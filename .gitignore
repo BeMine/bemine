@@ -32,6 +32,3 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
-
-# OAuth key
-/config/facebook.yml
