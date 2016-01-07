@@ -1,88 +1,63 @@
-/*
-
-*= require 'masonry/basic'
-*= require 'masonry/centered'
-*= require 'masonry/fluid'
-*= require 'masonry/gutters'
-*= require 'masonry/infinitescroll'
-*= require 'masonry/right-to-left'
-*= require 'masonry/transitions'
-
-*/
-
-
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-
-
-.logo-place { background: black; }
-
-h1 { color: white ; 
-
+@import "masonry/basic";
+@import "masonry/centered";
+@import "masonry/fluid";
+@import "masonry/gutters";
+@import "masonry/infinitescroll";
+@import "masonry/right-to-left";
+@import "masonry/transitions";
+.logo-place {
+  background: black;
 }
 
+h1 {
+  color: white;
+}
 
 .categories {
-	background: rgba(40,40,40,.9);
+  background: rgba(40, 40, 40, .9);
+}
+
+.category img {
+  display: block;
+  margin: 0 auto;
 }
 
 .log {
-	
-    float: right;
-}  
+  float: right;
+}
 
 .container {
-    width: 1024px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .categories li {
-    margin-top: 5px;
-    margin-right: 10px;
-	color: white;
-	display: inline-block;
-	font: inherity;
+  margin-top: 5px;
+  margin-right: 10px;
+  color: white;
+  display: inline-block;
+  font: inherity;
 }
 
 .log li {
-    display: inline-block;
-
-} 
+  display: inline-block;
+}
 
 .log li a {
-   text-decoration: none !important;
+  text-decoration: none !important;
 }
 
-ol, ul, li {
-    
-    list-style: none;
+ol,
+ul,
+li {
+  list-style: none;
 }
 
-.table { border: 3px, solid;
-
-}
-
-/*.masonry-container {
-	 width: 1020px;
-	 
-}
-
-/*.masonry-brick {
-    float: left;
-	border:1px solid#ccc;
-	max-width: 500px;
-	padding: 0 5px;
-	margin:0 10px 10px 0;
-}*/
-
-.box.masonry-brick {
-    width: 320px;
+.table {
+  border: 3px, solid;
 }
 
 .propic img {
-	
-   max-width: 480px; 
-
+  max-width: 480px;
 }

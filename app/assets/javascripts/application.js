@@ -14,12 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
 //= require_tree .
 
-//= require masonry/jquery.masonry
-
-
-
-
-
-
+$(function() {
+    return $('#masonry-container').imagesLoaded(function() {
+        return $('#masonry-container').masonry({
+            itemSelector: '.box',
+            isFitWidth: true
+        });
+    });
+});
