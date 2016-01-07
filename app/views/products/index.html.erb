@@ -1,0 +1,67 @@
+<html>
+  <body>
+    <div class = "header">
+      <div class = "logo-place">
+       <div class = "container">
+        <h1><a src = "#">BeMine</a></h1>
+        
+       </div>  
+      </div>
+      <div class = "categories">
+       <div class ="container">
+        <ul>
+          <li>MEN</li>
+          <li>WOMEN</li>
+          <li>KIDS</li>
+          <li>CONTACT</li>
+          </ul>
+        </div>
+       </div>  
+    </div>  
+    <div class = "container">
+      <span>
+         <a href="http://store.nike.com/us/en_us/pw/mens-nikelab/7puZofo"><img src="http://asphaltgold.de/blog/wp-content/uploads/2014/08/SneakerFreaker-1000px_10.jpg" alt=""></a>
+      </span>
+
+
+ 
+
+
+<div id="masonry-container" class="transitions-enabled.masonry infinite-scroll clearfix">
+ <% @products.each do |p|%>
+
+  <div class = "box masonry-brick">
+     <div class = "propic"><%=image_tag( p.picture.url )%></div>
+    <h2><%= p.name %></h2>
+    <h3><%= p.description %></h3>
+    <div class = "prolocate"><%= p.location %></div>
+    <div class = "proprice">NTD$ <%= number_with_delimiter(p.price) %></div>
+    <div class = "bttn"><%= link_to "商品detail", category_product_path(@category, p), :class => "btn btn-info"%></div>
+    <div class = "bttn"><%= link_to "更改商品內容", edit_category_product_path(@category, p), :class => "btn btn-info"%></div>
+    <div class = "btttn"><%= link_to "刪除", category_product_path(@category, p), :method => :delete, :data =>{ :confirm => "Are u sure?"}, :class => "btn btn-danger"%></div>
+   
+
+     
+  
+  </div>
+ 
+   
+ <% end %>
+</div> 
+ 
+<%#= paginate @products %>
+
+<%#= link_to "edit product info", edit_product_path(p), :class => "btn btn-warning"%>
+
+<%= link_to "Add new product", new_category_product_path(@category), :class => "btn btn-info"%>
+
+
+     
+    </div>
+   
+  </body>
+</html>  
+
+
+
+

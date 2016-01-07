@@ -1,0 +1,88 @@
+/*
+
+*= require 'masonry/basic'
+*= require 'masonry/centered'
+*= require 'masonry/fluid'
+*= require 'masonry/gutters'
+*= require 'masonry/infinitescroll'
+*= require 'masonry/right-to-left'
+*= require 'masonry/transitions'
+
+*/
+
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+.logo-place { background: black; }
+
+h1 { color: white ; 
+
+}
+
+
+.categories {
+	background: rgba(40,40,40,.9);
+}
+
+.log {
+	
+    float: right;
+}  
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.categories li {
+    margin-top: 5px;
+    margin-right: 10px;
+	color: white;
+	display: inline-block;
+	font: inherity;
+}
+
+.log li {
+    display: inline-block;
+
+} 
+
+.log li a {
+   text-decoration: none !important;
+}
+
+ol, ul, li {
+    
+    list-style: none;
+}
+
+.table { border: 3px, solid;
+
+}
+
+/*.masonry-container {
+	 width: 1020px;
+	 
+}
+
+/*.masonry-brick {
+    float: left;
+	border:1px solid#ccc;
+	max-width: 500px;
+	padding: 0 5px;
+	margin:0 10px 10px 0;
+}*/
+
+.box.masonry-brick {
+    width: 320px;
+}
+
+.propic img {
+	
+   max-width: 480px; 
+
+}

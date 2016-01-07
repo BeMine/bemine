@@ -1,0 +1,9 @@
+<% @categories.each do |c|%>
+
+ <%=link_to image_tag( c.picture.url ), category_products_path(c)%>
+  
+
+<% end %>
+
+
+<%= link_to "Add new category", new_category_path, :class => "btn btn-info"%>  

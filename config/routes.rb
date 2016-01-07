@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+    
+   resources :categories do
+    resources :products, :controller => "products"
+     resources :details, :controller => "details"
+   end
+
+   
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -20,6 +29,7 @@ Rails.application.routes.draw do
   #       get 'short'
   #       post 'toggle'
   #     end
+  root 'categories#index'
   #
   #     collection do
   #       get 'sold'
