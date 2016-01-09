@@ -1,7 +1,0 @@
-development:
-  app_id: 1510554765912455
-  secret: f409f80cdb0b534965edac7a46ed2dfe
-
-production:
-  app_id:
-  secret:
