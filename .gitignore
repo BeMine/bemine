@@ -32,3 +32,9 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore byebug history
+.byebug_history

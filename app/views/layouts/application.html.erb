@@ -7,25 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
-<div class="header">
-      <div class="logo-place">
-        <div class="container">
-          <h1><%= link_to "BeMine", root_path %></h1>
-        </div>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <div class="header">
+    <div class="logo-place">
+      <div class="container">
+        <h1><%= link_to "BeMine", root_path %></h1>
       </div>
-      <div class="categories">
-        <div class="container">
-          <ul>
-            <li>MEN</li>
-            <li>WOMEN</li>
-            <li>KIDS</li>
-            <li>CONTACT</li>
-          </ul>
-        </div>
+    </div>
+    <div class="categories">
+      <div class="container">
+        <ul>
+          <li>MEN</li>
+          <li>WOMEN</li>
+          <li>KIDS</li>
+          <li>CONTACT</li>
+        </ul>
       </div>
-</div>
+    </div>
+  </div>
 
 <%= yield %>
 

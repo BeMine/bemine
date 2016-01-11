@@ -1,0 +1,17 @@
+# Figaro config for storing secrets for this app
+# Never commit this file into repo
+
+development:
+  secret_key_base:
+  fb_app_id:
+  fb_app_secret:
+
+test:
+  secret_key_base:
+  fb_app_id:
+  fb_secret:
+
+production:
+  secret_key_base:
+  fb_app_id:
+  fb_app_secret:
