@@ -53,8 +53,6 @@ ActiveRecord::Schema.define(version: 20160107094042) do
 
   add_index "products", ["category_id"], name: "index_products_on_category_id"
 
-ActiveRecord::Schema.define(version: 20160105085707) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
