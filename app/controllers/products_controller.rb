@@ -29,17 +29,18 @@ def create
 end
 
 def show
-  
+  @category = Category.find(params[:category_id])
   @product = @category.products.find(params[:id]) 
 
 end
 
 def edit
+  @category = Category.find(params[:category_id])
   @product = @category.products.find(params[:id]) 
 end
 
 def update
-
+  @category = Category.find(params[:category_id])
   @product = @category.products.find(params[:id])
 
   if @product.update(product_params)
@@ -72,6 +73,6 @@ end
 
 private
  def product_params
-   params.require(:product).permit(:name, :description, :location, :price, :picture )
+   params.require(:product).permit(:name, :description, :location, :price, :picture, :matcharea )
 
  end

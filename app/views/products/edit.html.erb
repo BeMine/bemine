@@ -1,6 +1,6 @@
 
                        <!--回到controller找action => update-->
-<%= form_for @product, :url => product_path(@product), :method => :patch do |f| %>
+<%= form_for @product, :url => category_product_path(@category, @product), :method => :patch do |f| %>
 
 <%= f.label :name, "Product Name"%>
 <div class= "form group">
@@ -24,6 +24,12 @@
 <div class= "form group"> 
  <%= f.text_field :price%>
 </div>
+
+ <%= f.label :matcharea, "match 訊息"%>
+<div class= "form group">
+ <%= f.text_field :matcharea%>
+</div>
+
 
 <div class= "form group">
  <%= f.submit "送出", :class => "btn btn-warning"%>

@@ -16,6 +16,10 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'kaminari'
 
+gem "select2-rails"
+
+gem 'jquery-turbolinks'
+
 gem 'masonry-rails', '~> 0.2.4'
 
 gem 'paperclip'

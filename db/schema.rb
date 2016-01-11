@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160106144300) do
+ActiveRecord::Schema.define(version: 20160107094042) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20160106144300) do
     t.string   "location"
     t.integer  "price"
     t.integer  "category_id"
+    t.string   "matcharea"
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id"
