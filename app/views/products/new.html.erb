@@ -1,0 +1,43 @@
+<%= form_for @product, :url => category_products_path(@category) do  |f| %>
+
+
+ <%= f.label :name, "Product Name"%>
+<div class= "form group">
+ <%= f.text_field :name%>
+</div>
+
+
+ <%= f.label :description, "Product Description"%>
+<div class= "form group">
+ <%= f.text_area :description%>
+</div>
+
+
+ <%= f.label :location, "Product Location"%>
+<div class= "form group"> 
+ <%= f.text_field :location%>
+</div>
+
+
+ <%= f.label :price, "Price"%>
+<div class= "form group"> 
+ <%= f.text_field :price%>
+</div>
+
+<%= f.label :picture, "Product Picture" %>
+<%= f.file_field :picture %>
+
+ <%= f.label :matcharea, "match 訊息"%>
+<div class= "form group">
+ <%= f.text_field :matcharea%>
+</div>
+
+<%#= check_box_tag "destroy_logo", "1" %> 刪除檔案
+
+<div class= "form group">
+ <%= f.submit "送出", :class => "btn btn-warning"%>
+</div>
+
+
+
+<% end %>
