@@ -8,18 +8,52 @@
 @import "masonry/right-to-left";
 @import "masonry/transitions";
 .logo-place {
-  background: black;
+
+  background: #111;
+  border:0px solid;
+  
 }
 
 h1 {
+  margin-bottom: 0px;
+  margin-top: 0px;
   color: white;
 }
 
-.categories {
-  background: rgba(40, 40, 40, .9);
+.layoutcate {
+  border:0px solid;
+  line-height: 20px;
+  background: #404549;
+}
+
+.deistrict{
+  border: 0px solid;
+  width:1124px;
+  margin: 0px auto;
+}
+
+.qqq {
+
+  float: right;
+  margin-top: 20px;
+  padding-left:360px;
+  border:0px solid;
 }
 
 
+.firstcontainer{
+  border: 0px solid;
+  
+}
+.cate {
+   
+  border: 0px solid;
+}
+
+.secondbar {
+  
+  margin-bottom: 0px;
+}
 
 .category img {
 
@@ -63,12 +97,12 @@ h1 {
 
 
 
-.categories li {
-  margin-top: 5px;
-  margin-right: 10px;
+.layoutcate li {
+  padding: 5px 50px ;
   color: white;
   display: inline-block;
   font: inherity;
+  border: 0px solid;
 }
 
 .log li {
@@ -183,12 +217,16 @@ li {
 
 #top{
  position:absolute;
- top:120px;
+ top:160px;
  left:30px;
  width:150px;
  height:150px;
  background-color:#6DA9E7;
  z-index:2;
+}
+
+.loginsection {
+  border: 2px solid;
 }
 
 
