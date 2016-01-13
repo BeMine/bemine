@@ -13,12 +13,12 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'omniauth-facebook'
 gem 'paperclip'
 gem 'pg'
-gem 'rails_12factor'
 gem 'rails', '4.2.5'
 gem 'turbolinks'
 gem 'select2-rails'
 
 group :production do
+  gem 'rails_12factor'
 end
 
 group :asset do
@@ -42,6 +42,7 @@ group :development do
   gem 'sdoc', '~> 0.4.0'
   gem 'spring'
   gem 'web-console'
+  gem 'xray-rails'
 end
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
