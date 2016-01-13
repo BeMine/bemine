@@ -1,0 +1,19 @@
+<h1>我的訂單一覽</h1>
+<table class="table">
+  <tr>
+    <th>訂單編號</th>
+    <th>細目</th>
+    <th>總金額</th>
+  </tr>
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.id %></td>
+      <td>
+        <% order.line_items.each do |line| %>
+          <%= line.product.name %>: <%= line.quantity %> 筆
+      <% end %>
+      </td>
+      <td>$<%= order.amount %></td>
+    </tr>
+  <% end %>
+</table>

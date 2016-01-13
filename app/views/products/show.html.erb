@@ -1,20 +1,16 @@
-
-<div class = "matchcontainer ">
-  <div class = "proshow">
-   <div class = "detailpics col-xs-7"><%= image_tag( @product.picture.url )%></div>
-   <div class = "prodetail col-xs-4">
-    <div class = "proname"><%= @product.name %></div>
-    <div class = "matcharea"><%= @product.matcharea%></div>
-    <div class="proprice">NTD$ <%= number_with_delimiter(@product.price) %></div>
-    <div id = "btnmatch" class = "infinite-scroll centered clearfix"><%=link_to "Start Matching", categories_path, :class =>"btn btn-warning"%></div>
-   </div>
+<%= render "products/cart" %>
+<div class="matchcontainer ">
+  <div class="proshow">
+    <div class="detailpics col-xs-7"><%= image_tag(@product.picture.url) %></div>
+    <div class="prodetail col-xs-4">
+      <div class="proname"><%= @product.name %></div>
+      <div class="matcharea"><%= @product.matcharea %></div>
+      <div class="proprice">NTD <%= number_to_currency(@product.price, precision: 0) %></div>
+      <div id="btnmatch" class="infinite-scroll centered clearfix">
+        <%= link_to "Match", buy_product_path(@product), :method => :post, :class => "btn btn-primary" %>
+      </div>
+    </div>
   </div>
-  <div class = "showcata " >123</div>
-</div> 
-
-
-
-
+  <div class="showcata">123</div>
+</div>
 <%#= numebr_field_tag :qty, options_for_select(1..10) %>
-
-

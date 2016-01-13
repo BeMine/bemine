@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Bemine</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <div class="header">
-    <div class="logo-place">
-      <div class="container">
-        <h1><%= link_to "BeMine", root_path %></h1>
+  <head>
+    <title>Bemine</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-place">
+        <div class="container">
+          <h1><%= link_to "BeMine", root_path %></h1>
+        </div>
+      </div>
+      <div class="categories">
+        <div class="container">
+          <ul>
+            <li>MEN</li>
+            <li>WOMEN</li>
+            <li>KIDS</li>
+            <li>CONTACT</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="categories">
-      <div class="container">
-        <ul>
-          <li>MEN</li>
-          <li>WOMEN</li>
-          <li>KIDS</li>
-          <li>CONTACT</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-<%= yield %>
-
-</body>
+    <% if current_user %>
+      <%= link_to('登出', destroy_user_session_path, :method => :delete) %>
+      <%= link_to('修改密碼', edit_registration_path(:user)) %>
+    <% else %>
+      <%= link_to('註冊', new_registration_path(:user)) %>
+      <%= link_to('登入', new_session_path(:user)) %>
+      <%= link_to "Facebook 登入", user_omniauth_authorize_path(:facebook) %>
+    <% end %>
+    <%= yield %>
+  </body>
 </html>

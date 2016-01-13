@@ -1,32 +1,31 @@
 class CategoriesController < ApplicationController
+  def index
+    @categories = Category.all
+  end
 
-    def index
-      @categories = Category.all
+  def new
+    @category = Category.new
+  end
 
-    end 	
+  def create
+    @category = Category.new( category_params )
 
-    def new
-      @category = Category.new	 
+    if @category.save
+      flash[:notice] = "GREEN LIGHT"
+      redirect_to categories_path
+    else
+      render :action => :new
+    end
+  end
 
-    end	
+  def show
+    @category = Category.find(params[:id])
+    @products = @category.products
+  end
 
-    def create
-      @category = Category.new( category_params )  	 
+  private
 
-      if @category.save
-  	   flash[:notice] = "GREEN LIGHT"
-         redirect_to categories_path
-      else
-        render :action => :new
-      end
-    end	
-
-
+  def category_params
+    params.require(:category).permit(:name, :description, :location, :price, :picture )
+  end
 end
-
-
-private
- def category_params
-   params.require(:category).permit(:name, :description, :location, :price, :picture )
-
- end

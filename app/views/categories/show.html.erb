@@ -1,6 +1,7 @@
 <%= render "products/cart" %>
 <div class="bbcontainer">
   <div class="category">
+    <div class = "probar"><%= @category.name %></div>
     <div id="masonry-container" class="transitions-enabled infinite-scroll centered clearfix">
       <% @products.each do |p| %>
         <div class="box col3">
