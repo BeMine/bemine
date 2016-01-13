@@ -7,15 +7,15 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product =  @category.products.build
+    @product = Product.new
   end
 
   def create
-    @product = @category.products.build(product_params)
+    @product = Product.new(product_params)
 
     if @product.save
       flash[:notice] = "新增成功"
-      redirect_to category_products_path(@category)
+      redirect_to products_path
     else
       render :new
     end
@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
   def update
     if @product.update(product_params)
       flash[:notice] = "編輯成功"
-      redirect_to category_products_path(@category)
+      redirect_to products_path
     else
       render :edit
     end
@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
 
     flash[:alert] = "刪除成功"
 
-    redirect_to category_products_path
+    redirect_to products_path
   end
 
   def buy

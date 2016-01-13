@@ -1,17 +1,11 @@
 <%= form_for @category, :url => categories_path do |f| %>
-
-<%= f.label :name, "Category Name"%>
-<div class= "form group">
- <%= f.text_field :name%>
-</div>
-
-<%= f.label :picture, "Category Picture" %>
-<%= f.file_field :picture %>
-
-<%#= check_box_tag "destroy_logo", "1" %> 刪除檔案
-
-<div class= "form group">
- <%= f.submit "送出", :class => "btn btn-warning"%>
-</div>
-
+  <%= f.label :name, "Category Name"%>
+  <div class= "form group">
+    <%= f.text_field :name%>
+  </div>
+  <%= f.label :picture, "Category Picture" %>
+  <%= f.file_field :picture %>
+  <div class= "form group">
+    <%= f.submit "送出", :class => "btn btn-warning"%>
+  </div>
 <% end %>
