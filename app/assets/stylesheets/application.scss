@@ -9,10 +9,7 @@
 @import "masonry/transitions";
 @import "font-awesome.css";
 .logo-place {
-
-  
-  border:0px solid;
-  
+  border: 0px solid;
 }
 
 h1 {
@@ -23,48 +20,41 @@ h1 {
 }
 
 .layoutcate {
-  
-  border:0px solid;
+  border: 0px solid;
   line-height: 20px;
-  
 }
 
-.deistrict{
+.deistrict {
   border: 0px solid;
-  width:1524px;
+  width: 1524px;
   margin: 0px auto;
 }
 
 .qqq {
-  
   float: right;
   margin-top: 0px;
   padding-top: 20px;
-  padding-left:200px;
-  border:0px solid;
+  padding-left: 200px;
+  border: 0px solid;
   height: 60px;
 }
 
-
-.firstcontainer{
+.firstcontainer {
   border: 0px solid;
-  height:60px;
+  height: 60px;
   padding-top: 10px;
   padding-left: 80px;
-  
 }
+
 .cate {
-   
   border: 0px solid;
 }
 
 .secondbar {
-  
   margin-bottom: 0px;
 }
 
 .category img {
-
   display: block;
   margin: 0 auto;
 }
@@ -75,39 +65,29 @@ h1 {
 
 .bbcontainer {
   background-color: #f7f8f8;
-
 }
-  
+
 .probar {
-    font-size: 30px;
-    margin: 0px auto;
-    width: 1200px;
-    text-align: center;
-    color: #30302f;
-    border-bottom: 2px solid #30302f;
-    padding: 20px;
+  font-size: 30px;
+  margin: 0px auto;
+  width: 1200px;
+  text-align: center;
+  color: #30302f;
+  border-bottom: 2px solid #30302f;
+  padding: 20px;
 }
 
 .proname {
-  padding:10px ;
+  padding: 10px;
   height: 35px;
   text-align: center;
   font-size: 25px;
   border: 0px solid;
-  
-  
 }
-
-  
-
-
-
-
-
 
 .layoutcate li {
   font-family: 'Lora', serif;
-  padding: 5px 50px ;
+  padding: 5px 50px;
   color: white;
   display: inline-block;
   font: inherity;
@@ -136,135 +116,106 @@ li {
   max-width: 480px;
 }
 
-.box{
-	  background: white;
-	  border: 0px solid;
-
-
+.box {
+  background: white;
+  border: 0px solid;
 }
 
 .detailpics {
-    float: left;
-	margin-left: 30px;
-	margin-top: 5px;
+  float: left;
+  margin-left: 30px;
+  margin-top: 5px;
   border: 0px solid;
-  
-
 }
 
 .matchcontainer {
-    background-color: #f7f8f9;
-    width: 100%;
-    height: 850px;
-    margin: 0 auto;
-	  border: 0px solid;
-    margin-left: 0px;
-   
-    
-
+  background-color: #f7f8f9;
+  width: 100%;
+  height: 850px;
+  margin: 0 auto;
+  border: 0px solid;
+  margin-left: 0px;
 }
-.proshow  { 
-    float: right;
-    margin-right: 100px;
-    width: 1000px ;
-    margin-top: 100px;
-    overflow: hidden;
-    border: 0px solid;
-	
+
+.proshow {
+  float: right;
+  margin-right: 100px;
+  width: 1000px;
+  margin-top: 100px;
+  overflow: hidden;
+  border: 0px solid;
 }
 
 .prodetail {
   height: 1000px;
-	float: left;
-	border: 0px solid;
-	margin-right: 30px;
+  float: left;
+  border: 0px solid;
+  margin-right: 30px;
 }
 
-.matcharea  {
-   margin-top: 25px;
-   border: 0px solid;
-
-
+.matcharea {
+  margin-top: 25px;
+  border: 0px solid;
 }
 
 #masonry-container {
-	 
-   border: 0px solid;
-   width: 1024px;
-
-
+  border: 0px solid;
+  width: 1024px;
 }
 
-
-
 .showcata {
-
   border: 3px solid;
   width: 100px;
-   
-  
-
-
 }
 
 .proprice {
-   height: 70px;
-   color: red;
-   font-size: 30px;
-   border: 0px solid;
-  
-
-
+  height: 70px;
+  color: red;
+  font-size: 30px;
+  border: 0px solid;
 }
 
-
-
-
-#top{
- position:absolute;
- top:160px;
- left:30px;
- width:150px;
- height:150px;
- background-color:#6DA9E7;
- z-index:2;
+#top {
+  position: absolute;
+  top: 160px;
+  left: 30px;
+  width: 150px;
+  height: 150px;
+  background-color: #6DA9E7;
+  z-index: 2;
 }
 
 .loginsection {
   border: 2px solid;
 }
 
-
-
 .btn.stroke.smooth.scroll {
-    color :  black;
-    border-color: black;
-    border: 2px solid;
-    background-color: transparent;
-    border-radius:2px;
-    font-size:18px;
-    font-weight:500;
-    margin-right:30px;
-    min-width:0 ;
-    padding:8px 120px;
+  color: black;
+  border-color: black;
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 30px;
+  min-width: 0;
+  padding: 8px 120px;
 }
 
-.btn.btn-signup  {
-  
-  color :  #fec503;
-    border-color: #fec503;
-    border: 2px solid;
-    background-color: transparent;
-    border-radius:2px;
-    font-size:18px;
-    font-weight:500;
-    margin-right:30px;
-    min-width:0 ;
-    padding: 5px 30px;
+.btn.btn-signup {
+  color: #fec503;
+  border-color: #fec503;
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 30px;
+  min-width: 0;
+  padding: 5px 30px;
 }
 
-.btn.btn-signin  {
-  
+.btn.btn-signin {
   color: white;
 }
 
@@ -273,42 +224,35 @@ li {
   color: white;
 }
 
-.btn.btn-change  {
+.btn.btn-change {
   color: white;
   font-size: 20px;
 }
 
-  
 .header {
-  background: linear-gradient(to bottom,rgba(0,0,0,0.9) 0,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 99%);
-  position: fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 99%);
   z-index: 2000;
-  width:100%;
+  width: 100%;
   height: 90px;
 }
 
 .light-typo {
-    color: #fff;
+  color: #fff;
 }
+
 .color-bg {
-    
-    background-color: #fec503;
+  background-color: #fec503;
 }
+
 .padding-top-bottom {
-    padding: 60px 0;
+  padding: 60px 0;
 }
 
 .fa.fa {
-  
   color: black;
 }
 
 .bg-lt-grey {
-    background: #404549;
-    line-height: 50px;
+  background: #404549;
+  line-height: 50px;
 }
-
-
-
-
-

@@ -1,29 +1,24 @@
-
-    
+<%= render "products/cart" %>
+<div class="bbcontainer">
+  <div class="category">
     <div class="bbcontainer">
       <div class="category">
-        <a href="http://store.nike.com/us/en_us/pw/mens-nikelab/7puZofo">
-          <img src="http://content.finda.photo/unsplash/VfIYjO8P_24.jpg" alt="">
-        </a>
-        <div class = "probar">RCENT PRODUCTS</div>
         <div id="masonry-container" class="transitions-enabled infinite-scroll centered clearfix">
-          <% @products.each do |p|%>
+          <% @products.each do |p| %>
             <div class="box col3">
               <div class = "proname"><%= p.name %></div>
-              <div class = "pics"><%=link_to image_tag( p.picture.url ), category_product_path(@category, p)%></div>
-              
+              <div class = "pics"><%=link_to image_tag(p.picture.url), product_path(p) %></div>
               <h3><%= p.description %></h3>
               <div class="prolocate"><%= p.location %></div>
-              <div class="proprice">NTD $ <%= number_with_delimiter(p.price) %></div>
-              <div class="bttn"><%= link_to "商品detail", category_product_path(@category, p), :class => "btn btn-info" %></div>
-              <div class="bttn"><%= link_to "更改商品內容", edit_category_product_path(@category, p), :class => "btn btn-info" %></div>
-              <div class="btttn"><%= link_to "刪除", category_product_path(@category, p), :method => :delete, :data =>{ :confirm => "Are u sure?" }, :class => "btn btn-danger" %></div>
+              <div class="proprice">NTD <%= number_to_currency(p.price, precision: 0) %></div>
+              <div class="bttn"><%= link_to "商品detail", product_path(p), :class => "btn btn-info" %></div>
+              <div class="bttn"><%= link_to "更改商品內容", edit_product_path(p), :class => "btn btn-info" %></div>
+              <div class="btttn"><%= link_to "刪除", product_path(p), :method => :delete, :data =>{ :confirm => "Are u sure?" }, :class => "btn btn-danger" %></div>
             </div>
           <% end %>
         </div>
-        <%#= paginate @products %>
-        <%#= link_to "edit product info", edit_product_path(p), :class => "btn btn-warning"%>
-        <%= link_to "Add new product", new_category_product_path(@category), :class => "btn btn-info" %>
+        <%= link_to "New Product", new_product_path(@category), :class => "btn btn-info" %>
       </div>
     </div>
- 
+  </div>
+</div>

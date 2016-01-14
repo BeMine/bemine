@@ -7,7 +7,6 @@
     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
     <li data-target="#carousel-example-generic" data-slide-to="4"></li>
   </ol>
-
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
@@ -39,10 +38,8 @@
       <div class="carousel-caption">
         ...
       </div>
-   </div>
-    
+    </div>
   </div>
-
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -53,19 +50,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-
 <div id="top" class = "topwords" ><img src = "http://www.churchhousecollection.com/resources/123%20clip%20art.jpg" alt="..."></div>
-
-
-
-
 <% @categories.each do |c|%>
-
- <%=link_to image_tag( c.picture.url ), category_products_path(c)%>
-  
-
+  <%=link_to image_tag( c.picture.url ), category_path(c)%>
 <% end %>
-
-
-<%= link_to "Add new category", new_category_path, :class => "btn btn-info"%>  
+<%= link_to "Add new category", new_category_path, :class => "btn btn-info"%>
