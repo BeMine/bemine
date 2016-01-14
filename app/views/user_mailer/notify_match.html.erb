@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+</head>
+<body>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
+
+<section id="cta" class="padding-top-bottom color-bg light-typo">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <i class="fa fa-reddit-alien fa-5x "></i>
+            <h3>Quality guaranteed</h3>
+          </div>
+          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.4s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+            <i class="fa fa-truck icons fa-5x "></i>
+            <h3>Home delivery</h3>
+          </div>
+          <div class="col-md-4 col-sm-4 wow fadeInUp animated" data-wow-delay="0.6s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+            <i class="fa fa-btc  fa-5x"></i>
+            <h3>Secure payment</h3>
+          </div>
+        </div>
+      </div>
+
+</section> 
+
+
+<h1>Dear. <%=@user.email%> </h1>
+
+
+<%= fa_stacked_icon "twitter", base: "square-o" %>
+
+<p>
+  <%= @product.id %>
+</p>
+
+
+</body>
+</html>

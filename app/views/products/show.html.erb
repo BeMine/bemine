@@ -6,15 +6,476 @@
     <div class = "proname"><%= @product.name %></div>
     <div class = "matcharea"><%= @product.matcharea%></div>
     <div class="proprice">NTD$ <%= number_with_delimiter(@product.price) %></div>
-    <div id = "btnmatch" class = "infinite-scroll centered clearfix"><%=link_to "Start Matching", categories_path, :class =>"btn btn-warning"%></div>
+        <div id = "btnmatch" class = "infinite-scroll centered clearfix"><%=link_to "Start Matching", match_category_product_path(@category,@product), :class =>"btn stroke smooth scroll"%></div>
+   
+
    </div>
   </div>
   <div class = "showcata " >123</div>
 </div> 
 
+<fieldset>
+        
+          
+            
+                      
+            
+            
+               
+            
+            
+            
+              
+          
+      
+      
+        <div id="shipping-form-fields">
+      
+          
+          <p class="dialog-required">All fields are mandatory unless noted otherwise.</p>
+            
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="form-row">
+                <label>
+                  <span>Shipping To</span>
+                </label>
+                &nbsp;&nbsp;Taiwan
+              </div>
+                <select class="country" style="display: none; text-transform: uppercase;" id="dwfrm_singleshipping_shippingAddress_addressFields_country" name="dwfrm_singleshipping_shippingAddress_addressFields_country">        
+                  <option value="TW">TW</option>
+                </select> 
+              </div>
+          </div>  
+          
+          <div class="row">
+            <div class="col-md-6">
+                
 
+
+
+
+  <div class="form-row   required " data-required-text="Please provide a first name.">
+  
+  
+  
+    
+      
+      <label for="dwfrm_singleshipping_shippingAddress_addressFields_firstName">
+      
+        
+        
+          <span class="required-indicator">•</span>
+        
+        
+        <span>
+        First Name
+        </span>
+      </label>
+    
+
+    
+      
+
+        
+        
+          
+          
+          <input class="input-text profileFName required" id="dwfrm_singleshipping_shippingAddress_addressFields_firstName" type="text" name="dwfrm_singleshipping_shippingAddress_addressFields_firstName" value="" maxlength="256">
+          
+        
+        
+        
+        
+        
+          
+        
+
+    
+
+  
+  
+  
+  </div>                
+              </div>
+            <div class="col-md-6">
+                
+
+
+
+
+  <div class="form-row   required " data-required-text="Please provide a last name.">
+  
+  
+  
+    
+      
+      <label for="dwfrm_singleshipping_shippingAddress_addressFields_lastName">
+      
+        
+        
+          <span class="required-indicator">•</span>
+        
+        
+        <span>
+        Last Name
+        </span>
+      </label>
+    
+
+    
+      
+
+        
+        
+          
+          
+          <input class="input-text profileLName required" id="dwfrm_singleshipping_shippingAddress_addressFields_lastName" type="text" name="dwfrm_singleshipping_shippingAddress_addressFields_lastName" value="" maxlength="256">
+          
+        
+        
+        
+        
+        
+          
+        
+
+    
+
+  
+  
+  
+  </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+              
+
+
+
+
+  <div class="form-row   required " data-required-text="Please enter a valid street address.">
+  
+  
+  
+    
+      
+      <label for="dwfrm_singleshipping_shippingAddress_addressFields_address1">
+      
+        
+        
+          <span class="required-indicator">•</span>
+        
+        
+        <span>
+        Address 1
+        </span>
+      </label>
+    
+
+    
+      
+
+        
+        
+          
+          
+          <input class="input-text streetaddress required" id="dwfrm_singleshipping_shippingAddress_addressFields_address1" type="text" name="dwfrm_singleshipping_shippingAddress_addressFields_address1" value="" maxlength="35">
+          
+        
+        
+        
+        
+        
+          
+        
+
+    
+
+  
+  
+  
+  </div>
+              </div>
+            <div class="col-md-6">
+                
+
+
+
+
+  <div class="form-row   ">
+  
+  
+  
+    
+      
+      <label for="dwfrm_singleshipping_shippingAddress_addressFields_address2">
+      
+        
+        
+        
+        <span>
+        Address 2 (optional)
+        </span>
+      </label>
+    
+
+    
+      
+
+        
+        
+          
+          
+          <input class="input-text addressfield2" id="dwfrm_singleshipping_shippingAddress_addressFields_address2" type="text" name="dwfrm_singleshipping_shippingAddress_addressFields_address2" value="" maxlength="35">
+          
+        
+        
+        
+        
+        
+          
+        
+
+    
+
+  
+  
+  
+  </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+                
+
+
+
+
+  <div class="form-row   required " data-required-text="Please enter a valid city.">
+  
+  
+  
+    
+      
+      <label for="dwfrm_singleshipping_shippingAddress_addressFields_city">
+      
+        
+        
+          <span class="required-indicator">•</span>
+        
+        
+        <span>
+        City
+        </span>
+      </label>
+    
+
+    
+      
+
+        
+        
+          
+          
+          <input class="input-text City required" id="dwfrm_singleshipping_shippingAddress_addressFields_city" type="text" name="dwfrm_singleshipping_shippingAddress_addressFields_city" value="" maxlength="256">
+          
+        
+        
+        
+        
+        
+          
+        
+
+    
+
+  
+  
+  
+  </div>
+            </div>
+            <div class="col-md-6">
+                <input type="hidden" id="selected-province" value="null">
+                
+                  <label>
+                    <span>Province  </span>
+                  </label>
+                  
+
+
+
+
+  <div class="form-row   ">
+  
+  
+  
+    
+
+    
+      
+
+        
+        
+          
+          
+          <input class="input-text province" id="dwfrm_singleshipping_shippingAddress_addressFields_states_state" type="text" name="dwfrm_singleshipping_shippingAddress_addressFields_states_state" value="" maxlength="2147483647">
+          
+        
+        
+        
+        
+        
+          
+        
+
+    
+
+  
+  
+  
+  </div>
+                
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+                
+                  <label>
+                    <span>Postal Code</span>
+                  </label>            
+                
+                  
+
+
+
+
+  <div class="form-row   required " data-required-text="Please enter a valid ZIP or postal code.">
+  
+  
+  
+    
+
+    
+      
+
+        
+        
+          
+          
+          <input class="input-text postal required" id="dwfrm_singleshipping_shippingAddress_addressFields_zip" type="text" name="dwfrm_singleshipping_shippingAddress_addressFields_zip" value="" maxlength="12">
+          
+        
+        
+        
+        
+        
+          
+        
+
+    
+
+  
+  
+  
+  </div>
+            </div>
+            <div class="col-md-6">
+                
+
+
+
+
+  <div class="form-row   required " data-required-text="Please enter a valid phone number, in case we need to contact you regarding your order.">
+  
+  
+  
+    
+      
+      <label for="dwfrm_singleshipping_shippingAddress_addressFields_phone">
+      
+        
+        
+          <span class="required-indicator">•</span>
+        
+        
+        <span>
+        Shipping Phone Number
+        </span>
+      </label>
+    
+
+    
+      
+
+        
+        
+          
+          
+          <input class="input-text phone phone required" id="dwfrm_singleshipping_shippingAddress_addressFields_phone" type="text" name="dwfrm_singleshipping_shippingAddress_addressFields_phone" value="" maxlength="20">
+          
+        
+        
+        
+        
+        
+          
+        
+
+    
+
+  
+  
+  
+  </div>
+            </div>            
+          </div>
+                    
+                        
+            
+              
+        </div>
+
+              
+                              
+                
+                            
+              
+
+              <hr>
+        
+              <div id="shipping-method-list" class="">
+              
+                
+
+
+              
+              </div>
+                  
+              
+              
+              
+      
+          
+
+    
+      
+            
+          
+      
+      </fieldset>
 
 
 <%#= numebr_field_tag :qty, options_for_select(1..10) %>
 
+
+<div>
+      <a href="/pricing" target="_self" class="btn btn-primary" title="Sign up">
+      Sign up
+      </a>
+    </div>
 

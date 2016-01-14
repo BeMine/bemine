@@ -44,6 +44,7 @@ def update
   @product = @category.products.find(params[:id])
 
   if @product.update(product_params)
+    UserMailer.notify_product(current_user, @product).deliver_later!
   	flash[:notice] = "編輯成功"
   	redirect_to category_products_path(@category)
   else
@@ -62,13 +63,27 @@ def destroy
 
   redirect_to category_products_path
    
-
-
 end	
 
+def match
+  
+  @product = Product.find(params[:id])
 
+  User.all.each do |u|
+    if u != current_user
+
+    UserMailer.notify_match(u, @product).deliver_later!
+
+   end
+    
+  
+    
+ end
 
 end
+
+end
+
 
 
 private
