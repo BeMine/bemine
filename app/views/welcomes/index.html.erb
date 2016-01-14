@@ -1,3 +1,6 @@
+
+<link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -62,5 +65,100 @@
 <% @categories.each do |c|%>
 
 <%=link_to image_tag( c.picture.url ), category_products_path(c)%>
+
   
-<% end %>    
+<% end %>  
+
+<section id="cta" class="padding-top-bottom color-bg light-typo">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <i class="fa fa-reddit-alien fa-5x "></i>
+            <h3>Quality guaranteed</h3>
+          </div>
+          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.4s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+            <i class="fa fa-truck icons fa-5x "></i>
+            <h3>Home delivery</h3>
+          </div>
+          <div class="col-md-4 col-sm-4 wow fadeInUp animated" data-wow-delay="0.6s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+            <i class="fa fa-btc  fa-5x"></i>
+            <h3>Secure payment</h3>
+          </div>
+        </div>
+      </div>
+
+</section> 
+
+
+
+<div class="footer">
+    <div class="bg-lt-grey">
+      <div class="container">
+        <div class="widget-footer">
+          <div class="widget-box">
+            <a href="#"><img src="http://placehold.it/250x50" alt=""></a>
+            <p>
+              Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+            </p>
+            <p>
+              Class aptent taciti sociosqu ad litora torquent per conubia nostra, perceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin ondimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat.
+            </p>
+          </div>
+        </div>
+        <div class="widget-footer">
+          <div class="widget-title">POPULAR POSTS</div>
+          <div class="widget-box">
+            <div class="item-list">
+              <div class="item-group">
+                <div class="item-title"><a href="#">Augue laoreet rutrum faucibus dolor auctor</a></div>
+                <div class="item-excerpt">
+                   Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetu...
+                </div>
+              </div>
+              <div class="item-group">
+                <div class="item-title"><a href="#">Augue laoreet rutrum faucibus dolor auctor</a></div>
+                <div class="item-excerpt">
+                   Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetu...
+                </div>
+              </div>
+              <div class="item-group">
+                <div class="item-title"><a href="#">Augue laoreet rutrum faucibus dolor auctor</a></div>
+                <div class="item-excerpt">
+                   Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetu...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="widget-footer">
+          <div class="widget-title">ABOUT COMPANY</div>
+          <div class="widget-box">
+            <address>
+              <p>Some Example Company Ltd.</p>
+              <p>Head Office: Number 18, 12345 Street name, California, USA</p>
+            </address>
+            <ul class="contact">
+              <li>Skype: Some support</li>
+              <li>Home phone: (+000) 0000 456 789</li>
+              <li>Mobile: (+000) 0000 456 789</li>
+              <li>Email: <a href="mailto:something@gmail.com">something@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-grey">
+      <div class="container">
+        <div class="copyright">
+          <p>Copyright © 2013. <a href="#">Altis</a> - All Rights Reserved</p>
+          <p>Template Created by <a href="#">OddThemes</a> Powered by Blogger</p>
+        </div>
+      </div>
+    </div>
+  
+
+</div> 
+
+
+
+<%= fa_stacked_icon "twitter", base: "square-o" %>
