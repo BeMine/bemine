@@ -31,8 +31,8 @@ namespace :dev do
     file.write(string_io.read)
 
     Category.all.each do |category|
-      rand(10).times do
-        category.products.create!(name: Faker::Commerce.product_name, picture: file, price: Faker::Number.number(6))
+      rand(1..20).times do
+        category.products.create!(name: Faker::Commerce.product_name, picture: file, price: Faker::Number.between(1, 99999))
       end
     end
   end
