@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
-    <section id="cta" class="padding-top-bottom color-bg light-typo">
+<head>
+ 
+</head>
+<body>
+
+
+<%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
+
+<section id="cta" class="padding-top-bottom color-bg light-typo">
       <div class="container">
         <div class="row text-center">
           <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
@@ -22,10 +25,19 @@
           </div>
         </div>
       </div>
-    </section>
-    <h1>Dear. <%=@user.email%> </h1>
-    <p>
-      <%= @product.id %>
-    </p>
-  </body>
+</section> 
+
+<div class = "testt">123</div>
+
+<h1>Dear. <%=@user.email%> </h1>
+
+
+
+
+<p>
+  <%= image_tag( @product.picture.url )%>
+</p>
+
+
+</body>
 </html>
