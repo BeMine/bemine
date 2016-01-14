@@ -11,10 +11,10 @@ class CategoriesController < ApplicationController
     @category = Category.new( category_params )
 
     if @category.save
-      flash[:notice] = "GREEN LIGHT"
+      flash[:notice] = '新增成功'
       redirect_to categories_path
     else
-      render :action => :new
+      render :new
     end
   end
 

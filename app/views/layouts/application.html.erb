@@ -32,6 +32,8 @@
       <%= link_to('登入', new_session_path(:user)) %>
       <%= link_to "Facebook 登入", user_omniauth_authorize_path(:facebook) %>
     <% end %>
+    <p><%= notice %></p>
+    <p><%= alert %></p>
     <%= yield %>
   </body>
 </html>

@@ -21,6 +21,8 @@ class OrdersController < ApplicationController
 
       redirect_to orders_path
     else
+      flash[:alert] = '新增失敗'
+
       render :new
     end
   end
