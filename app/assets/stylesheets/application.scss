@@ -1,12 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "masonry/basic.css";
-@import "masonry/centered.css";
-@import "masonry/fluid.css";
-@import "masonry/gutters.css";
-@import "masonry/infinitescroll.css";
-@import "masonry/right-to-left.css";
-@import "masonry/transitions.css";
+@import "masonry/basic";
+@import "masonry/centered";
+@import "masonry/fluid";
+@import "masonry/gutters";
+@import "masonry/infinitescroll";
+@import "masonry/right-to-left";
+@import "masonry/transitions";
 .logo-place {
   background: black;
 }

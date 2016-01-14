@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '~>3.3.4'
 gem 'braintree'
+gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'faker'
 gem 'figaro'
@@ -14,17 +15,13 @@ gem 'omniauth-facebook'
 gem 'paperclip'
 gem 'pg'
 gem 'rails', '4.2.5'
-gem 'turbolinks'
+gem 'sass-rails', '~> 5.0'
 gem 'select2-rails'
+gem 'turbolinks'
+gem 'uglifier', '>= 1.3.0'
 
 group :production do
   gem 'rails_12factor'
-end
-
-group :asset do
-  gem 'coffee-rails', '~> 4.1.0'
-  gem 'sass-rails', '~> 5.0'
-  gem 'uglifier', '>= 1.3.0'
 end
 
 group :development, :test do
