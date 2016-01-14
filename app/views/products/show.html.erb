@@ -7,7 +7,10 @@
       <div class="matcharea"><%= @product.matcharea %></div>
       <div class="proprice">NTD <%= number_to_currency(@product.price, precision: 0) %></div>
       <div id="btnmatch" class="infinite-scroll centered clearfix">
-        <%= link_to "Match", buy_product_path(@product), :method => :post, :class => "btn btn-primary" %>
+        <%= form_tag buy_product_path(@product) do %>
+          Quantity: <%= select_tag :quantity, options_for_select(1..5), :class => 'form-control' %>
+          <%= submit_tag 'Match', :class => 'btn btn-primary' %>
+        <% end %>
       </div>
     </div>
   </div>

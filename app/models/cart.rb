@@ -5,10 +5,10 @@ class Cart < ActiveRecord::Base
     line_items.map(&:amount).sum
   end
 
-  def add_line_item(product)
+  def add_line_item(product, increment = 1)
     line_item = line_items.find_by(:product_id => product.id)
     if line_item
-      line_item.increment!(:quantity)
+      line_item.increment!(:quantity, increment)
     else
       line_items.create!(:product => product, :quantity => 1)
     end

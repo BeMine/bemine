@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      flash[:notice] = "新增成功"
+      flash[:notice] = '新增成功'
       redirect_to products_path
     else
       render :new
@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      flash[:notice] = "編輯成功"
+      flash[:notice] = '編輯成功'
       redirect_to products_path
     else
       render :edit
@@ -39,34 +39,34 @@ class ProductsController < ApplicationController
   def destroy
     @product.delete
 
-    flash[:alert] = "刪除成功"
+    flash[:alert] = '刪除成功'
 
     redirect_to products_path
   end
 
   def buy
     # Add to cart
-    current_cart.add_line_item(@product)
+    current_cart.add_line_item(@product, params[:quantity].to_i)
 
     respond_to do |format|
-      format.html {
-        flash[:notice] = "加入成功"
+      format.html do
+        flash[:notice] = '加入成功'
         redirect_to :back
-      }
+      end
       format.js
     end
   end
 
   def cancel
-    line_item = current_cart.line_items.find_by( :product_id => @product.id )
+    line_item = current_cart.line_items.find_by(:product_id => @product.id)
     line_item.destroy
 
     respond_to do |format|
-      format.html {
-        flash[:notice] = "移除成功"
+      format.html do
+        flash[:notice] = '移除成功'
         redirect_to :back
-      }
-      format.js { render "buy" }
+      end
+      format.js { render :buy }
     end
   end
 
