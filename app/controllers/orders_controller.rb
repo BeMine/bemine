@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @orders = current_user.orders
+    @orders = current_user.orders.includes(line_item: :product)
   end
 
   def new
@@ -12,13 +12,12 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
-    @order.user = current_user
+    @order = current_user.orders.build(order_params)
     @order.amount = current_cart.line_item.amount
+    @order.line_item = current_cart.line_item
 
     if @order.save
       session[:cart_id] = nil
-      current_cart.line_item.update(order_id: @order.id)
 
       User.all.each do |u|
         if u != current_user

@@ -49,11 +49,9 @@ class ProductsController < ApplicationController
 
     # Update line item in cart
     if current_cart.line_item
-      current_cart.line_item.update(product: @product, quantity: quantity)
+      current_cart.line_item.update!(product: @product, quantity: quantity)
     else
-      line = LineItem.new(cart: current_cart, product: @product, quantity: quantity)
-      line.save
-      current_cart.line_item = line
+      current_cart.create_line_item!(cart: current_cart, product: @product, quantity: quantity)
     end
 
     respond_to do |format|
