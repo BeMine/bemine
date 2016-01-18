@@ -1,15 +1,11 @@
 namespace :dev do
+  task rebuild: :environment do
+    Rake::Task['db:reset'].invoke
+    Rake::Task['dev:fake'].invoke
+  end
+
   task fake: :environment do
-    puts 'Nuking the db...'
-
-    User.delete_all
-    Product.delete_all
-    Order.delete_all
-    LineItem.delete_all
-
-    puts 'Nuking uploaded images in public/system/products...'
-
-    rm_rf 'public/system/products'
+    Rake::Task['dev:clean'].invoke
 
     puts 'Generating users...'
 
@@ -35,6 +31,20 @@ namespace :dev do
         category.products.create!(name: Faker::Commerce.product_name, picture: file, price: Faker::Number.between(1, 99999))
       end
     end
+  end
+
+  task clean: :environment do
+    puts 'Cleaning the db...'
+
+    User.delete_all
+    Product.delete_all
+    Cart.delete_all
+    Order.delete_all
+    LineItem.delete_all
+
+    puts 'Cleaning uploaded images in public/system/products...'
+
+    rm_rf 'public/system/products'
   end
 
   task nuke_images: :environment do
