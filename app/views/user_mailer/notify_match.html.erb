@@ -4,15 +4,16 @@
  
 </head>
 <body>
-
-
-<%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
-
-<section id="cta" class="padding-top-bottom color-bg light-typo">
+  <img src="http://insight.japantoday.com/wp-content/uploads/2015/08/Japan-Landing_banner_3.jpg.1600x565_q85.jpg" alt="...">
+  
+  <section id="cta" class="padding-top-bottom color-bg light-typo">
+      <div class = "tiitle text-center " ><h1>Dear. <%=@user.email%> </h1><font size="8">YOU got an order Request</font></div>
+      <div class = "countryflag"><img src="http://img06.deviantart.net/c7bb/i/2009/038/2/3/japan_grunge_flag_by_think0.jpg" alt="..."></div>
       <div class="container">
+       
         <div class="row text-center">
           <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-            <i class="fa fa-reddit-alien fa-5x "></i>
+            <i class="fa fa-reddit-alien fa-5x "><p><%= image_tag( @product.picture.url )%></p></i>
             <h3>Quality guaranteed</h3>
           </div>
           <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.4s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
@@ -24,19 +25,42 @@
             <h3>Secure payment</h3>
           </div>
         </div>
+       
+      </div>
+
+</section>
+
+<%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
+
+<section id="cta" class="padding-top-bottom color-bg light-typo">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <i class="fa fa-reddit-alien fa-5x "><p><%=link_to image_tag("accept.png"), accept_order_url(@order, :token => @token)%></p></a></i>
+            <h3>Accept Request</h3>
+          </div>
+          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.4s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+            <i class="fa fa-truck icons fa-5x "><a href ="#"><p><%= image_tag("reject.png")%></p></p></i>
+            <h3>Reject Request</h3>
+          </div>
+          <div class="col-md-4 col-sm-4 wow fadeInUp animated" data-wow-delay="0.6s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+            <i class="fa fa-btc  fa-5x"><p><%=link_to image_tag("stop.png"), accept_order_url(@order)%></p></i>
+            <h3>Stop Being Shopper</h3>
+          </div>
+        </div>
       </div>
 </section> 
 
-<div class = "testt">123</div>
-
-<h1>Dear. <%=@user.email%> </h1>
+<h8><%= @token %></h8>
 
 
 
 
-<p>
-  <%= image_tag( @product.picture.url )%>
-</p>
+
+
+
+
+
 
 
 </body>

@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
     :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :orders
+  has_many :fulfill_requests
 
   def display_name
     name || email

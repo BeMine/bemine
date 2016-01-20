@@ -7,12 +7,24 @@ class UserMailer < ApplicationMailer
   #
    default :from => "http://localhost:3000/"
 
-    def notify_match(user, product)
+    def notify_match(user, order, product, token)
         @product = product
-
+        @order = order
         @user = user
+        @token = token
         mail(:to => user.email, :subject => "New Order Request")
     end
+
+    def notify_matchsuccess(user, product, order)
+        @order = order
+        @product = product
+        @user = user
+        
+
+        mail(:to => order.user.email, :subject => "confirm request")
+
+
+    end   
 end
 
 

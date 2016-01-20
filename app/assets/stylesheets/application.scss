@@ -13,7 +13,7 @@
 }
 
 h1 {
-  font-family: 'Satisfy', cursive;
+  font-family: 'Cinzel', serif;
   margin-bottom: 0px;
   margin-top: 0px;
   color: white;
@@ -234,6 +234,7 @@ li {
   z-index: 2000;
   width: 100%;
   height: 90px;
+  
 }
 
 .light-typo {
@@ -258,19 +259,42 @@ li {
 }
 
 .testt {
-  
-  border: 2px solid;
+  margin-top:10px ;
+  border: 0px solid;
   color: red;
 }
 
 .tiitle {
-  margin-top: 0px ;
-  border: 2px solid;
-  text-sixe: 50px;
+  margin-bottom: 30px ;
+  border: 0px solid;
+  font-size: 30px;
+  background: #404549;
+
+
+  
 }
 
 .container {
-  
-  border:2px solid;
+  margin-top: 0px;
+  border:0px solid;
 }
+
+.light-typo {
+  
+  border: 0px solid;
+}
+
+.countryflag {
+  width:400px;
+  height:300px;
+  margin:0px auto;
+  margin-top:5px;
+  border:0px solid;
+}
+#cta {
+  
+  border:0px solid;
+
+}
+
 

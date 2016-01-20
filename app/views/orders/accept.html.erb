@@ -1,0 +1,12 @@
+
+
+
+<% if @order.fulfiller_id %>
+
+<h7>go fuck urself</h7>
+
+<% else %>
+<%=link_to "order confirm", orderconfirm_order_path(@order,:fulfill_request => @fulfill_request), :class =>"btn btn-info"%>
+
+
+<% end %>
