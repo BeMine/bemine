@@ -1,8 +1,10 @@
 class Order < ActiveRecord::Base
   validates_presence_of :name, :amount
-
+  
   belongs_to :user
   has_one :line_item
+  has_many :fulfill_requests
+
 
   def add_line_items(cart)
     cart.line_items.each do |line|
@@ -11,4 +13,8 @@ class Order < ActiveRecord::Base
 
     self.amount = cart.amount
   end
+
+  def accepted?
+    !fulfiller_id.nil?
+  end 
 end

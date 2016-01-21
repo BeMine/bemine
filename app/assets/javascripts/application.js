@@ -33,3 +33,14 @@ $(function() {
         });
     });
 });
+
+$(function(){
+  $('.btn.btn-signup').on('mouseover', function(){
+	  $('.btn.btn-signup').css({'color': 'black','border-color': '#fec503', 'background-color': '#fec503', });
+	})
+  .on('mouseout', function(){
+	  $('.btn.btn-signup').css({'color': '#fec503', 'background-color': 'transparent'});
+	})
+});
+
+

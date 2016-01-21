@@ -1,5 +1,21 @@
+<script>
+
+$(function () {
+$(".carousel").carousel({
+interval:7;      //设置轮播切换速度
+keyboard:false,   //设置是否启用鼠标控制图片轮播切换
+pause:"hover",   //鼠标进入时暂停轮播循环，鼠标离开时恢复轮播循环。
+wrap:true      //设置是否循环播放
+});
+        });
+
+</script>
+
 <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -12,31 +28,31 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="https://jessicafaulkner.com/wp-content/uploads/2015/07/HAPPENING_IN_LOS_ANGELES_JESSICA_FAULKNER_72715_2.jpg" alt="...">
+      <img src="http://www.kippreport.com/wp-content/uploads/bigstock-Dubai-Marina-New-Dubai-62452307.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="http://3mkfmvpr88h3off9du3hk812.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/Dollarphotoclub_73314409-1600x600_c.jpg" alt="...">
+      <img src="http://www.wallackmanagement.com/SlideImg/show6.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="https://www.qvestmedia.com/fileadmin/_processed_/csm_qm-location-singapore-tphd_97f60e792d.jpg" alt="...">
+      <img src="http://www.cosmorama.gr/media/Mediafiles/11655.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="https://www.strath.ac.uk/media/1newwebsite/images-general/internationalstudentssection/countrypages/italy-1600x600.jpg" alt="...">
+      <img src="http://2.bp.blogspot.com/-cI1ImXbH2Ew/VBUEe0cxo-I/AAAAAAAAClU/xiZhHkzdSNc/s1600/IMG_8435_1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="http://korenbrothers.com/wp-content/uploads/2014/10/KB00001075301.jpg" alt="...">
+      <img src="http://www.30xthirty.com/wp-content/uploads/2015/11/paris.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
@@ -52,10 +68,22 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<div id="top" class = "topwords" ><img src = "http://www.churchhousecollection.com/resources/123%20clip%20art.jpg" alt="..."></div>
-<% @categories.each do |c|%>
-  <%=link_to image_tag(c.picture.url), c%>
-<% end %>
+
+
+<div id="top" class = "topwords" >We get you what YOU NEED ABORDING</div>
+
+<div id = "catee">
+ <div id ="cateename">
+  <h4>CATEGORIES</h4>
+ </div>
+  <% @categories.each do |c|%>
+   <%=link_to image_tag(c.picture.url), c%>
+  <% end %>
+ 
+</div>
+
+
+
 <%= link_to "New Category", new_category_path, :class => "btn btn-info"%>
 <section id="cta" class="padding-top-bottom color-bg light-typo">
   <div class="container">
@@ -75,6 +103,70 @@
     </div>
   </div>
 </section>
+<section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style = "color: white">BeMine海外代購媒合服務</h2>
+                    
+                    
+                </div>
+            </div>
+            <script type="text/javascript">var submitted=false;</script>
+                    <iframe id="hidden_iframe" name="hidden_iframe" style="display: none;" onload="if(submitted) {window.location='http://www.bemine.site/thankyou.html';}">
+                    </iframe>
+                <form action="http://www.newsleopard.com/mailverify.htm?x=0000000051bdb3cc0151bea5514a1266" target="hidden_iframe" method="post" onsubmit="submitted=true;" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;max-width: 500px;margin: 10px auto;padding: 12px 20px;;border-radius: 8px;">
+                    
+                    <fieldset>
+                        <div class="col-lg-12 text-center">
+                        <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 25px; color:#FED136;font-size: 25px;">
+                            訂閱BeMine人氣商品電子報！
+                        </label>
+                        </div>
+                        <input required="" placeholder="留下e-mail吧！" type="email" id="mail" name="email" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;color: #000000;font: inherit; text-indent:5px;;line-height: normal;background: #FFFFFF;font-size: 16px;height: auto;outline: 0;padding: 8px;width: 100%;background-color: #FFFFFF;box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;margin-bottom: 30px; display:block; ">
+                        <div class="col-lg-12 text-center">
+                        <button class="signupButton wow tada btn btn-xl" type="submit">
+                            立即訂閱！
+                        </button>
+                        </div> 
+                        
+                    </fieldset>
+                </form>
+             <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+    </div></section>
 <div class="footer">
   <div class="bg-lt-grey">
     <div class="container">
