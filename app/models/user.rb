@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :orders
   has_many :fulfill_requests
 
+  store :payment_info, accessors: [:bt_customer_id]
+
   def display_name
     name || email
   end
