@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :new_product, only: [:index, :new]
+  before_action :new_product, only: [:new]
   before_action :find_product, only: [:show, :edit, :update, :destroy, :buy, :cancel, :match]
 
   def index

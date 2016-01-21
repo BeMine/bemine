@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def cart
+  def get_cart
     cart = Cart.find_by(id: session[:cart_id]) if session[:cart_id]
 
     if cart.nil?
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_cart
-    @current_cart = cart unless @current_cart
+    @current_cart = get_cart unless @current_cart
 
     return @current_cart
   end

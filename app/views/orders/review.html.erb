@@ -1,0 +1,25 @@
+<h1>Review Order</h1>
+<h3>Order Detail</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <td>Order Number</td>
+      <td>Product</td>
+      <td>Quantity</td>
+      <td>Total</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @order.id %></td>
+      <td><%= @order.line_item.product.name %></td>
+      <td><%= @order.line_item.quantity %></td>
+      <td><%= number_to_currency(@order.amount, precision: 0) %></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Payment Detail</h3>
+<p><%= image_tag @payment_method.image_url %> •••• •••• •••• <%= @payment_method.last_4 %></p>
+<%= link_to 'Change payment', add_payment_order_path(@order) %>
+<h3>Shipping Detail</h3>
+<%= link_to 'Confirm Order', confirm_order_path(@order), method: :post, class: 'btn btn-primary' %>

@@ -5,6 +5,8 @@ class Order < ActiveRecord::Base
   belongs_to :user
   has_one :line_item
 
+  store :transaction_info, accessors: [:bt_payment_method_nonce, :bt_payment_method_token, :bt_transaction_id]
+
   def add_line_items(cart)
     cart.line_items.each do |line|
       line_items.build(product: line.product, quantity: line.quantity )

@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   has_many :orders
 
+  store :payment_info, accessors: [:bt_customer_id]
+
   def display_name
     name || email
   end

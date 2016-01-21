@@ -12,7 +12,17 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :orders
+  resources :orders do
+    member do
+      get 'add_payment'
+      post 'save_payment'
+      get 'add_address'
+      post 'save_address'
+      get 'review'
+      post 'confirm'
+      get 'thankyou'
+    end
+  end
 
   Bemine::Application.routes.draw do
     mount LetterOpenerWeb::Engine, at: '/letter_opener'
