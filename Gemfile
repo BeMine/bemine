@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~>3.3.4'
 gem 'braintree'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'country_select'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
@@ -24,6 +25,7 @@ gem 'rails', '4.2.5'
 gem 'rails-i18n'
 gem 'sass-rails', '~> 5.0'
 gem 'select2-rails'
+gem 'simple_form'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
@@ -37,6 +39,7 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do
@@ -45,17 +48,9 @@ group :development do
   gem 'binding_of_caller'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
+  gem 'meta_request'
   gem 'quiet_assets'
   gem 'spring'
   gem 'web-console'
   gem 'xray-rails'
 end
-
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
