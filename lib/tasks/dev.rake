@@ -1,6 +1,7 @@
 namespace :dev do
   task rebuild: :environment do
-    Rake::Task['db:reset'].invoke
+    Rake::Task['db:migrate:reset'].invoke
+    Rake::Task['db:seed'].invoke
     Rake::Task['dev:fake'].invoke
   end
 
