@@ -31,7 +31,13 @@ namespace :dev do
 
     Category.all.each do |category|
       rand(1..20).times do
-        category.products.create!(name: Faker::Commerce.product_name, picture: file, price: Faker::Number.between(1, 99999))
+        category.products.create!(
+          name: Faker::Commerce.product_name,
+          description: Faker::Hipster.sentences(3),
+          price: Faker::Number.between(1, 99999),
+          picture: file,
+          location: Faker::Address.country
+        )
       end
     end
   end
