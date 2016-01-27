@@ -1,19 +1,34 @@
-<h1>新訂單</h1>
-<%= form_for @order do |f| %>
-  <%= render 'products/cart' %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :email %>
-    <%= f.text_field :email, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_field :address, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.submit '成立訂單', class: 'btn btn-primary', data: { disable: true } %>
-  </div>
+<h1>Review Order</h1>
+<h3>Order Detail</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <td>Product</td>
+      <td>Quantity</td>
+      <td>Total</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @order.line_item.product.name %></td>
+      <td><%= @order.line_item.quantity %></td>
+      <td><%= number_to_currency(@order.amount, precision: 0) %></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Payment Detail</h3>
+<p><%= image_tag @payment_method.image_url %> •••• •••• •••• <%= @payment_method.last_4 %></p>
+<%= link_to 'Change payment', show_payment_cart_path(@cart), data: { no_turbolink: true } %>
+<h3>Shipping Detail</h3>
+<p><%= @order.name %></p>
+<p>
+  <%= @order.shipping_address.postcode %>
+  <%= @order.shipping_address.region %>
+  <%= @order.shipping_address.locality %>
+  <%= @order.shipping_address.address1 %>
+</p>
+<p><%= ISO3166::Country.find_country_by_alpha2(@order.shipping_address.country).name %></p>
+<%= link_to 'Change address', show_address_cart_path(@cart) %>
+<%= simple_form_for @order do |f| %>
+  <%= f.button :submit, '下單', class: 'btn btn-primary' %>
 <% end %>

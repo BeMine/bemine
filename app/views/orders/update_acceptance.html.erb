@@ -1,0 +1,7 @@
+<% if @order.fulfiller_id == @fulfill_request.user_id %>
+  <h6>CONGRATS FOR GETTING ORDER</h6>
+  You got the order, ship to ....
+  <% else %>
+  Order already taken
+  <img src = "http://www.indianaffiliateprograms.com/wp-content/uploads/2015/05/we-are-sorry.jpg">
+<% end %>

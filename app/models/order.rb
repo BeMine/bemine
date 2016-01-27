@@ -4,25 +4,27 @@ class Order < ActiveRecord::Base
 
   belongs_to :user
   has_one :line_item
+  has_one :shipping_address, class_name: 'Address', as: :addressable
   has_many :fulfill_requests
 
-  store :transaction_info, accessors: [:bt_payment_method_nonce, :bt_payment_method_token, :bt_transaction_id]
+  accepts_nested_attributes_for :shipping_address, allow_destroy: true, reject_if: :all_blank
 
-  def add_line_items(cart)
-    cart.line_items.each do |line|
-      line_items.build(product: line.product, quantity: line.quantity )
-    end
-
-    self.amount = cart.amount
-  end
+  store :transaction_info, accessors: [:bt_transaction_id]
 
   def accepted?
     !fulfiller_id.nil?
   end
 
   def has_line_item
-    if line_item.nil?
-      errors.add(:order, 'has no line_item')
-    end
+    errors.add(:order, 'has no line_item') if line_item.nil?
+  end
+
+  def self.build_from_cart(cart, user)
+    order = user.orders.new
+    order.name = cart.name
+    order.build_shipping_address(cart.shipping_address.attributes.merge(id: nil))
+    cart.line_item.order = order
+    order.amount = cart.amount
+    order
   end
 end

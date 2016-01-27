@@ -13,7 +13,9 @@ namespace :dev do
     users = []
     password = 'password'
 
-    users << User.create!(email: 'user@email.com', name: 'Test User', password: password)
+    user = User.create!(email: 'user@email.com', name: 'Test User', password: password)
+    user.create_address(address1: '南京東路二段97號', locality: '中山區', region: '台北市', postcode: '104', country: 'TW')
+    users << user
 
     2.times do
       users << User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: password)

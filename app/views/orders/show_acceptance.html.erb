@@ -1,0 +1,10 @@
+<% if @order.accepted? %>
+  <% if @order.fulfiller_id == @fulfill_request.user_id %>
+    <h6>CONGRATS FOR GETTING ORDER</h6>
+    You got the order, ship to ....
+  <% else %>
+    <h7>Order already taken</h7>
+  <% end %>
+<% else %>
+  <%= link_to "Accept Order", update_acceptance_order_path(@order, :fulfill_request_id => @fulfill_request.id), :class =>"btn btn-info" %>
+<% end %>

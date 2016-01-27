@@ -1,0 +1,13 @@
+<h1>寄件資訊</h1>
+<%= simple_form_for @cart, url: update_address_cart_path(@cart), method: :post do |f| %>
+  <%= f.input :name %>
+  <%= f.simple_fields_for :shipping_address do |a| %>
+    <%= a.input :address1, label: '地址' %>
+    <%= a.input :address2, label: '地址（第二行）', required: false %>
+    <%= a.input :locality, label: '鄉鎮市區' %>
+    <%= a.input :region, label: '縣市' %>
+    <%= a.input :country, label: '國家', priority: [ 'Taiwan' ] %>
+    <%= a.input :postcode, label: '郵遞區號', required: false %>
+  <% end %>
+  <%= f.button :submit, '繼續', class: 'btn btn-primary' %>
+<% end %>
