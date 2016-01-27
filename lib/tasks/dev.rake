@@ -1,5 +1,6 @@
 namespace :dev do
   task rebuild: :environment do
+    Rake::Task['dev:nuke_images'].invoke
     Rake::Task['db:migrate:reset'].invoke
     Rake::Task['db:seed'].invoke
     Rake::Task['dev:fake'].invoke
@@ -46,14 +47,18 @@ namespace :dev do
     puts 'Cleaning the db...'
 
     User.delete_all
+    Address.delete_all
     Product.delete_all
     Cart.delete_all
     Order.delete_all
     LineItem.delete_all
+    FulfillRequest.delete_all
 
-    puts 'Cleaning uploaded images in public/system/products...'
-
+    puts 'Cleaning product images...'
     rm_rf 'public/system/products'
+
+    puts 'Cleaning emails in letter_opener...'
+    rm_rf 'tmp/letter_opener'
   end
 
   task nuke_images: :environment do
