@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      UserMailer.notify_product(current_user, @product).deliver_later!
+      
 
       flash[:notice] = '編輯成功'
       redirect_to products_path

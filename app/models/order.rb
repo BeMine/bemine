@@ -5,6 +5,7 @@ class Order < ActiveRecord::Base
   belongs_to :user
   has_one :line_item
   has_many :fulfill_requests
+  
 
   store :transaction_info, accessors: [:bt_payment_method_nonce, :bt_payment_method_token, :bt_transaction_id]
 

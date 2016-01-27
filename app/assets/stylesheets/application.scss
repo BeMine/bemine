@@ -10,6 +10,13 @@
 @import "font-awesome";
 .logo-place {
   border: 0px solid;
+  height:80px;
+}
+
+.beminelogo {
+  margin-top: 0px;
+  border:0px solid;
+  height: 80px;
 }
 
 h1 {
@@ -22,6 +29,8 @@ h1 {
 .layoutcate {
   border: 0px solid;
   line-height: 20px;
+
+
 }
 
 .deistrict {
@@ -42,12 +51,12 @@ h1 {
 .firstcontainer {
   border: 0px solid;
   height: 60px;
-  padding-top: 10px;
-  padding-left: 80px;
+  
 }
 
 .cate {
   border: 0px solid;
+
 }
 
 .secondbar {
@@ -64,29 +73,36 @@ h1 {
 }
 
 .bbcontainer {
-  background-color: #f7f8f8;
+  background-color: white;
+  border: 0px solid;
+  width:100%;
+  margin-top : 116px;
+  position:absolute;
+  height: 900px;
 }
 
 .probar {
   font-size: 30px;
   margin: 0px auto;
-  width: 1200px;
+  width: 1240px;
   text-align: center;
   color: #30302f;
   border-bottom: 2px solid #30302f;
   padding: 20px;
+  margin-top: 80px;
 }
 
 .proname {
-  padding: 10px;
-  height: 35px;
+  line-height: normal;
+  height: 60px;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   border: 0px solid;
+  
 }
 
 .layoutcate li {
-  font-family: 'Lora', serif;
+ 
   padding: 5px 50px;
   color: white;
   display: inline-block;
@@ -117,40 +133,47 @@ li {
 }
 
 .box {
-  background: white;
+  
+  background-color: transparent;
   border: 0px solid;
+  margin-left:20px;
+  margin-top : 20px;
+
 }
 
 .detailpics {
   float: left;
-  margin-left: 30px;
-  margin-top: 5px;
+  margin-left: 0px;
+  margin-top: 30px;
   border: 0px solid;
 }
 
 .matchcontainer {
-  background-color: #f7f8f9;
+  position:absolute;
+  text-align: center;
+  background-color: white;
   width: 100%;
   height: 850px;
   margin: 0 auto;
+  margin-top: 90px;
   border: 0px solid;
+  border-color: blue;
   margin-left: 0px;
 }
 
 .proshow {
-  float: right;
-  margin-right: 100px;
+  margin: 0px auto;
   width: 1000px;
-  margin-top: 100px;
+  margin-top: 70px;
   overflow: hidden;
   border: 0px solid;
 }
 
 .prodetail {
-  height: 1000px;
-  float: left;
   border: 0px solid;
-  margin-right: 30px;
+  height: 600px;
+  float: left;
+  margin-left: 80px;
 }
 
 .matcharea {
@@ -161,10 +184,11 @@ li {
 #masonry-container {
   border: 0px solid;
   width: 1024px;
+  margin-top:25px;
 }
 
 .showcata {
-  border: 3px solid;
+  border: 0px solid;
   width: 100px;
 }
 
@@ -187,6 +211,7 @@ li {
   height: 150px;
   background-color: transparent;
   z-index: 2;
+  font-weight:300;
 }
 
 .loginsection {
@@ -220,6 +245,7 @@ li {
 }
 
 .btn.btn-signin {
+  font-family: 'cwTeXHei', serif;
   color: white;
 }
 
@@ -237,8 +263,10 @@ li {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 99%);
   z-index: 2000;
   width: 100%;
-  height: 90px;
+  height: 120px;
+  position:fixed;
   
+
 }
 
 .light-typo {
@@ -302,6 +330,7 @@ li {
 section#contact {
     background-color: #222;
     background-image: url(http://ironsummitmedia.github.io/startbootstrap-agency/img/map-image.png);
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -313,21 +342,441 @@ section#contact {
 }
 
 h3 {
-  color: black;
+  border: 0px solid;
+  text-align:center;
+  font-size: 30px;
+  color: #555;
+  letter-spacing: 3px;
+}
+h4 {
+  margin-top:30px;
+  letter-spacing: 2px;
+  color :#555;
 }
 
 #catee {
-margin-top: 30px;
+  background-color: #222;
+  margin-top: 0px;
   border: 0px solid;
+  border-color: red;
   text-align: center;
-
+  height:1100px;
 }
 
 #cateename {
+  font-size: 40px;
+  color: white;
+  padding-top: 100px;
+  letter-spacing: 5px;
   margin: 0px auto;
-  height: 40px;
+  font-weight: 100;
   margin-bottom: 10px;
   border: 0px solid;
   width: 900px;
   border-bottom: 2px solid;
+}
+
+.catee {
+  margin-top: 15px;
+  border: 0px solid;
+  text-align: center;
+  border-color: orange;
+  height: 700px;
+  padding: 50px 70px;
+}
+
+#cateepic{
+  border: 0px solid;
+  border-color: blue;
+  margin-top: 20px;
+}
+
+.btn.btn-regisubmit {
+  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  color: black;
+  border-color: #fec503;
+  border: 0px solid;
+  background-color: #fff300;
+  border-radius: 2px;
+  font-size: 18px;
+  margin-top: 30px;
+  min-width: 0;
+  padding: 10px 50px;
+  width: 240px;
+
+}
+
+.signup {
+  box-shadow: 0px 0px 9px rgba(0,0,0,.2);
+  border:0px solid;
+  width: 500px;
+  margin:0px auto;
+  height: 500px;
+}
+.signupcontainer {
+  border: 0px solid;
+  width:100%;
+  margin-top : 130px;
+  position:absolute;
+  height: 300px;
+
+  
+}
+
+.btn.btn-facebooksignin {
+  box-shadow: rgba(0,0,0,.2) 0 2px 10px 0;
+  color: white;
+  border-color: #3b5998;;
+  border: 0px solid;
+  background-color: #3b5998;
+  border-radius: 2px;
+  font-size: 18px;
+  margin-top:15px;
+  min-width: 0;
+  padding: 10px 50px;
+  width: 300px;
+}
+.regifield {
+  width: 240px;
+}
+.renderlinks {
+  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  background-color: #f3f3f3;
+  border: 0px solid;
+  margin-top: 0px; 
+}
+.btn.btn-regisignin {
+  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  color: black;
+  border-color: #fec503;
+  border: 0px solid;
+  background-color: #fff300;
+  border-radius: 2px;
+  font-size: 18px;
+  margin-top: 30px;
+  min-width: 0;
+  padding: 10px 50px;
+  width: 240px;
+}
+.rdysignup {
+
+  border:0px solid;
+  padding-top:10px;
+  margin-top:25px;
+  text-align:center;
+}
+.productsshow {
+  position:absolute;
+  margin-top: 0px;
+  border:0px solid;
+}
+.generic-block-wrapper.generic-block--tall {
+  background-image:url('http://i.imgur.com/rjWbK.jpg');
+  min-height: 750px;
+  border: 0px solid;
+}
+.generic-block-wrapper.parallax {
+    background-attachment: fixed;
+}
+.generic-block-wrapper {
+    padding: 0px 0;
+    position: relative;
+}
+.block {
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.block--center {
+    
+}
+
+.btn.btn-middlebottom {
+  color: white;
+  border-color: #fec503;
+  
+  background-color: #fec503;
+  border-radius: 2px;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 150px ;
+  margin-top:250px;
+  width: 350px;
+  padding: 10px 50px;
+  letter-spacing: 2px;
+  
+}
+.seperate {
+  margin-top: 100px;
+  height: 350px;
+  margin-bottom: 30px;
+  border:0px solid;
+}  
+
+.middlewords {
+  color: white;
+  border:0px solid;
+  font-size: 60px;
+  top: 60px;
+  left: 0px;
+  height: 250px;
+  width: 450px;
+  margin-left:150px;
+  background-color: transparent;
+  font-weight: 100;
+}
+.middledownwords {
+  color: white;
+  border:0px solid;
+  font-size: 20px;
+  margin-left:150px;
+  margin-bottom: 120px;
+  
+  width: 750px;
+  background-color: transparent;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.coreservice {
+  
+  margin:0px auto;
+  border: 0px solid;
+  width: 1200px;
+  background-color: whire;
+  height: 830px;
+  
+}
+.coreservicetitle {
+  color:#555;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  border: 0px solid;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 100;
+  margin-top:90px;
+}
+
+#coreservicesection {
+  text-align:center;
+}
+.coreservicecontainer {
+  
+  margin-top: 25px;
+}
+
+.coreservicesection2 {
+  
+  margin-top: 100px;
+}
+.carousel.slide {
+  height: 835px;
+}
+
+p {
+  margin-top: 8px;
+  margin-left: 30px;
+}
+
+#purchasesection {
+  margin-top: 50px;
+}
+
+.btn.btn-match  {
+  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  color: #30302f;
+  background-color: #fec503;
+  border-radius: 2px;
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 50px;
+  min-width: 0;
+  padding: 10px 100px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.buyerdetail {
+  width: 100%;
+  background-color: #f7f8f8;
+  border: 0px solid;
+  margin: 0px auto;
+  margin-top :110px;
+  position: absolute;
+  min-height: 650px;
+}
+.buyerdetails {
+  margin-top: 60px;
+  width: 380px;
+  border: 0px solid;
+  margin-left: 80px;
+}
+.cartdetail{
+  font-size: 25px;
+}
+.cartprice {
+  color : red;
+}
+.addpayment {
+  text-align: center;
+  width : 100%;
+  height : 600px;
+  border: 0px solid;
+  margin-top : 118px;
+  position: absolute;
+}
+.cardconfirm {
+  border: 0px solid;
+  margin: 0px auto;
+  height: 400px;
+  width: 700px;
+  margin-top: 70px;
+}
+.paymentconfirm { 
+  border: 2px solid;
+  width: 100% ;
+  margin-top : 150px;
+  position: absolute;
+}
+.paymentimage {
+  border: 2px solid;
+  width:96px;
+  height:24px;
+}
+#paymentdetails {
+  border: 0px solid;
+  margin-top: 20px;
+}
+.thankyouaftermatch {
+  position: absolute;
+  margin-top : 150px;
+  width: 100% ; 
+}
+.setcart {
+  box-shadow: 0 2px 10px -2px rgba(0,0,0,.15);
+  margin-left: 90px;
+  margin-top: 60px;
+  border:0px solid;
+  height: 500px;
+}
+.buyerarea {
+  height: 750px;
+  background-color: #fff;
+  width: 1200px;
+  margin: 0px auto;
+  box-shadow: 0 2px 10px -2px rgba(0,0,0,.15);
+}
+.btn.btn-buyer {
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 4px;
+  padding: 10px 50px;
+  width: 340px;
+  letter-spacing: 2px;
+}
+.calmdown {
+  padding: 15px;
+  color: #636363;
+  background: #ffefd5;
+  margin-top : 50px;
+  text-align: center;
+  height: 70px;
+  border-color: blue;
+  border: 0px solid;
+  font-size : 30px;
+  letter-spacing: 5px;
+  text-weight: 50;
+}
+.savepayment {
+  border: 0px solid;
+  margin: 20px auto;
+  margin-top : 70px;
+}
+.btn.btn-savepayment {
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  font-size: 18px;
+  padding: 10px 50px;
+  width: 340px;
+  letter-spacing: 2px;
+}
+.addpaymenttitle {
+  border: 0px solid;
+  font-size : 30px;
+  height: 60px;
+}
+#payment-form {
+  border: 0px solid;
+  height: 150px;
+}
+.order-summary {
+  background: #f7f7f7;
+  position:absolute;
+  width: 800px;
+  margin-top: 250px;
+  margin-left: 100px;
+  border: 0px solid;
+}
+.dotted-list { 
+  margin: 0px auto;
+  border: 0px solid ;
+  border-color:blue;
+  height: 400px;
+  width: 500px;
+  }
+.dotted-list dt:after {
+    content: "..................................................................................................................................................................................................................";
+    display: inline-block;
+    width: 0;
+    color: #313132;
+    font-size: .7857142857rem;
+    letter-spacing: 1.5px;
+}
+
+.dotted-list dt {
+    display: table-cell;
+    width: 100%;
+    max-width: 0;
+    overflow: hidden;
+    vertical-align: top;
+}
+.dotted-list dd {
+    display: table-cell;
+    margin: 0;
+    padding-left: 4px;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+.dotted-list span {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+.thankyouimg {
+  height:600px;
+  position:absolute;
+  margin-top: 350px;
+  margin-left:800px;
+}
+.heading {
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-size: 20px;
+  text-align: center;
+}
+.btn.btn-continuebutton {
+  color: white;
+  background-color: #67c39f;
+  border-color: #67c39f;
+  border-radius: 2px;
+  font-size: 18px;
+  padding: 10px 50px;
+  width: 340px;
+  letter-spacing: 2px;
 }
