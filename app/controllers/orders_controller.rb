@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_order, only: [:add_payment, :save_payment, :review, :confirm]
+  before_action :find_order, only: [:add_payment, :save_payment, :review, :confirm, :thankyou]
 
   def index
     @orders = current_user.orders.includes(line_item: :product)
@@ -10,6 +10,8 @@ class OrdersController < ApplicationController
     @order = Order.new
     @order.name = current_user.name
     @order.email = current_user.email
+    
+
   end
 
   def create
@@ -96,6 +98,7 @@ class OrdersController < ApplicationController
   end
 
   def thankyou
+
   end
 
   def accept

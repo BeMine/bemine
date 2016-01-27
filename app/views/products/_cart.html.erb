@@ -1,9 +1,11 @@
-<h2>Cart</h2>
-<% if line = current_cart.line_item %>
-  <ul>
-    <li>
-      <%= line.product.name %> x <%= line.quantity %> = NTD <%= number_to_currency(line.amount, precision: 0) %>
-      <%= link_to "[x]", cancel_product_path(line.product), :method => :post %>
-    </li>
-  </ul>
-<% end %>
+<div class="cart">
+ <h2>總金額</h2>
+ <% if line = current_cart.line_item %>
+   <ul>
+     <li class= "cartdetail">
+       <%= line.product.name %> x <%= line.quantity %> = <span class ="cartprice"><%= number_to_currency(line.amount, precision: 0) %></span>
+       <%= link_to "[x]", cancel_product_path(line.product), :method => :post %>
+     </li>
+   </ul>
+ <% end %>
+</div>

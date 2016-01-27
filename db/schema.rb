@@ -55,12 +55,12 @@ ActiveRecord::Schema.define(version: 20160115085557) do
   add_index "fulfill_requests", ["user_id"], name: "index_fulfill_requests_on_user_id", using: :btree
 
   create_table "line_items", force: :cascade do |t|
+    t.integer  "cart_id"
+    t.integer  "order_id"
     t.integer  "product_id", null: false
     t.integer  "quantity",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "cart_id"
-    t.integer  "order_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -74,9 +74,9 @@ ActiveRecord::Schema.define(version: 20160115085557) do
     t.string   "shipping_status"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "fulfiller_id"
     t.string   "payment_info"
     t.string   "transaction_info"
-    t.integer  "fulfiller_id"
   end
 
   add_index "orders", ["fulfiller_id"], name: "index_orders_on_fulfiller_id", using: :btree

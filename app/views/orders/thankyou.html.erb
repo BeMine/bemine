@@ -1,2 +1,72 @@
-<h1>Thank you for your order</h1>
-<%= link_to 'Continue shopping', root_path %>
+<div class = "thankyoupage">
+ <div class = "thankyouaftermatch">
+  <h5>Thank you for your order</h5>
+  <h5> hi xx 您好  謝謝您使用xx商品的媒合服務,我們將在24小時內Email通知您媒合結果,在此期間我們不會收取您任何費用,請放心</h5>
+
+  <div class = "continuebutton"><%= link_to 'Continue shopping', root_path, :class => "btn btn-continuebutton" %></div>
+ </div>
+
+
+
+<div class = "order-summary row">
+   
+  <h5 class = "heading">Order Summary</h5>
+  <div class = "dotted-list small-12 columns">
+   <dl>
+    <dt>
+     <span>
+        Subtotal:
+        <pseudo:after></pseudo:after>
+     </span>
+     <pseudo:after></pseudo:after>
+    </dt>
+    <dd><%= number_to_currency(@order.amount, precision: 0) %></dd>
+   </dl> 
+   <dl> 
+    <dt>
+     <span>
+        Shipping:
+        <pseudo:after></pseudo:after>
+     </span>
+     <pseudo:after></pseudo:after>
+    </dt>
+    <dd>FREE</dd>
+    </dl>
+    <dl>
+     <dt>
+      <span>
+         Total:
+         <pseudo:after></pseudo:after>
+      </span>
+      <pseudo:after></pseudo:after>
+     </dt>
+     <dd><%= number_to_currency(@order.amount, precision: 0) %></dd>
+    </dl> 
+    <dl>
+    <dt>
+     <span>
+        Name:
+        <pseudo:after></pseudo:after>
+     </span>
+     <pseudo:after></pseudo:after>
+    </dt>
+    <dd><%= @order.name%></dd>
+   </dl> 
+    <dl>
+     <dt>
+      <span>
+         Diliver Address:
+         <pseudo:after></pseudo:after>
+      </span>
+      <pseudo:after></pseudo:after>
+     </dt>
+     <dd><%= @order.address %></dd>
+    </dl>   
+  </div>  
+</div>
+</div>
+
+<div class = "thankyouimg"><%=image_tag("thankyou.png")%></div>
+
+<%= image_tag(@order.line_item.product.picture.url) %>
+

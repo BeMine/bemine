@@ -69,22 +69,70 @@ wrap:true      //设置是否循环播放
   </a>
 </div>
 
-
 <div id="top" class = "topwords" >We get you what YOU NEED ABORDING</div>
 
-<div id = "catee">
- <div id ="cateename">
-  <h4>CATEGORIES</h4>
- </div>
-  <% @categories.each do |c|%>
-   <%=link_to image_tag(c.picture.url), c%>
-  <% end %>
- 
+<div class ="generic-block-wrapper parallax block block--light-gray block--light block--center block--middle generic-block--tall generic-block--vertical-center  clearfix " style="background-image: url('http://i.imgur.com/rjWbK.jpg');">
+  <div class = "seperate row ">
+   <div id ="middle" class = "middlewords col-xs-7 ">Come get ut fuckin personal shopper</div>
+   <div class = "middlebottom col-xs-5 "><%=link_to "成為代購者", root_path, :class => "btn btn-middlebottom"%></div>
+  </div>
+  <div id ="middledown" class= "middledownwords ">The best way to get whishlist abording is Enjoy BEMINE, Stanley Kuo</div>
 </div>
 
 
 
-<%= link_to "New Category", new_category_path, :class => "btn btn-info"%>
+<div id = "catee">
+ <div id ="cateename">CATEGORIES</div>
+ <div class = "catee centered clearfix">
+    <% @categories.each do |c|%>
+      <div id = "cateepic" class = "box col4">  
+        <%=link_to image_tag(c.picture.url), c%>
+      </div>
+     <% end %>
+ </div> 
+ <%= link_to "New Category", new_category_path, :class => "btn btn-info"%>
+</div>
+
+<div class = "coreservice">
+  <div class = "coreservicetitle">Core Service
+  </div>
+  <div class = "coreservicecontainer">
+   <div class ="coreservicesection1 row" id = "coreservicesection">
+    <div class ="service1 col-md-4 col-sm-4">
+    <i class="fa fa-spinner fa-3x "></i>
+    <h3>自動代購媒合</h3>
+    <h4>找到自己喜歡的商品，線上立即自動幫您配對代購者，保證24小時內通知媒合結果，輕鬆完成交易。</h4>
+    </div>
+    <div class ="service2 col-md-4 col-sm-4">
+    <i class="fa fa-eye fa-3x "></i>
+    <h3>商品經手把關</h3>
+    <h4>所有商品都由經過認證的代購者買回，經BeMine嚴格的商品檢查後，才將最好的商品送到您手中。如仍遇瑕疵或仿造品，BeMine則全權負起退換貨之責任。</h4>
+    </div>
+    <div class ="service3 col-md-4 col-sm-4">
+    <i class="fa fa-times fa-3x "></i>
+    <h3>一律免運費</h3>
+    <h4>我們堅持您看到的價格就是最後的實際價格，不再收取任何額外費用</h4>
+    </div>
+   </div>
+   <div class ="coreservicesection2 row"  id = "coreservicesection">
+    <div class ="service4 col-md-4 col-sm-4">
+    <i class="fa fa-clock-o fa-3x "></i>
+    <h3>24小時回覆結果</h3>
+    </div>
+    <div class ="service5 col-md-4 col-sm-4">
+    <i class="fa fa-truck fa-3x "></i>
+    <h3>負責物流服務</h3>
+    </div>
+    <div class ="service6 col-md-4 col-sm-4">
+    <i class="fa fa-quote-right fa-3x "></i>
+    <h3>專人客服</h3>
+    </div>
+   </div>
+  </div> 
+</div>
+
+
+
 <section id="cta" class="padding-top-bottom color-bg light-typo">
   <div class="container">
     <div class="row text-center">
