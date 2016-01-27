@@ -48,6 +48,7 @@ class ProductsController < ApplicationController
     quantity = params[:quantity].to_i
 
     # Update line item in cart
+    # extract = current_cart.add(product, quantity)
     if current_cart.line_item
       current_cart.line_item.update!(product: @product, quantity: quantity)
     else
@@ -55,10 +56,7 @@ class ProductsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html do
-        flash[:notice] = '加入成功'
-        redirect_to new_order_path
-      end
+      format.html { redirect_to show_address_cart_path(current_cart), notice: '加入成功' }
       format.js
     end
   end
@@ -67,10 +65,7 @@ class ProductsController < ApplicationController
     current_cart.line_item.destroy
 
     respond_to do |format|
-      format.html do
-        flash[:notice] = '移除成功'
-        redirect_to products_path
-      end
+      format.html { redirect_to products_path, notice: '移除成功' }
       format.js { render :buy }
     end
   end
@@ -88,5 +83,4 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :description, :location, :price, :picture, :matcharea)
   end
-
 end

@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, :omniauth_providers => [:facebook]
 
+  has_one :address, as: :addressable
   has_many :orders
   has_many :fulfill_requests
 

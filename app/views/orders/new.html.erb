@@ -1,26 +1,40 @@
-<div class = "buyerdetail">
- <div class = "buyerarea row">
-  <div class = "calmdown"><i class="fa fa-bell-o fa-1x"></i>請放心，商品媒合成功之前，本公司不會收取您任何費用</div>
-  <div class = "setcart col-xs-6"><%= render 'products/cart' %></div>
-  <div class ="buyerdetails col-xs-6">
-  <h5>新媒合訂單</h5>
-  <%= form_for @order do |f| %>
-    <div class="form-group">
-      <%= f.label :name, "Full Name"%>
-      <%= f.text_field :name, class: 'form-control' %>
-    </div>
-    <div class="form-group disabled">
-      <%= f.label :email, "Email Address" %>
-      <%= f.text_field :email, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :address, "送貨地址" %>
-      <%= f.text_field :address, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.submit '成立訂單', class: 'btn btn-buyer', data: { disable: true } %>
-    </div>
-  <% end %>
-  </div> 
- </div>  
+<div class="paymentconfirm">
+  <div class="paymentdetail">
+    <h1>Review Order</h1>
+    <h3>Order Detail</h3>
+    <table class="table" id="paymentdetails">
+      <thead>
+        <tr>
+          <td>Product</td>
+          <td>Quantity</td>
+          <td>Total</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class ="box col2"><%= image_tag(@order.line_item.product.picture.url) %><%= @order.line_item.product.name %></div>
+          </td>
+          <td><%= @order.line_item.quantity %></td>
+          <td><%= number_to_currency(@order.amount, precision: 0) %></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Payment Detail</h3>
+    <p><%= image_tag @payment_method.image_url %> •••• •••• •••• <%= @payment_method.last_4 %></p>
+    <%= link_to 'Change payment', show_payment_cart_path(@cart), data: { no_turbolink: true } %>
+    <h3>Shipping Detail</h3>
+    <p><%= @order.name %></p>
+    <p>
+      <%= @order.shipping_address.postcode %>
+      <%= @order.shipping_address.region %>
+      <%= @order.shipping_address.locality %>
+      <%= @order.shipping_address.address1 %>
+    </p>
+    <p><%= ISO3166::Country.find_country_by_alpha2(@order.shipping_address.country).name %></p>
+    <%= link_to 'Change address', show_address_cart_path(@cart) %>
+    <%= simple_form_for @order do |f| %>
+      <%= f.button :submit, '下單', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
 </div>

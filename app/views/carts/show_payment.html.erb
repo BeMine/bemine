@@ -1,0 +1,20 @@
+<div class = "addpayment">
+  <div class = "cardconfirm">
+    <div class ="addpaymenttitle">Add Payment</div>
+    <%= simple_form_for @cart, url: update_payment_cart_path(@cart), method: :post, html: { id: :show_payment } do |f| %>
+      <div id="payment-form"></div>
+      <div class ="savepayment">
+        <%= f.button :submit, '繼續', class: 'btn btn-savepayment', disabled: true %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= javascript_include_tag 'https://js.braintreegateway.com/v2/braintree.js' %>
+<script>
+  braintree.setup("<%= @bt_client_token %>", "dropin", {
+    container: "payment-form",
+    onReady: function () {
+      $('#show_payment :submit').prop('disabled', false);
+    }
+  });
+</script>

@@ -11,14 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115085557) do
+ActiveRecord::Schema.define(version: 20160125082002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "addresses", force: :cascade do |t|
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "address3"
+    t.string   "locality"
+    t.string   "region"
+    t.string   "postcode"
+    t.string   "country"
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "addresses", ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id", using: :btree
+
   create_table "carts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "name"
+    t.string   "payment_info"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -66,8 +84,6 @@ ActiveRecord::Schema.define(version: 20160115085557) do
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
-    t.string   "email"
-    t.string   "address"
     t.integer  "amount"
     t.string   "status"
     t.string   "payment_status"
@@ -75,7 +91,6 @@ ActiveRecord::Schema.define(version: 20160115085557) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "fulfiller_id"
-    t.string   "payment_info"
     t.string   "transaction_info"
   end
 

@@ -12,17 +12,20 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :carts do
+    member do
+      get  :show_address
+      post :update_address
+      get  :show_payment
+      post :update_payment
+    end
+  end
+
   resources :orders do
     member do
-      get :add_address
-      post :save_address
-      get :add_payment
-      post :save_payment
-      get :review
-      post :confirm
-      get :thankyou
-      get :accept
-      get :orderconfirm
+      get :thank_you
+      get :show_acceptance
+      get :update_acceptance
     end
   end
 
