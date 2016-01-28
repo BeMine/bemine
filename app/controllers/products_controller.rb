@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      
+
 
       flash[:notice] = '編輯成功'
       redirect_to products_path
@@ -65,7 +65,7 @@ class ProductsController < ApplicationController
     current_cart.line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to products_path, notice: '移除成功' }
+      format.html { redirect_to root_path, notice: '移除成功' }
       format.js { render :buy }
     end
   end
