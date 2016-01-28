@@ -14,12 +14,35 @@ namespace :dev do
     users = []
     password = 'password'
 
-    user = User.create!(email: 'user@email.com', name: 'Test User', password: password)
-    user.create_address(address1: '南京東路二段97號', locality: '中山區', region: '台北市', postcode: '104', country: 'TW')
+    user = User.create!(
+      email: 'user@email.com',
+      name: 'Test User', password:
+      password, role: 'admin'
+    )
+    user.create_address(
+      address1: '南京東路二段97號',
+      locality: '中山區',
+      region: '台北市',
+      postcode: '104',
+      country: 'TW'
+    )
     users << user
 
     2.times do
-      users << User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: password)
+      user = User.create!(
+        name: Faker::Name.name,
+        email: Faker::Internet.email,
+        password: password
+      )
+      user.create_address(
+        address1: Faker::Address.street_address,
+        locality: Faker::Address.city,
+        region: Faker::Address.state,
+        postcode: Faker::Address.zip,
+        country: 'TW'
+      )
+      users << user
+
     end
 
     puts 'Generating products...'
