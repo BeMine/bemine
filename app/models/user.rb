@@ -11,6 +11,15 @@ class User < ActiveRecord::Base
 
   store :payment_info, accessors: [:bt_customer_id]
 
+  def self.notify_fulfiller!(order)
+    self.find_each do |user|
+      if user != order.user
+        fulfill_request = user.fulfill_requests.create!(user: user, order: order)
+        UserMailer.notify_match(user, order, fulfill_request).deliver_later!
+      end
+    end
+  end
+
   def display_name
     name || email
   end

@@ -11,36 +11,31 @@
     <div class = "dotted-list small-12 columns">
       <dl>
         <dt>
-          <span>Subtotal:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Subtotal:</span>
         </dt>
         <dd><%= number_to_currency(@order.amount, precision: 0) %></dd>
       </dl>
       <dl>
         <dt>
-          <span>Shipping:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Shipping:</span>
         </dt>
         <dd>FREE</dd>
       </dl>
       <dl>
         <dt>
-          <span>Total:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Total:</span>
         </dt>
         <dd><%= number_to_currency(@order.amount, precision: 0) %></dd>
       </dl>
       <dl>
         <dt>
-          <span>Name:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Name:</span>
         </dt>
         <dd><%= @order.name%></dd>
       </dl>
       <dl>
         <dt>
-          <span>Diliver Address:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Diliver Address:</span>
         </dt>
         <dd>
           <%= @order.shipping_address.postcode %>
