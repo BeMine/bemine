@@ -72,7 +72,7 @@ class OrdersController < ApplicationController
     # TODO: Move if/else render login in view into view object
 
     # TODO: Move mailing action to sidekiq
-    UserMailer.notify_match_success(@order.fulfiller_id, @product, @order).deliver_later!
+    UserMailer.notify_match_success(@order.fulfiller_id, @order).deliver_later!
 
     # TODO: redirect_to done_acceptance_order_path(@order)
   end
