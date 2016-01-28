@@ -25,15 +25,6 @@
 //= require_tree .
 
 $(function() {
-  return $('#masonry-container').imagesLoaded(function() {
-    return $('#masonry-container').masonry({
-      itemSelector: '.box',
-      isFitWidth: true
-    });
-  });
-});
-
-$(function() {
   $('.btn.btn-match').on('mouseover', function() {
       $('.btn.btn-match').css({
         'color': 'black',

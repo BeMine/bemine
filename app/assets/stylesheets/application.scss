@@ -8,22 +8,33 @@
 @import "masonry/right-to-left";
 @import "masonry/transitions";
 @import "font-awesome";
+//   .row [class^=col-] {
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   background-color: rgba(86, 61, 124, .15);
+//   border: 1px solid rgba(86, 61, 124, .2);
+// }
+body {
+  font-family: "Hiragino Sans GB", "华文细黑", "STHeiti", "微软雅黑", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
 .header {
-  background: #363636
-;
-  z-index: 2000;
-  width: 100%;
-  height: 75px;
+  background: #363636;
 }
 
 .logo {
-  padding-top: 5px;
+  padding: 10px 0px 0px 20px;
   float: left;
 }
 
 .logo img {
   height: 50px;
-
 }
 
 .menu {
@@ -41,7 +52,7 @@
   font-size: 16px;
   border-color: #fec503;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 10px 50px;
 }
 
@@ -60,19 +71,8 @@
   color: #fec503;
 }
 
-h1 {
-  margin-bottom: 0px;
-  margin-top: 0px;
-  color: white;
-}
-
 .layoutcate {
-  border: 0px solid;
   line-height: 20px;
-}
-
-.cate {
-  border: 0px solid;
 }
 
 .secondbar {
@@ -86,15 +86,6 @@ h1 {
 
 .log {
   float: right;
-}
-
-.bbcontainer {
-  background-color: white;
-  border: 0px solid;
-  width: 100%;
-  margin-top: 116px;
-  position: absolute;
-  height: 900px;
 }
 
 .probar {
@@ -113,7 +104,6 @@ h1 {
   height: 60px;
   text-align: center;
   font-size: 30px;
-  border: 0px solid;
 }
 
 .layoutcate li {
@@ -121,7 +111,6 @@ h1 {
   color: white;
   display: inline-block;
   font: inherity;
-  border: 0px solid;
 }
 
 .log li {
@@ -130,12 +119,6 @@ h1 {
 
 .log li a {
   text-decoration: none !important;
-}
-
-ol,
-ul,
-li {
-  list-style: none;
 }
 
 .table {
@@ -148,7 +131,6 @@ li {
 
 .box {
   background-color: transparent;
-  border: 0px solid;
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -157,20 +139,6 @@ li {
   float: left;
   margin-left: 0px;
   margin-top: 30px;
-  border: 0px solid;
-}
-
-.matchcontainer {
-  position: absolute;
-  text-align: center;
-  background-color: white;
-  width: 100%;
-  height: 850px;
-  margin: 0 auto;
-  margin-top: 90px;
-  border: 0px solid;
-  border-color: blue;
-  margin-left: 0px;
 }
 
 .proshow {
@@ -178,11 +146,9 @@ li {
   width: 1000px;
   margin-top: 70px;
   overflow: hidden;
-  border: 0px solid;
 }
 
 .prodetail {
-  border: 0px solid;
   height: 600px;
   float: left;
   margin-left: 80px;
@@ -190,17 +156,14 @@ li {
 
 .matcharea {
   margin-top: 25px;
-  border: 0px solid;
 }
 
 #masonry-container {
-  border: 0px solid;
   width: 1024px;
   margin-top: 25px;
 }
 
 .showcata {
-  border: 0px solid;
   width: 100px;
 }
 
@@ -208,21 +171,20 @@ li {
   height: 70px;
   color: red;
   font-size: 30px;
-  border: 0px solid;
 }
 
-#top {
+.hero-content {}
+
+.text-hero {
   position: absolute;
   color: white;
-  border: 0px solid;
-  font-size: 60px;
-  margin-left: 150px;
-  top: 120px;
-  left: 30px;
-  width: 450px;
-  height: 150px;
-  background-color: transparent;
+  top: 150px;
+  left: 150px;
   z-index: 2;
+}
+
+.text-jumbo {
+  font-size: 60px;
   font-weight: 300;
 }
 
@@ -235,7 +197,7 @@ li {
   border-color: black;
   border: 2px solid;
   background-color: transparent;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: 500;
   margin-right: 30px;
@@ -266,37 +228,29 @@ li {
 
 .testt {
   margin-top: 10px;
-  border: 0px solid;
   color: red;
 }
 
 .tiitle {
   margin-bottom: 30px;
-  border: 0px solid;
   font-size: 30px;
   background: #404549;
 }
 
 .container {
   margin-top: 0px;
-  border: 0px solid;
 }
 
-.light-typo {
-  border: 0px solid;
-}
+.light-typo {}
 
 .countryflag {
   width: 400px;
   height: 300px;
   margin: 0px auto;
   margin-top: 5px;
-  border: 0px solid;
 }
 
-#cta {
-  border: 0px solid;
-}
+#cta {}
 
 section#contact {
   background-color: #222;
@@ -311,53 +265,27 @@ section#contact {
   position: absolute;
 }
 
-h3 {
-  border: 0px solid;
-  text-align: center;
-  font-size: 30px;
-  color: #555;
-  letter-spacing: 3px;
-}
-
-h4 {
-  margin-top: 30px;
-  letter-spacing: 2px;
-  color: #555;
-}
-
-#catee {
+#categories {
   background-color: #222;
-  margin-top: 0px;
-  border: 0px solid;
-  border-color: red;
-  text-align: center;
-  height: 1100px;
+  padding: 100px;
 }
+
+.category {}
 
 #cateename {
-  font-size: 40px;
-  color: white;
   padding-top: 100px;
   letter-spacing: 5px;
   margin: 0px auto;
   font-weight: 100;
-  margin-bottom: 10px;
-  border: 0px solid;
   width: 900px;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
 }
 
-.catee {
-  margin-top: 15px;
-  border: 0px solid;
-  text-align: center;
-  border-color: orange;
-  height: 700px;
-  padding: 50px 70px;
+.text-white {
+  color: white;
 }
 
 #cateepic {
-  border: 0px solid;
   border-color: blue;
   margin-top: 20px;
 }
@@ -366,9 +294,8 @@ h4 {
   box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: black;
   border-color: #fec503;
-  border: 0px solid;
   background-color: #fff300;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   margin-top: 30px;
   min-width: 0;
@@ -378,14 +305,12 @@ h4 {
 
 .signup {
   box-shadow: 0px 0px 9px rgba(0, 0, 0, .2);
-  border: 0px solid;
   width: 500px;
   margin: 0px auto;
   height: 500px;
 }
 
 .signupcontainer {
-  border: 0px solid;
   width: 100%;
   margin-top: 130px;
   position: absolute;
@@ -397,9 +322,8 @@ h4 {
   color: white;
   border-color: #3b5998;
   ;
-  border: 0px solid;
   background-color: #3b5998;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   margin-top: 15px;
   min-width: 0;
@@ -414,7 +338,6 @@ h4 {
 .renderlinks {
   box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   background-color: #f3f3f3;
-  border: 0px solid;
   margin-top: 0px;
 }
 
@@ -422,9 +345,8 @@ h4 {
   box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: black;
   border-color: #fec503;
-  border: 0px solid;
   background-color: #fff300;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   margin-top: 30px;
   min-width: 0;
@@ -433,7 +355,6 @@ h4 {
 }
 
 .rdysignup {
-  border: 0px solid;
   padding-top: 10px;
   margin-top: 25px;
   text-align: center;
@@ -442,13 +363,11 @@ h4 {
 .productsshow {
   position: absolute;
   margin-top: 0px;
-  border: 0px solid;
 }
 
 .generic-block-wrapper.generic-block--tall {
   background-image: url('http://i.imgur.com/rjWbK.jpg');
   min-height: 750px;
-  border: 0px solid;
 }
 
 .generic-block-wrapper.parallax {
@@ -472,7 +391,7 @@ h4 {
   color: white;
   border-color: #fec503;
   background-color: #fec503;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 25px;
   font-weight: 500;
   margin-left: 150px;
@@ -486,12 +405,10 @@ h4 {
   margin-top: 100px;
   height: 350px;
   margin-bottom: 30px;
-  border: 0px solid;
 }
 
 .middlewords {
   color: white;
-  border: 0px solid;
   font-size: 60px;
   top: 60px;
   left: 0px;
@@ -504,7 +421,6 @@ h4 {
 
 .middledownwords {
   color: white;
-  border: 0px solid;
   font-size: 20px;
   margin-left: 150px;
   margin-bottom: 120px;
@@ -515,22 +431,17 @@ h4 {
 }
 
 .coreservice {
-  margin: 0px auto;
-  border: 0px solid;
+  margin: 100px auto;
   width: 1200px;
-  background-color: whire;
-  height: 830px;
 }
 
 .coreservicetitle {
   color: #555;
   margin: 0 auto;
   letter-spacing: 2px;
-  border: 0px solid;
   text-align: center;
   font-size: 80px;
   font-weight: 100;
-  margin-top: 90px;
 }
 
 #coreservicesection {
@@ -545,15 +456,6 @@ h4 {
   margin-top: 100px;
 }
 
-.carousel.slide {
-  height: 835px;
-}
-
-p {
-  margin-top: 8px;
-  margin-left: 30px;
-}
-
 #purchasesection {
   margin-top: 50px;
 }
@@ -562,7 +464,7 @@ p {
   box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: #30302f;
   background-color: #fec503;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 28px;
   font-weight: 500;
   margin-top: 50px;
@@ -575,7 +477,6 @@ p {
 .buyerdetail {
   width: 100%;
   background-color: #f7f8f8;
-  border: 0px solid;
   margin: 0px auto;
   margin-top: 110px;
   position: absolute;
@@ -585,7 +486,6 @@ p {
 .buyerdetails {
   margin-top: 60px;
   width: 380px;
-  border: 0px solid;
   margin-left: 80px;
 }
 
@@ -601,13 +501,10 @@ p {
   text-align: center;
   width: 100%;
   height: 600px;
-  border: 0px solid;
   margin-top: 118px;
-  position: absolute;
 }
 
 .cardconfirm {
-  border: 0px solid;
   margin: 0px auto;
   height: 400px;
   width: 700px;
@@ -628,7 +525,6 @@ p {
 }
 
 #paymentdetails {
-  border: 0px solid;
   margin-top: 20px;
 }
 
@@ -642,7 +538,6 @@ p {
   box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .15);
   margin-left: 90px;
   margin-top: 60px;
-  border: 0px solid;
   height: 500px;
 }
 
@@ -657,7 +552,7 @@ p {
 .btn.btn-buyer {
   color: white;
   background-color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   margin-top: 20px;
   margin-left: 4px;
@@ -674,14 +569,12 @@ p {
   text-align: center;
   height: 70px;
   border-color: blue;
-  border: 0px solid;
   font-size: 30px;
   letter-spacing: 5px;
   text-weight: 50;
 }
 
 .savepayment {
-  border: 0px solid;
   margin: 20px auto;
   margin-top: 70px;
 }
@@ -689,7 +582,7 @@ p {
 .btn.btn-savepayment {
   color: white;
   background-color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   padding: 10px 50px;
   width: 340px;
@@ -697,13 +590,11 @@ p {
 }
 
 .addpaymenttitle {
-  border: 0px solid;
   font-size: 30px;
   height: 60px;
 }
 
 #payment-form {
-  border: 0px solid;
   height: 150px;
 }
 
@@ -713,12 +604,10 @@ p {
   width: 800px;
   margin-top: 250px;
   margin-left: 100px;
-  border: 0px solid;
 }
 
 .dotted-list {
   margin: 0px auto;
-  border: 0px solid;
   border-color: blue;
   height: 400px;
   width: 500px;
@@ -773,9 +662,37 @@ p {
   color: white;
   background-color: #67c39f;
   border-color: #67c39f;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   padding: 10px 50px;
   width: 340px;
   letter-spacing: 2px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+}
+
+.acceptance td {
+  text-align: right;
+}
+
+.btn-bemine,
+.btn-bemine:hover {
+  border-color: #fec503;
+  background-color: #fec503;
+}
+
+.page-header {
+  border-bottom: 1px solid #eee;
+}
+
+.footer {
+  padding: 75px 0;
+  color: lightgray;
+  background-color: #222222;
+  background-image: image-url('world_map.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }

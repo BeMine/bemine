@@ -1,16 +1,17 @@
-<div class="matchcontainer">
-  <div class="proshow">
-    <div class="detailpics col-xs-7"><%= image_tag(@product.picture.url) %></div>
-    <div class="prodetail col-xs-4">
-      <div class="proname" id = "purchasesection"><%= @product.name %></div>
-      <div class="matcharea" id = "purchasesection"><%= @product.matcharea %></div>
-      <div class="proprice" id = "purchasesection"><%= number_to_currency(@product.price, precision: 0) %></div>
-      <div id="btnmatch purchasesection" class="infinite-scroll centered clearfix">
-        <%= form_tag buy_product_path(@product) do %>
-          Quantity: <%= select_tag :quantity, options_for_select(1..5), :class => 'form-control' %>
-          <%= submit_tag 'Match', :class => 'btn btn-match' %>
-        <% end %>
-      </div>
+<div class="container">
+  <div class="page-header text-center">
+    <h1><%= @product.name %></h1>
+  </div>
+  <div class="col-md-6"><%= image_tag(@product.picture.url) %></div>
+  <div class="col-md-6">
+    <div class="" id=""><%= @product.name %></div>
+    <div class="" id=""><%= @product.matcharea %></div>
+    <div class="" id=""><%= number_to_currency(@product.price, precision: 0) %></div>
+    <div id="" class="infinite-scroll centered clearfix">
+      <%= form_tag buy_product_path(@product) do %>
+        Quantity: <%= select_tag :quantity, options_for_select(1..5), :class => 'form-control' %>
+        <%= submit_tag '訂購', :class => 'btn btn-match' %>
+      <% end %>
     </div>
   </div>
 </div>

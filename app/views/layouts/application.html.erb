@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BeMine</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <title>BeMine - 海外代購媒合</title>
+    <%= stylesheet_link_tag    'application', controller_name, media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="header">
+    <div class="header clearfix">
       <div class="logo">
         <p><%=link_to image_tag("logo.png"), root_path %></p>
       </div>
       <div class="menu">
         <ul>
           <% if current_user %>
-            <li><%= current_user.name %></li>
             <li><%= link_to('登出', destroy_user_session_path, :method => :delete, :class => "btn btn-menu") %></li>
-            <li><%= link_to('修改密碼', edit_registration_path(:user), :class => "btn btn-menu") %></li>
+            <!--   <li><%= link_to('修改密碼', edit_registration_path(:user), :class => "btn btn-menu") %></li> -->
             <li><%= link_to('訂單', orders_path, :class => "btn btn-menu") %></li>
           <% else %>
             <li><%= link_to('註冊', new_registration_path(:user), :class => "btn btn-signup") %></li>
@@ -27,4 +26,7 @@
     </div>
     <%= yield %>
   </body>
+  <div class="footer">
+    <p class="text-center">© BeMine</p>
+  </div>
 </html>

@@ -1,19 +1,23 @@
-<div class="bbcontainer">
-  <div class="category">
-    <div class = "probar"><%= @category.name %></div>
-    <div id="masonry-container" class="transitions-enabled infinite-scroll centered clearfix">
-      <% @products.each do |p| %>
-        <div class="box col3">
-          <div class = "pics"><%=link_to image_tag(p.picture.url), product_path(p) %></div>
-          <div class = "proname"><%= p.name %></div>
-          <div class="prolocate"><%= p.location %></div>
-          <div class="proprice"><%= number_to_currency(p.price, precision: 0) %></div>
-          <div class="bttn"><%= link_to "商品detail", product_path(p), :class => "btn btn-info" %></div>
-          <div class="bttn"><%= link_to "更改商品內容", edit_product_path(p), :class => "btn btn-info" %></div>
-          <div class="btttn"><%= link_to "刪除", product_path(p), :method => :delete, :data =>{ :confirm => "Are u sure?" }, :class => "btn btn-danger" %></div>
-        </div>
-      <% end %>
-    </div>
-    <%= link_to "New Product", new_product_path, :class => "btn btn-info" %>
+<div class="container">
+  <div class="page-header text-center">
+    <h1><%= @category.name %></h1>
   </div>
+  <div id="masonry-container" class="transitions-enabled infinite-scroll centered clearfix">
+    <% @products.each do |p| %>
+      <div class="box col3">
+        <%=link_to image_tag(p.picture.url), product_path(p) %>
+        <div class="h3"><%= p.name %></div>
+        <div class="h4"><%= p.location %></div>
+        <div class="h4"><%= number_to_currency(p.price, precision: 0) %></div>
+        <% if current_user && current_user.admin? %>
+          <%= link_to "商品detail", product_path(p), :class => "btn btn-info" %>
+          <%= link_to "更改商品內容", edit_product_path(p), :class => "btn btn-info" %>
+          <%= link_to "刪除", product_path(p), :method => :delete, :data =>{ :confirm => "Are u sure?" }, :class => "btn btn-danger" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <% if current_user && current_user.admin? %>
+    <%= link_to "新增", new_product_path, :class => "btn btn-info" %>
+  <% end %>
 </div>

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, :omniauth_providers => [:facebook]
 
+  # TODO: Add validation of role
+
   has_one :address, as: :addressable
   has_many :orders
   has_many :fulfill_requests
@@ -50,5 +52,9 @@ class User < ActiveRecord::Base
     user.password = Devise.friendly_token[0, 20]
     user.save!
     return user
+  end
+
+  def admin?
+    role == 'admin'
   end
 end
