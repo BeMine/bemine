@@ -10,12 +10,12 @@
 @import "font-awesome";
 .logo-place {
   border: 0px solid;
-  height:80px;
+  height: 80px;
 }
 
 .beminelogo {
   margin-top: 0px;
-  border:0px solid;
+  border: 0px solid;
   height: 80px;
 }
 
@@ -29,8 +29,6 @@ h1 {
 .layoutcate {
   border: 0px solid;
   line-height: 20px;
-
-
 }
 
 .deistrict {
@@ -51,12 +49,10 @@ h1 {
 .firstcontainer {
   border: 0px solid;
   height: 60px;
-  
 }
 
 .cate {
   border: 0px solid;
-
 }
 
 .secondbar {
@@ -75,9 +71,9 @@ h1 {
 .bbcontainer {
   background-color: white;
   border: 0px solid;
-  width:100%;
-  margin-top : 116px;
-  position:absolute;
+  width: 100%;
+  margin-top: 116px;
+  position: absolute;
   height: 900px;
 }
 
@@ -98,11 +94,9 @@ h1 {
   text-align: center;
   font-size: 30px;
   border: 0px solid;
-  
 }
 
 .layoutcate li {
- 
   padding: 5px 50px;
   color: white;
   display: inline-block;
@@ -133,12 +127,10 @@ li {
 }
 
 .box {
-  
   background-color: transparent;
   border: 0px solid;
-  margin-left:20px;
-  margin-top : 20px;
-
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .detailpics {
@@ -149,7 +141,7 @@ li {
 }
 
 .matchcontainer {
-  position:absolute;
+  position: absolute;
   text-align: center;
   background-color: white;
   width: 100%;
@@ -184,7 +176,7 @@ li {
 #masonry-container {
   border: 0px solid;
   width: 1024px;
-  margin-top:25px;
+  margin-top: 25px;
 }
 
 .showcata {
@@ -202,16 +194,16 @@ li {
 #top {
   position: absolute;
   color: white;
-  border:0px solid;
+  border: 0px solid;
   font-size: 60px;
-  margin-left:150px;
+  margin-left: 150px;
   top: 120px;
   left: 30px;
   width: 450px;
   height: 150px;
   background-color: transparent;
   z-index: 2;
-  font-weight:300;
+  font-weight: 300;
 }
 
 .loginsection {
@@ -264,9 +256,6 @@ li {
   z-index: 2000;
   width: 100%;
   height: 120px;
-  position:fixed;
-  
-
 }
 
 .light-typo {
@@ -291,67 +280,64 @@ li {
 }
 
 .testt {
-  margin-top:10px ;
+  margin-top: 10px;
   border: 0px solid;
   color: red;
 }
 
 .tiitle {
-  margin-bottom: 30px ;
+  margin-bottom: 30px;
   border: 0px solid;
   font-size: 30px;
   background: #404549;
-
-
-  
 }
 
 .container {
   margin-top: 0px;
-  border:0px solid;
+  border: 0px solid;
 }
 
 .light-typo {
-  
   border: 0px solid;
 }
 
 .countryflag {
-  width:400px;
-  height:300px;
-  margin:0px auto;
-  margin-top:5px;
-  border:0px solid;
+  width: 400px;
+  height: 300px;
+  margin: 0px auto;
+  margin-top: 5px;
+  border: 0px solid;
 }
-#cta { 
-  border:0px solid;
+
+#cta {
+  border: 0px solid;
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url(http://ironsummitmedia.github.io/startbootstrap-agency/img/map-image.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-
+  background-color: #222;
+  background-image: url(http://ironsummitmedia.github.io/startbootstrap-agency/img/map-image.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .carousel-indicators {
-  height: px ;
+  height: px;
   position: absolute;
 }
 
 h3 {
   border: 0px solid;
-  text-align:center;
+  text-align: center;
   font-size: 30px;
   color: #555;
   letter-spacing: 3px;
 }
+
 h4 {
-  margin-top:30px;
+  margin-top: 30px;
   letter-spacing: 2px;
-  color :#555;
+  color: #555;
 }
 
 #catee {
@@ -360,7 +346,7 @@ h4 {
   border: 0px solid;
   border-color: red;
   text-align: center;
-  height:1100px;
+  height: 1100px;
 }
 
 #cateename {
@@ -385,14 +371,14 @@ h4 {
   padding: 50px 70px;
 }
 
-#cateepic{
+#cateepic {
   border: 0px solid;
   border-color: blue;
   margin-top: 20px;
 }
 
 .btn.btn-regisubmit {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: black;
   border-color: #fec503;
   border: 0px solid;
@@ -403,50 +389,52 @@ h4 {
   min-width: 0;
   padding: 10px 50px;
   width: 240px;
-
 }
 
 .signup {
-  box-shadow: 0px 0px 9px rgba(0,0,0,.2);
-  border:0px solid;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, .2);
+  border: 0px solid;
   width: 500px;
-  margin:0px auto;
+  margin: 0px auto;
   height: 500px;
 }
+
 .signupcontainer {
   border: 0px solid;
-  width:100%;
-  margin-top : 130px;
-  position:absolute;
+  width: 100%;
+  margin-top: 130px;
+  position: absolute;
   height: 300px;
-
-  
 }
 
 .btn.btn-facebooksignin {
-  box-shadow: rgba(0,0,0,.2) 0 2px 10px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 10px 0;
   color: white;
-  border-color: #3b5998;;
+  border-color: #3b5998;
+  ;
   border: 0px solid;
   background-color: #3b5998;
   border-radius: 2px;
   font-size: 18px;
-  margin-top:15px;
+  margin-top: 15px;
   min-width: 0;
   padding: 10px 50px;
   width: 300px;
 }
+
 .regifield {
   width: 240px;
 }
+
 .renderlinks {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   background-color: #f3f3f3;
   border: 0px solid;
-  margin-top: 0px; 
+  margin-top: 0px;
 }
+
 .btn.btn-regisignin {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: black;
   border-color: #fec503;
   border: 0px solid;
@@ -458,81 +446,83 @@ h4 {
   padding: 10px 50px;
   width: 240px;
 }
-.rdysignup {
 
-  border:0px solid;
-  padding-top:10px;
-  margin-top:25px;
-  text-align:center;
+.rdysignup {
+  border: 0px solid;
+  padding-top: 10px;
+  margin-top: 25px;
+  text-align: center;
 }
+
 .productsshow {
-  position:absolute;
+  position: absolute;
   margin-top: 0px;
-  border:0px solid;
+  border: 0px solid;
 }
+
 .generic-block-wrapper.generic-block--tall {
-  background-image:url('http://i.imgur.com/rjWbK.jpg');
+  background-image: url('http://i.imgur.com/rjWbK.jpg');
   min-height: 750px;
   border: 0px solid;
 }
+
 .generic-block-wrapper.parallax {
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
+
 .generic-block-wrapper {
-    padding: 0px 0;
-    position: relative;
+  padding: 0px 0;
+  position: relative;
 }
+
 .block {
-   
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.block--center {
-    
-}
+
+.block--center {}
 
 .btn.btn-middlebottom {
   color: white;
   border-color: #fec503;
-  
   background-color: #fec503;
   border-radius: 2px;
   font-size: 25px;
   font-weight: 500;
-  margin-left: 150px ;
-  margin-top:250px;
+  margin-left: 150px;
+  margin-top: 250px;
   width: 350px;
   padding: 10px 50px;
   letter-spacing: 2px;
-  
 }
+
 .seperate {
   margin-top: 100px;
   height: 350px;
   margin-bottom: 30px;
-  border:0px solid;
-}  
+  border: 0px solid;
+}
 
 .middlewords {
   color: white;
-  border:0px solid;
+  border: 0px solid;
   font-size: 60px;
   top: 60px;
   left: 0px;
   height: 250px;
   width: 450px;
-  margin-left:150px;
+  margin-left: 150px;
   background-color: transparent;
   font-weight: 100;
 }
+
 .middledownwords {
   color: white;
-  border:0px solid;
+  border: 0px solid;
   font-size: 20px;
-  margin-left:150px;
+  margin-left: 150px;
   margin-bottom: 120px;
-  
   width: 750px;
   background-color: transparent;
   font-weight: 100;
@@ -540,37 +530,36 @@ h4 {
 }
 
 .coreservice {
-  
-  margin:0px auto;
+  margin: 0px auto;
   border: 0px solid;
   width: 1200px;
   background-color: whire;
   height: 830px;
-  
 }
+
 .coreservicetitle {
-  color:#555;
+  color: #555;
   margin: 0 auto;
   letter-spacing: 2px;
   border: 0px solid;
   text-align: center;
   font-size: 80px;
   font-weight: 100;
-  margin-top:90px;
+  margin-top: 90px;
 }
 
 #coreservicesection {
-  text-align:center;
+  text-align: center;
 }
+
 .coreservicecontainer {
-  
   margin-top: 25px;
 }
 
 .coreservicesection2 {
-  
   margin-top: 100px;
 }
+
 .carousel.slide {
   height: 835px;
 }
@@ -584,8 +573,8 @@ p {
   margin-top: 50px;
 }
 
-.btn.btn-match  {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+.btn.btn-match {
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: #30302f;
   background-color: #fec503;
   border-radius: 2px;
@@ -603,30 +592,35 @@ p {
   background-color: #f7f8f8;
   border: 0px solid;
   margin: 0px auto;
-  margin-top :110px;
+  margin-top: 110px;
   position: absolute;
   min-height: 650px;
 }
+
 .buyerdetails {
   margin-top: 60px;
   width: 380px;
   border: 0px solid;
   margin-left: 80px;
 }
-.cartdetail{
+
+.cartdetail {
   font-size: 25px;
 }
+
 .cartprice {
-  color : red;
+  color: red;
 }
+
 .addpayment {
   text-align: center;
-  width : 100%;
-  height : 600px;
+  width: 100%;
+  height: 600px;
   border: 0px solid;
-  margin-top : 118px;
+  margin-top: 118px;
   position: absolute;
 }
+
 .cardconfirm {
   border: 0px solid;
   margin: 0px auto;
@@ -634,40 +628,47 @@ p {
   width: 700px;
   margin-top: 70px;
 }
-.paymentconfirm { 
+
+.paymentconfirm {
   border: 2px solid;
-  width: 100% ;
-  margin-top : 150px;
+  width: 100%;
+  margin-top: 150px;
   position: absolute;
 }
+
 .paymentimage {
   border: 2px solid;
-  width:96px;
-  height:24px;
+  width: 96px;
+  height: 24px;
 }
+
 #paymentdetails {
   border: 0px solid;
   margin-top: 20px;
 }
+
 .thankyouaftermatch {
   position: absolute;
-  margin-top : 150px;
-  width: 100% ; 
+  margin-top: 150px;
+  width: 100%;
 }
+
 .setcart {
-  box-shadow: 0 2px 10px -2px rgba(0,0,0,.15);
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .15);
   margin-left: 90px;
   margin-top: 60px;
-  border:0px solid;
+  border: 0px solid;
   height: 500px;
 }
+
 .buyerarea {
   height: 750px;
   background-color: #fff;
   width: 1200px;
   margin: 0px auto;
-  box-shadow: 0 2px 10px -2px rgba(0,0,0,.15);
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .15);
 }
+
 .btn.btn-buyer {
   color: white;
   background-color: black;
@@ -679,24 +680,27 @@ p {
   width: 340px;
   letter-spacing: 2px;
 }
+
 .calmdown {
   padding: 15px;
   color: #636363;
   background: #ffefd5;
-  margin-top : 50px;
+  margin-top: 50px;
   text-align: center;
   height: 70px;
   border-color: blue;
   border: 0px solid;
-  font-size : 30px;
+  font-size: 30px;
   letter-spacing: 5px;
   text-weight: 50;
 }
+
 .savepayment {
   border: 0px solid;
   margin: 20px auto;
-  margin-top : 70px;
+  margin-top: 70px;
 }
+
 .btn.btn-savepayment {
   color: white;
   background-color: black;
@@ -706,70 +710,80 @@ p {
   width: 340px;
   letter-spacing: 2px;
 }
+
 .addpaymenttitle {
   border: 0px solid;
-  font-size : 30px;
+  font-size: 30px;
   height: 60px;
 }
+
 #payment-form {
   border: 0px solid;
   height: 150px;
 }
+
 .order-summary {
   background: #f7f7f7;
-  position:absolute;
+  position: absolute;
   width: 800px;
   margin-top: 250px;
   margin-left: 100px;
   border: 0px solid;
 }
-.dotted-list { 
+
+.dotted-list {
   margin: 0px auto;
-  border: 0px solid ;
-  border-color:blue;
+  border: 0px solid;
+  border-color: blue;
   height: 400px;
   width: 500px;
-  }
+}
+
 .dotted-list dt:after {
-    content: "..................................................................................................................................................................................................................";
-    display: inline-block;
-    width: 0;
-    color: #313132;
-    font-size: .7857142857rem;
-    letter-spacing: 1.5px;
+  content: "..................................................................................................................................................................................................................";
+  display: inline-block;
+  width: 0;
+  color: #313132;
+  font-size: .7857142857rem;
+  letter-spacing: 1.5px;
 }
 
 .dotted-list dt {
-    display: table-cell;
-    width: 100%;
-    max-width: 0;
-    overflow: hidden;
-    vertical-align: top;
+  display: table-cell;
+  width: 100%;
+  max-width: 0;
+  overflow: hidden;
+  vertical-align: top;
 }
+
 .dotted-list dd {
-    display: table-cell;
-    margin: 0;
-    padding-left: 4px;
-    vertical-align: bottom;
-    white-space: nowrap;
+  display: table-cell;
+  margin: 0;
+  padding-left: 4px;
+  vertical-align: bottom;
+  white-space: nowrap;
 }
+
 .dotted-list span {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 3px;
 }
+
 .thankyouimg {
-  height:600px;
-  position:absolute;
+  height: 600px;
+  position: absolute;
   margin-top: 350px;
-  margin-left:800px;
+  margin-left: 800px;
 }
+
 .heading {
   font-weight: 300;
   letter-spacing: 3px;
   font-size: 20px;
   text-align: center;
 }
+
 .btn.btn-continuebutton {
   color: white;
   background-color: #67c39f;
