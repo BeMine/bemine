@@ -5,7 +5,6 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.notify_comment.subject
   #
-  default from: 'BeMine'
 
   def notify_match(user, order, fulfill_request)
     @user = user
