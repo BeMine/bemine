@@ -57,7 +57,7 @@ namespace :dev do
       rand(1..20).times do
         category.products.create!(
           name: Faker::Commerce.product_name,
-          description: Faker::Hipster.sentences(3),
+          description: Faker::Hipster.paragraph(3),
           price: Faker::Number.between(1, 99999),
           picture: file,
           location: Faker::Address.country
