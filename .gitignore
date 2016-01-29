@@ -39,5 +39,5 @@ bower.json
 # Ignore byebug history
 .byebug_history
 
-# Ignore mail settings
+# Ignore mail settings55
 /config/email.yml
