@@ -1,5 +1,6 @@
 namespace :dev do
   task rebuild: :environment do
+    Rake::Task['dev:nuke_images'].invoke
     Rake::Task['db:migrate:reset'].invoke
     Rake::Task['db:seed'].invoke
     Rake::Task['dev:fake'].invoke
@@ -13,12 +14,35 @@ namespace :dev do
     users = []
     password = 'password'
 
-    user = User.create!(email: 'user@email.com', name: 'Test User', password: password)
-    user.create_address(address1: '南京東路二段97號', locality: '中山區', region: '台北市', postcode: '104', country: 'TW')
+    user = User.create!(
+      email: 'user@email.com',
+      name: 'Test User', password:
+      password, role: 'admin'
+    )
+    user.create_address(
+      address1: '南京東路二段97號',
+      locality: '中山區',
+      region: '台北市',
+      postcode: '104',
+      country: 'TW'
+    )
     users << user
 
     2.times do
-      users << User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: password)
+      user = User.create!(
+        name: Faker::Name.name,
+        email: Faker::Internet.email,
+        password: password
+      )
+      user.create_address(
+        address1: Faker::Address.street_address,
+        locality: Faker::Address.city,
+        region: Faker::Address.state,
+        postcode: Faker::Address.zip,
+        country: 'TW'
+      )
+      users << user
+
     end
 
     puts 'Generating products...'
@@ -31,7 +55,13 @@ namespace :dev do
 
     Category.all.each do |category|
       rand(1..20).times do
-        category.products.create!(name: Faker::Commerce.product_name, picture: file, price: Faker::Number.between(1, 99999))
+        category.products.create!(
+          name: Faker::Commerce.product_name,
+          description: Faker::Hipster.paragraph(3),
+          price: Faker::Number.between(1, 99999),
+          picture: file,
+          location: Faker::Address.country
+        )
       end
     end
   end
@@ -40,14 +70,18 @@ namespace :dev do
     puts 'Cleaning the db...'
 
     User.delete_all
+    Address.delete_all
     Product.delete_all
     Cart.delete_all
     Order.delete_all
     LineItem.delete_all
+    FulfillRequest.delete_all
 
-    puts 'Cleaning uploaded images in public/system/products...'
-
+    puts 'Cleaning product images...'
     rm_rf 'public/system/products'
+
+    puts 'Cleaning emails in letter_opener...'
+    rm_rf 'tmp/letter_opener'
   end
 
   task nuke_images: :environment do

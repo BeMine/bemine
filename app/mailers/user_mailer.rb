@@ -7,19 +7,19 @@ class UserMailer < ApplicationMailer
   #
   default from: 'http://localhost:3000/'
 
-  def notify_match(user, order, product, token)
-    @product = product
-    @order = order
+  def notify_match(user, order, fulfill_request)
     @user = user
-    @token = token
+    @order = order
+    @product = order.line_item.product
+    @token = fulfill_request.token
 
     mail(to: @user.email, subject: 'New Order Request')
   end
 
-  def notify_match_success(user, product, order)
-    @order = order
-    @product = product
+  def notify_match_success(user, order)
     @user = user
+    @order = order
+    @product = order.line_item.product
 
     mail(to: order.user.email, subject: 'Confirm Request')
   end

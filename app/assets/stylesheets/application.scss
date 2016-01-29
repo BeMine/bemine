@@ -8,55 +8,73 @@
 @import "masonry/right-to-left";
 @import "masonry/transitions";
 @import "font-awesome";
-.logo-place {
-  border: 0px solid;
-  height:80px;
+.row [class^=col-],
+div [class*=col] {
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  // background-color: rgba(86, 61, 124, .15);
+  // border: 1px solid rgba(86, 61, 124, .2);
 }
 
-.beminelogo {
-  margin-top: 0px;
-  border:0px solid;
-  height: 80px;
+body {
+  font-family: "Hiragino Sans GB", "华文细黑", "STHeiti", "微软雅黑", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  font-family: 'Cinzel', serif;
-  margin-bottom: 0px;
-  margin-top: 0px;
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+.header {
+  background: #363636;
+}
+
+.logo {
+  padding: 10px 0px 0px 20px;
+  float: left;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu {
+  padding-top: 15px;
+  float: right
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.btn-signup {
+  color: #fec503;
+  font-size: 16px;
+  border-color: #fec503;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px 50px;
+}
+
+.btn-signup:hover {
+  color: black;
+  border-color: #fec503;
+  background-color: #fec503;
+}
+
+.btn-menu {
   color: white;
+  font-size: 16px;
+}
+
+.btn-menu:hover {
+  color: #fec503;
 }
 
 .layoutcate {
-  border: 0px solid;
   line-height: 20px;
-
-
-}
-
-.deistrict {
-  border: 0px solid;
-  width: 1524px;
-  margin: 0px auto;
-}
-
-.qqq {
-  float: right;
-  margin-top: 0px;
-  padding-top: 10px;
-  padding-left: 160px;
-  border: 0px solid;
-  height: 60px;
-}
-
-.firstcontainer {
-  border: 0px solid;
-  height: 60px;
-  
-}
-
-.cate {
-  border: 0px solid;
-
 }
 
 .secondbar {
@@ -70,15 +88,6 @@ h1 {
 
 .log {
   float: right;
-}
-
-.bbcontainer {
-  background-color: white;
-  border: 0px solid;
-  width:100%;
-  margin-top : 116px;
-  position:absolute;
-  height: 900px;
 }
 
 .probar {
@@ -97,17 +106,13 @@ h1 {
   height: 60px;
   text-align: center;
   font-size: 30px;
-  border: 0px solid;
-  
 }
 
 .layoutcate li {
- 
   padding: 5px 50px;
   color: white;
   display: inline-block;
   font: inherity;
-  border: 0px solid;
 }
 
 .log li {
@@ -118,47 +123,19 @@ h1 {
   text-decoration: none !important;
 }
 
-ol,
-ul,
-li {
-  list-style: none;
-}
-
-.table {
-  border: 3px, solid;
-}
-
 .propic img {
   max-width: 480px;
 }
 
 .box {
-  
   background-color: transparent;
-  border: 0px solid;
-  margin-left:20px;
-  margin-top : 20px;
-
+  margin: 20px 10px 0px 10px;
 }
 
 .detailpics {
   float: left;
   margin-left: 0px;
   margin-top: 30px;
-  border: 0px solid;
-}
-
-.matchcontainer {
-  position:absolute;
-  text-align: center;
-  background-color: white;
-  width: 100%;
-  height: 850px;
-  margin: 0 auto;
-  margin-top: 90px;
-  border: 0px solid;
-  border-color: blue;
-  margin-left: 0px;
 }
 
 .proshow {
@@ -166,11 +143,9 @@ li {
   width: 1000px;
   margin-top: 70px;
   overflow: hidden;
-  border: 0px solid;
 }
 
 .prodetail {
-  border: 0px solid;
   height: 600px;
   float: left;
   margin-left: 80px;
@@ -178,17 +153,9 @@ li {
 
 .matcharea {
   margin-top: 25px;
-  border: 0px solid;
-}
-
-#masonry-container {
-  border: 0px solid;
-  width: 1024px;
-  margin-top:25px;
 }
 
 .showcata {
-  border: 0px solid;
   width: 100px;
 }
 
@@ -196,22 +163,19 @@ li {
   height: 70px;
   color: red;
   font-size: 30px;
-  border: 0px solid;
 }
 
-#top {
+.text-hero {
   position: absolute;
   color: white;
-  border:0px solid;
-  font-size: 60px;
-  margin-left:150px;
-  top: 120px;
-  left: 30px;
-  width: 450px;
-  height: 150px;
-  background-color: transparent;
+  top: 150px;
+  left: 150px;
   z-index: 2;
-  font-weight:300;
+}
+
+.text-jumbo {
+  font-size: 4em;
+  font-weight: 300;
 }
 
 .loginsection {
@@ -223,48 +187,12 @@ li {
   border-color: black;
   border: 2px solid;
   background-color: transparent;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: 500;
   margin-right: 30px;
   min-width: 0;
   padding: 8px 120px;
-}
-
-.btn.btn-signup {
-  color: #fec503;
-  border-color: #fec503;
-  border: 1px solid;
-  background-color: transparent;
-  border-radius: 2px;
-  font-size: 18px;
-  font-weight: 500;
-  margin-right: 30px;
-  min-width: 0;
-  padding: 10px 50px;
-}
-
-.btn.btn-signin {
-  font-family: 'cwTeXHei', serif;
-  color: white;
-}
-
-.btn.btn-signout {
-  font-size: 20px;
-  color: white;
-}
-
-.btn.btn-change {
-  color: white;
-  font-size: 20px;
-}
-
-.header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 99%);
-  z-index: 2000;
-  width: 100%;
-  height: 120px;
-
 }
 
 .light-typo {
@@ -289,304 +217,196 @@ li {
 }
 
 .testt {
-  margin-top:10px ;
-  border: 0px solid;
+  margin-top: 10px;
   color: red;
 }
 
 .tiitle {
-  margin-bottom: 30px ;
-  border: 0px solid;
+  margin-bottom: 30px;
   font-size: 30px;
   background: #404549;
-
-
-  
-}
-
-.container {
-  margin-top: 0px;
-  border:0px solid;
-}
-
-.light-typo {
-  
-  border: 0px solid;
 }
 
 .countryflag {
-  width:400px;
-  height:300px;
-  margin:0px auto;
-  margin-top:5px;
-  border:0px solid;
+  width: 400px;
+  height: 300px;
+  margin: 0px auto;
+  margin-top: 5px;
 }
-#cta { 
-  border:0px solid;
-}
+
+#cta {}
 
 section#contact {
-    background-color: #222;
-    background-image: url(http://ironsummitmedia.github.io/startbootstrap-agency/img/map-image.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
-
-.carousel-indicators {
-  height: px ;
-  position: absolute;
-}
-
-h3 {
-  border: 0px solid;
-  text-align:center;
-  font-size: 30px;
-  color: #555;
-  letter-spacing: 3px;
-}
-h4 {
-  margin-top:30px;
-  letter-spacing: 2px;
-  color :#555;
-}
-
-#catee {
   background-color: #222;
-  margin-top: 0px;
-  border: 0px solid;
-  border-color: red;
-  text-align: center;
-  height:1100px;
+  background-image: url(http://ironsummitmedia.github.io/startbootstrap-agency/img/map-image.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#categories {
+  background-color: #222;
 }
 
 #cateename {
-  font-size: 40px;
-  color: white;
   padding-top: 100px;
   letter-spacing: 5px;
   margin: 0px auto;
   font-weight: 100;
-  margin-bottom: 10px;
-  border: 0px solid;
   width: 900px;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
 }
 
-.catee {
-  margin-top: 15px;
-  border: 0px solid;
-  text-align: center;
-  border-color: orange;
-  height: 700px;
-  padding: 50px 70px;
-}
-
-#cateepic{
-  border: 0px solid;
-  border-color: blue;
-  margin-top: 20px;
+.text-white {
+  color: white;
 }
 
 .btn.btn-regisubmit {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: black;
   border-color: #fec503;
-  border: 0px solid;
   background-color: #fff300;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   margin-top: 30px;
   min-width: 0;
   padding: 10px 50px;
   width: 240px;
-
 }
 
 .signup {
-  box-shadow: 0px 0px 9px rgba(0,0,0,.2);
-  border:0px solid;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, .2);
   width: 500px;
-  margin:0px auto;
+  margin: 0px auto;
   height: 500px;
 }
+
 .signupcontainer {
-  border: 0px solid;
-  width:100%;
-  margin-top : 130px;
-  position:absolute;
+  width: 100%;
+  margin-top: 130px;
+  position: absolute;
   height: 300px;
-
-  
 }
 
-.btn.btn-facebooksignin {
-  box-shadow: rgba(0,0,0,.2) 0 2px 10px 0;
+.btn-facebook-signin,
+.btn-facebook-signin:hover {
+  border-color: #425F9E;
+  background-color: #425F9E;
   color: white;
-  border-color: #3b5998;;
-  border: 0px solid;
-  background-color: #3b5998;
-  border-radius: 2px;
-  font-size: 18px;
-  margin-top:15px;
-  min-width: 0;
-  padding: 10px 50px;
-  width: 300px;
 }
+
 .regifield {
   width: 240px;
 }
+
 .renderlinks {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   background-color: #f3f3f3;
-  border: 0px solid;
-  margin-top: 0px; 
+  margin-top: 0px;
 }
+
 .btn.btn-regisignin {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: black;
   border-color: #fec503;
-  border: 0px solid;
   background-color: #fff300;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   margin-top: 30px;
   min-width: 0;
   padding: 10px 50px;
   width: 240px;
 }
-.rdysignup {
 
-  border:0px solid;
-  padding-top:10px;
-  margin-top:25px;
-  text-align:center;
+.rdysignup {
+  padding-top: 10px;
+  margin-top: 25px;
+  text-align: center;
 }
+
 .productsshow {
-  position:absolute;
+  position: absolute;
   margin-top: 0px;
-  border:0px solid;
 }
+
 .generic-block-wrapper.generic-block--tall {
-  background-image:url('http://i.imgur.com/rjWbK.jpg');
+  background-image: url('http://i.imgur.com/rjWbK.jpg');
   min-height: 750px;
-  border: 0px solid;
 }
+
 .generic-block-wrapper.parallax {
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
+
 .generic-block-wrapper {
-    padding: 0px 0;
-    position: relative;
+  padding: 0px 0;
+  position: relative;
 }
+
 .block {
-   
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.block--center {
-    
-}
+
+.block--center {}
 
 .btn.btn-middlebottom {
   color: white;
   border-color: #fec503;
-  
   background-color: #fec503;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 25px;
   font-weight: 500;
-  margin-left: 150px ;
-  margin-top:250px;
+  margin-left: 150px;
+  margin-top: 250px;
   width: 350px;
   padding: 10px 50px;
   letter-spacing: 2px;
-  
 }
+
 .seperate {
   margin-top: 100px;
   height: 350px;
   margin-bottom: 30px;
-  border:0px solid;
-}  
+}
 
 .middlewords {
   color: white;
-  border:0px solid;
   font-size: 60px;
   top: 60px;
   left: 0px;
   height: 250px;
   width: 450px;
-  margin-left:150px;
+  margin-left: 150px;
   background-color: transparent;
   font-weight: 100;
 }
+
 .middledownwords {
   color: white;
-  border:0px solid;
   font-size: 20px;
-  margin-left:150px;
+  margin-left: 150px;
   margin-bottom: 120px;
-  
   width: 750px;
   background-color: transparent;
   font-weight: 100;
   letter-spacing: 2px;
 }
 
-.coreservice {
-  
-  margin:0px auto;
-  border: 0px solid;
-  width: 1200px;
-  background-color: whire;
-  height: 830px;
-  
-}
-.coreservicetitle {
-  color:#555;
-  margin: 0 auto;
-  letter-spacing: 2px;
-  border: 0px solid;
-  text-align: center;
-  font-size: 80px;
-  font-weight: 100;
-  margin-top:90px;
-}
-
-#coreservicesection {
-  text-align:center;
-}
-.coreservicecontainer {
-  
-  margin-top: 25px;
-}
-
-.coreservicesection2 {
-  
-  margin-top: 100px;
-}
-.carousel.slide {
-  height: 835px;
-}
-
-p {
-  margin-top: 8px;
-  margin-left: 30px;
+.core-service {
+  padding: 30px 50px;
 }
 
 #purchasesection {
   margin-top: 50px;
 }
 
-.btn.btn-match  {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+.btn.btn-match {
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: #30302f;
   background-color: #fec503;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 28px;
   font-weight: 500;
   margin-top: 50px;
@@ -599,83 +419,88 @@ p {
 .buyerdetail {
   width: 100%;
   background-color: #f7f8f8;
-  border: 0px solid;
   margin: 0px auto;
-  margin-top :110px;
+  margin-top: 110px;
   position: absolute;
   min-height: 650px;
 }
+
 .buyerdetails {
   margin-top: 60px;
   width: 380px;
-  border: 0px solid;
   margin-left: 80px;
 }
-.cartdetail{
+
+.cartdetail {
   font-size: 25px;
 }
+
 .cartprice {
-  color : red;
+  color: red;
 }
+
 .addpayment {
   text-align: center;
-  width : 100%;
-  height : 600px;
-  border: 0px solid;
-  margin-top : 118px;
-  position: absolute;
+  width: 100%;
+  height: 600px;
+  margin-top: 118px;
 }
+
 .cardconfirm {
-  border: 0px solid;
   margin: 0px auto;
   height: 400px;
   width: 700px;
   margin-top: 70px;
 }
-.paymentconfirm { 
 
+.paymentconfirm {
   border: 0px solid;
-  width: 100% ;
-  margin-top : 0px; 
-  height:1300px;
+  width: 100%;
+  margin-top: 0px;
+  height: 1300px;
 }
+
 .paymentimage {
   border: 2px solid;
-  width:96px;
-  height:24px;
+  width: 96px;
+  height: 24px;
 }
+
 #paymentdetails {
   margin: 0xp solid;
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
-  width:100%;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
+  width: 100%;
   border: 0px solid;
   margin-top: 0px;
   background: white;
 }
+
 .thankyouaftermatch {
   background: #ffefd5;
   height: 450px;
   border: 0px solid;
   width: 620px;
 }
+
 .setcart {
-  box-shadow: 0 2px 10px -2px rgba(0,0,0,.15);
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .15);
   margin-left: 90px;
   margin-top: 60px;
-  border:0px solid;
   height: 500px;
 }
+
 .buyerarea {
   height: 750px;
   background-color: #fff;
   width: 1200px;
   margin: 0px auto;
-  box-shadow: 0 2px 10px -2px rgba(0,0,0,.15);
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .15);
 }
+
 .btn.btn-buyer {
   color: white;
   background-color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   margin-top: 20px;
   margin-left: 4px;
@@ -683,123 +508,131 @@ p {
   width: 340px;
   letter-spacing: 2px;
 }
+
 .calmdown {
   padding: 15px;
   color: #636363;
   background: #ffefd5;
-  margin-top : 50px;
+  margin-top: 50px;
   text-align: center;
   height: 70px;
   border-color: blue;
-  border: 0px solid;
-  font-size : 30px;
+  font-size: 30px;
   letter-spacing: 5px;
   text-weight: 50;
 }
+
 .savepayment {
-  border: 0px solid;
   margin: 20px auto;
-  margin-top : 70px;
+  margin-top: 70px;
 }
+
 .btn.btn-savepayment {
   color: white;
   background-color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   padding: 10px 50px;
   width: 340px;
   letter-spacing: 2px;
 }
+
 .addpaymenttitle {
-  border: 0px solid;
-  font-size : 30px;
+  font-size: 30px;
   height: 60px;
 }
+
 #payment-form {
-  border: 0px solid;
   height: 150px;
 }
+
 .order-summary {
   margin: 0px auto;
   background: #f7f7f7;
-  
   width: 800px;
   border: 0px solid;
-  height:450px;
+  height: 450px;
 }
-.dotted-list { 
+
+.dotted-list {
   padding-top: 20px;
   text-align: left;
-  border: 0px solid ;
-  border-color:blue;
+  border: 0px solid;
+  border-color: blue;
   height: 400px;
   width: 500px;
   margin-left: 20px;
-  }
+}
+
 .dotted-list dt:after {
-    content: "..................................................................................................................................................................................................................";
-    display: inline-block;
-    width: 0;
-    color: #313132;
-    font-size: .7857142857rem;
-    letter-spacing: 1.5px;
+  content: "..................................................................................................................................................................................................................";
+  display: inline-block;
+  width: 0;
+  color: #313132;
+  font-size: .7857142857rem;
+  letter-spacing: 1.5px;
 }
 
 .dotted-list dt {
-    display: table-cell;
-    width: 100%;
-    max-width: 0;
-    overflow: hidden;
-    vertical-align: top;
+  display: table-cell;
+  width: 100%;
+  max-width: 0;
+  overflow: hidden;
+  vertical-align: top;
 }
+
 .dotted-list dd {
-    display: table-cell;
-    margin: 0;
-    padding-left: 4px;
-    vertical-align: bottom;
-    white-space: nowrap;
+  display: table-cell;
+  margin: 0;
+  padding-left: 4px;
+  vertical-align: bottom;
+  white-space: nowrap;
 }
+
 .dotted-list span {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 3px;
 }
-.thankyouimg {
 
+.thankyouimg {
   margin: 0px auto;
   margin-top: 30px;
-  border:0px solid;
-  
+  border: 0px solid;
 }
+
 .heading {
   font-weight: 300;
   letter-spacing: 3px;
   font-size: 20px;
   text-align: center;
 }
+
 .btn.btn-continuebutton {
   color: white;
   background-color: #67c39f;
   border-color: #67c39f;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   padding: 10px 50px;
   width: 340px;
   letter-spacing: 2px;
   margin-top: 100px;
 }
+
 .thankyouproductimage {
-  width:250px;
-  border:0px solid;
+  width: 250px;
+  border: 0px solid;
   height: 400px;
 }
 
 .thankyoupage {
-  text-align:center;
+  text-align: center;
   background: white;
   height: 800px;
   border: 0px solid;
 }
+
 .lineitemname {
   font-size: 15px;
   letter-spacing: 1px;
@@ -808,61 +641,65 @@ p {
 .totall {
   font-size: 20px
 }
+
 .thankyouwords {
-   font-size: 30px;
-   font-weight:200;
-   letter-spacing:2px; 
+  font-size: 30px;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
+
 #orderreview {
-  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
   color: #555;
   background: #ffefd5;
   font-size: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
-  text-align:center;
+  text-align: center;
   margin: 0px auto;
   width: 100%;
-  border:0px solid;
+  border: 0px solid;
   font-weight: 400;
   letter-spacing: 2px;
-  
 }
+
 #orrderdetail {
-  padding-left:5px;
+  padding-left: 5px;
   font-size: 50px;
   color: #555;
   margin-top: 10px;
   border: 0px solid;
 }
+
 .paymentdetail {
   background-color: #f7f7f7;
   margin: 0px auto;
-  width:1200px;
+  width: 1200px;
   border: 0px solid;
   border-color: blue;
   height: 1000px;
 }
 
-
 .paymenttdetail {
-  padding-left:5px;
+  padding-left: 5px;
   color: #555;
   font-size: 50px;
 }
+
 .shippingdetails {
-  padding-left:5px;
+  padding-left: 5px;
   color: #555;
   font-size: 50px;
-  
 }
+
 .paymentbutton {
-  text-align:center;
-  width : 100%;
+  text-align: center;
+  width: 100%;
   height: 100px;
   background: #ffefd5;
   border: 0px solid;
 }
+
 .btn.btn-paymentbutton {
   color: white;
   background-color: black;
@@ -872,21 +709,85 @@ p {
   margin-left: 4px;
   padding: 10px 50px;
   width: 340px;
-  letter-spacing: 2px; 
+  letter-spacing: 2px;
 }
 
 .paymenttdetail p {
-  font-size:20px;
-  font-weight:300;
+  font-size: 20px;
+  font-weight: 300;
   letter-spacing: 2px;
 }
 
 #educate {
-  padding-top:8px;
+  padding-top: 8px;
   margin: 0px auto;
   width: 600px;
   color: red;
-  font-size:20px;
+  font-size: 20px;
   font-weight: 300;
   letter-spacing: 2px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+}
+
+.acceptance td {
+  text-align: right;
+}
+
+.btn-bemine,
+.btn-bemine:hover {
+  border-color: #fec503;
+  background-color: #fec503;
+  min-width: 200px;
+}
+
+.page-header {
+  border-bottom: 1px solid #eee;
+}
+
+.container {
+  margin-bottom: 100px;
+}
+
+.footer {
+  padding: 75px 0;
+  color: lightgray;
+  background-color: #222222;
+  background-image: image-url('world_map.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.darken {
+  -webkit-filter: brightness(70%);
+}
+
+.text-overlay {
+  color: white;
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 20px black;
+}
+
+.home-section {
+  padding: 75px 0px;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.buy-container {
+  padding: 25px;
 }

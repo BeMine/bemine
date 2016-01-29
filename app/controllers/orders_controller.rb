@@ -32,16 +32,7 @@ class OrdersController < ApplicationController
         @order.bt_transaction_id = result.transaction.id
         @order.save!
 
-        # TODO: Move mailing action to sidekiq
-        User.find_each do |u|
-          if u != current_user
-            token = SecureRandom.hex(10)
-            fulfill_request = u.fulfill_requests.build(user: u, order: @order, token: token)
-            fulfill_request.save!
-
-            UserMailer.notify_match(u, @order, @order.line_item.product, token).deliver_later!
-          end
-        end
+        User.notify_fulfiller!(@order)
 
         redirect_to thank_you_order_path(@order)
       else
@@ -75,13 +66,15 @@ class OrdersController < ApplicationController
 
     return if @order.accepted?
 
-    @order.fulfiller_id = @fulfill_request.user_id
+    @order.fulfiller = @fulfill_request.user
     @order.save!
 
     # TODO: Move if/else render login in view into view object
 
     # TODO: Move mailing action to sidekiq
-    UserMailer.notify_match_success(@order.fulfiller_id, @product, @order).deliver_now!
+    UserMailer.notify_match_success(@order.fulfiller_id, @order).deliver_later!
+
+    # TODO: redirect_to done_acceptance_order_path(@order)
   end
 
   private

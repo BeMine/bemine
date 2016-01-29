@@ -1,59 +1,225 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    <img src="http://insight.japantoday.com/wp-content/uploads/2015/08/Japan-Landing_banner_3.jpg.1600x565_q85.jpg" alt="...">
-    <section id="cta" class="padding-top-bottom color-bg light-typo">
-      <div class = "tiitle text-center " >
-        <h1>Dear. <%=@user.email%> </h1>
-        <font size="8">YOU got an order Request</font></div>
-      <div class = "countryflag"><img src="http://img06.deviantart.net/c7bb/i/2009/038/2/3/japan_grunge_flag_by_think0.jpg" alt="..."></div>
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-            <i class="fa fa-reddit-alien fa-5x ">
-              <p><%= image_tag( @product.picture.url )%></p>
-            </i>
-            <h3>Quality guaranteed</h3>
-          </div>
-          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.4s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-            <i class="fa fa-truck icons fa-5x "></i>
-            <h3>Home delivery</h3>
-          </div>
-          <div class="col-md-4 col-sm-4 wow fadeInUp animated" data-wow-delay="0.6s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-            <i class="fa fa-btc  fa-5x"></i>
-            <h3>Secure payment</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
-    <section id="cta" class="padding-top-bottom color-bg light-typo">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-            <i class="fa fa-reddit-alien fa-5x ">
-              <p><%=link_to image_tag("accept.png"), show_acceptance_order_url(@order, :token => @token)%></p>
-            </a></i>
-          <h3>Accept Request</h3>
-        </div>
-        <div class="col-md-4 col-sm-4 news wow fadeInUp animated" data-wow-delay="0.4s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-          <i class="fa fa-truck icons fa-5x "><a href ="#">
-              <p><%= image_tag("reject.png")%></p>
-            </p>
-          </i>
-          <h3>Reject Request</h3>
-        </div>
-        <div class="col-md-4 col-sm-4 wow fadeInUp animated" data-wow-delay="0.6s" data-wow-offset="10" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-          <i class="fa fa-btc  fa-5x">
-            <p><%=link_to image_tag("stop.png"), show_acceptance_order_url(@order)%></p>
-          </i>
-          <h3>Stop Being Shopper</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-  <h8><%= @token %></h8>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+      <tr>
+        <td align="center" valign="top" id="bodyCell">
+          <!-- BEGIN TEMPLATE // -->
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN PREHEADER // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+                        <tr>
+                          <td valign="top" class="preheaderContainer" style="padding-top:10px; padding-bottom:10px;"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END PREHEADER -->
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN HEADER // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+                        <tr>
+                          <td valign="top" class="headerContainer" style="padding-top:15px; padding-bottom:10px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+                              <tbody class="mcnImageBlockOuter">
+                                <tr>
+                                  <td valign="top" style="padding:0px" class="mcnImageBlockInner">
+                                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                                      <tbody>
+                                        <tr>
+                                          <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                            <img align="center" alt="" src="<%= image_url('logo.png') %>" width="181" style="max-width:181px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END HEADER -->
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN BODY // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+                  <tr>
+                    <td align="center" valign="top" style="padding-top:10px; padding-right:10px; padding-bottom:5px; padding-left:10px;">
+                      <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+                        <tr>
+                          <td align="center" valign="top">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyBackground">
+                              <tr>
+                                <td valign="top" class="bodyContainer" style="padding-top:10px; padding-bottom:10px;">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+                                    <tbody class="mcnTextBlockOuter">
+                                      <tr>
+                                        <td valign="top" class="mcnTextBlockInner">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;" class="mcnTextContentContainer">
+                                            <tbody>
+                                              <tr>
+                                                <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
+                                                  <h1><br>
+                                                    嗨<%= @user.name %>！您有一個代購請求</h1>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
+                                    <tbody class="mcnCaptionBlockOuter">
+                                      <tr>
+                                        <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="false">
+                                            <tbody>
+                                              <tr>
+                                                <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
+                                                  <img alt="" src="<%= @product.picture.url %>" width="563" style="max-width:800px;" class="mcnImage">
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="563">
+                                                  <h2 class="null" style="text-align: center;"><strong style="font-size:20px; line-height:20.8px"><%= @order.line_item.quantity %>個<%= @product.name %></strong></h2>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+                                    <tbody class="mcnTextBlockOuter">
+                                      <tr>
+                                        <td valign="top" class="mcnTextBlockInner">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;" class="mcnTextContentContainer">
+                                            <tbody>
+                                              <tr>
+                                                <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
+                                                  <div style="text-align: center;"><br>
+                                                    <br>
+                                                    如果接受這個代購我們將會付款 <%= number_to_currency(@product.price, precision: 0) %> 給您。<span style="line-height:1.6em">依照海外便宜的價格您</span><span style="line-height:20.8px">平均可達到 <span style="color:#cc3300"> <%= number_to_currency(@product.price * 0.28, precision: 0) %> 的毛利</span>！</span></div>
+                                                  <div style="text-align: center;"><br>
+                                                    &nbsp;</div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+                                    <tbody class="mcnButtonBlockOuter">
+                                      <tr>
+                                        <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+                                          <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 1px none #BEBEBE;border-radius: 10px;background-color: #FFD700;">
+                                            <tbody>
+                                              <tr>
+                                                <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 22px; padding: 20px;">
+                                                  <a class="mcnButton " title="我要代購" href="<%= show_acceptance_order_url(@order, :token => @token) %>" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #333333;">我要代購</a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+                                    <tbody class="mcnTextBlockOuter">
+                                      <tr>
+                                        <td valign="top" class="mcnTextBlockInner">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;" class="mcnTextContentContainer">
+                                            <tbody>
+                                              <tr>
+                                                <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top">
+                            <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/couponshadow.png" height="20" width="600" class="mcnImage" style="display:block; max-width:560px;">
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END BODY -->
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top" style="padding-bottom:40px;">
+                <!-- BEGIN FOOTER // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+                        <tr>
+                          <td valign="top" class="footerContainer" style="padding-top:10px; padding-bottom:10px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+                              <tbody class="mcnTextBlockOuter">
+                                <tr>
+                                  <td valign="top" class="mcnTextBlockInner">
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;" class="mcnTextContentContainer">
+                                      <tbody>
+                                        <tr>
+                                          <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
+                                            Sent with&nbsp;♥&nbsp;from BeMine<br style="line-height: 20.8px;">
+                                            <a href="http://www.airbnb.com/users/notifications?eluid=9&amp;euid=1dc08f7e-057e-94cf-78eb-be51bb0d9850" style="line-height: 20.8px;" target="_blank">Email preferences</a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END FOOTER -->
+              </td>
+            </tr>
+          </table>
+          <!-- // END TEMPLATE -->
+        </td>
+      </tr>
+    </table>
+  </center>
 </body>
-</html>

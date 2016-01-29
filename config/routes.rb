@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcomes#index'
 
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
 
   resources :categories
 
@@ -25,9 +25,11 @@ Rails.application.routes.draw do
     member do
       get :thank_you
       get :show_acceptance
-      get :update_acceptance
+      post :update_acceptance
     end
   end
+
+  # TODO get "/requests/:token" => "orders#show_acceptance", :as => "order_request"
 
   Bemine::Application.routes.draw do
     mount LetterOpenerWeb::Engine, at: '/letter_opener'

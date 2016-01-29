@@ -19,7 +19,7 @@ class Cart < ActiveRecord::Base
     if user.address.nil?
       self.build_shipping_address
     else
-      self.build_shipping_address(user.address.attributes.merge(id: nil))
+      self.build_shipping_address(user.address.slice(:address1, :address2, :address3, :locality, :region, :postcode, :country))
     end
   end
 end

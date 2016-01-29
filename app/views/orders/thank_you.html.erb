@@ -8,40 +8,37 @@
   <div class = "order-summary row col-xs-5">
     <h5 class = "heading">Order Summary</h5>
     <div class = "thankyouproductimage col-md-4 col-sm-4">
-     <div class ="box col2 thankyouimage"><%= image_tag(@order.line_item.product.picture.url) %></div><div class ="lineitemname"><%= @order.line_item.product.name %></div>    
+      <div class ="box col2 thankyouimage"><%= image_tag(@order.line_item.product.picture.url) %></div>
+      <div class ="lineitemname"><%= @order.line_item.product.name %></div>
     </div>
-     <div class = "dotted-list small-12 columns col-md-6 col-sm-6 ">
+    <div class = "dotted-list small-12 columns col-md-6 col-sm-6 ">
       <dl>
         <dt>
-          <span>Subtotal:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Subtotal:</span>
         </dt>
         <dd><%= number_to_currency(@order.amount, precision: 0) %></dd>
       </dl>
       <dl>
         <dt>
-          <span>Shipping:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Shipping:</span>
         </dt>
         <dd>FREE</dd>
       </dl>
       <dl>
-        <dt class = "totall">
-          <span "totall">Total:</span>   
+        <dt>
+          <span>Total:</span>
         </dt>
         <dd class = "totall"><%= number_to_currency(@order.amount, precision: 0) %></dd>
       </dl>
       <dl>
         <dt>
-          <span>Name:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Name:</span>
         </dt>
         <dd><%= @order.name %></dd>
       </dl>
       <dl>
         <dt>
-          <span>Diliver Address:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+          <span>Diliver Address:</span>
         </dt>
         <dd>
           <%= @order.shipping_address.postcode %>
@@ -53,8 +50,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
