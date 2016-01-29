@@ -288,18 +288,11 @@ section#contact {
   height: 300px;
 }
 
-.btn.btn-facebooksignin {
-  box-shadow: rgba(0, 0, 0, .2) 0 2px 10px 0;
+.btn-facebook-signin,
+.btn-facebook-signin:hover {
+  border-color: #425F9E;
+  background-color: #425F9E;
   color: white;
-  border-color: #3b5998;
-  ;
-  background-color: #3b5998;
-  border-radius: 4px;
-  font-size: 18px;
-  margin-top: 15px;
-  min-width: 0;
-  padding: 10px 50px;
-  width: 300px;
 }
 
 .regifield {
@@ -631,10 +624,15 @@ section#contact {
 .btn-bemine:hover {
   border-color: #fec503;
   background-color: #fec503;
+  min-width: 200px;
 }
 
 .page-header {
   border-bottom: 1px solid #eee;
+}
+
+.container {
+  margin-bottom: 100px;
 }
 
 .footer {
@@ -665,4 +663,18 @@ section#contact {
 
 .home-section {
   padding: 75px 0px;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.buy-container {
+  padding: 25px;
+}
+
+.btn {
+  // box-shadow: rgba(0, 0, 0, .2) 0 2px 10px 0;
 }
