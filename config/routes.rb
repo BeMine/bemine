@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcomes#index'
 
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
 
   resources :categories
 

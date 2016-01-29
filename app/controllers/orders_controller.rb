@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.build_from_cart(current_cart, current_user)
 
-    if @order.save
+    if @order.save!
       session[:cart_id] = nil
 
       # TODO: Move to service object
