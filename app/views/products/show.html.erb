@@ -2,16 +2,28 @@
   <div class="page-header text-center">
     <h1><%= @product.name %></h1>
   </div>
-  <div class="col-md-6"><%= image_tag(@product.picture.url) %></div>
   <div class="col-md-6">
-    <div class="" id=""><%= @product.name %></div>
-    <div class="" id=""><%= @product.matcharea %></div>
-    <div class="" id=""><%= number_to_currency(@product.price, precision: 0) %></div>
-    <div id="" class="infinite-scroll centered clearfix">
-      <%= form_tag buy_product_path(@product) do %>
-        Quantity: <%= select_tag :quantity, options_for_select(1..5), :class => 'form-control' %>
-        <%= submit_tag '訂購', :class => 'btn btn-match' %>
-      <% end %>
+    <%= image_tag @product.picture.url, class: 'center-block' %>
+  </div>
+  <div class="col-md-6">
+    <p><%= @product.description %></p>
+    <h3><%= number_to_currency(@product.price, precision: 0) %></h3>
+    <div class="buy-container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= simple_form_for @product, url: buy_product_path(@product), method: :post, html: { class: 'form-horizontal'} do %>
+            <div class="form-group">
+              <%= label_tag :quantity, '數量', class: 'col-xs-3 control-label' %>
+              <div class="col-xs-9">
+                <%= select_tag :quantity, options_for_select(1..5), :class => 'form-control col-xs-10' %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= submit_tag '訂購', :class => 'btn btn-default btn-lg btn-bemine center-block' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

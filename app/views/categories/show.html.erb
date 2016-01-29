@@ -5,7 +5,9 @@
   <div id="masonry-container" class="transitions-enabled infinite-scroll centered clearfix">
     <% @products.each do |p| %>
       <div class="box col3">
-        <%=link_to image_tag(p.picture.url), product_path(p) %>
+        <%= link_to product_path(p) do %>
+          <%= image_tag(p.picture.url) %>
+        <% end %>
         <div class="h3"><%= p.name %></div>
         <div class="h4"><%= p.location %></div>
         <div class="h4"><%= number_to_currency(p.price, precision: 0) %></div>
