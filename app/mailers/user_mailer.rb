@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.notify_comment.subject
   #
-  default from: 'http://localhost:3000/'
+  default from: 'BeMine'
 
   def notify_match(user, order, product, token)
     @product = product
