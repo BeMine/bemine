@@ -10,7 +10,7 @@ development:
 production:
   address: "smtp.gmail.com"
   port: "587"
-  domain: "ihower.com"
+  domain: "gmail.com"
   authentication: "plain"
   user_name: "zowoe7912@gmail.com"
   password: "jack13929"
