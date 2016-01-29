@@ -8,12 +8,14 @@
 @import "masonry/right-to-left";
 @import "masonry/transitions";
 @import "font-awesome";
-//   .row [class^=col-] {
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-//   background-color: rgba(86, 61, 124, .15);
-//   border: 1px solid rgba(86, 61, 124, .2);
-// }
+.row [class^=col-],
+div [class*=col] {
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  // background-color: rgba(86, 61, 124, .15);
+  // border: 1px solid rgba(86, 61, 124, .2);
+}
+
 body {
   font-family: "Hiragino Sans GB", "华文细黑", "STHeiti", "微软雅黑", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -121,18 +123,13 @@ li {
   text-decoration: none !important;
 }
 
-.table {
-  border: 3px, solid;
-}
-
 .propic img {
   max-width: 480px;
 }
 
 .box {
   background-color: transparent;
-  margin-left: 20px;
-  margin-top: 20px;
+  margin: 20px 10px 0px 10px;
 }
 
 .detailpics {
@@ -158,11 +155,6 @@ li {
   margin-top: 25px;
 }
 
-#masonry-container {
-  width: 1024px;
-  margin-top: 25px;
-}
-
 .showcata {
   width: 100px;
 }
@@ -173,8 +165,6 @@ li {
   font-size: 30px;
 }
 
-.hero-content {}
-
 .text-hero {
   position: absolute;
   color: white;
@@ -184,7 +174,7 @@ li {
 }
 
 .text-jumbo {
-  font-size: 60px;
+  font-size: 4em;
   font-weight: 300;
 }
 
@@ -237,12 +227,6 @@ li {
   background: #404549;
 }
 
-.container {
-  margin-top: 0px;
-}
-
-.light-typo {}
-
 .countryflag {
   width: 400px;
   height: 300px;
@@ -260,17 +244,9 @@ section#contact {
   background-repeat: no-repeat;
 }
 
-.carousel-indicators {
-  height: px;
-  position: absolute;
-}
-
 #categories {
   background-color: #222;
-  padding: 100px;
 }
-
-.category {}
 
 #cateename {
   padding-top: 100px;
@@ -283,11 +259,6 @@ section#contact {
 
 .text-white {
   color: white;
-}
-
-#cateepic {
-  border-color: blue;
-  margin-top: 20px;
 }
 
 .btn.btn-regisubmit {
@@ -430,30 +401,8 @@ section#contact {
   letter-spacing: 2px;
 }
 
-.coreservice {
-  margin: 100px auto;
-  width: 1200px;
-}
-
-.coreservicetitle {
-  color: #555;
-  margin: 0 auto;
-  letter-spacing: 2px;
-  text-align: center;
-  font-size: 80px;
-  font-weight: 100;
-}
-
-#coreservicesection {
-  text-align: center;
-}
-
-.coreservicecontainer {
-  margin-top: 25px;
-}
-
-.coreservicesection2 {
-  margin-top: 100px;
+.core-service {
+  padding: 30px 50px;
 }
 
 #purchasesection {
@@ -695,4 +644,25 @@ section#contact {
   background-image: image-url('world_map.png');
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.darken {
+  -webkit-filter: brightness(70%);
+}
+
+.text-overlay {
+  color: white;
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 20px black;
+}
+
+.home-section {
+  padding: 75px 0px;
 }
