@@ -264,8 +264,6 @@ li {
   z-index: 2000;
   width: 100%;
   height: 120px;
-  position:fixed;
-  
 
 }
 
@@ -635,10 +633,11 @@ p {
   margin-top: 70px;
 }
 .paymentconfirm { 
-  border: 2px solid;
+
+  border: 0px solid;
   width: 100% ;
-  margin-top : 150px;
-  position: absolute;
+  margin-top : 0px; 
+  height:1300px;
 }
 .paymentimage {
   border: 2px solid;
@@ -646,13 +645,18 @@ p {
   height:24px;
 }
 #paymentdetails {
+  margin: 0xp solid;
+  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  width:100%;
   border: 0px solid;
-  margin-top: 20px;
+  margin-top: 0px;
+  background: white;
 }
 .thankyouaftermatch {
-  position: absolute;
-  margin-top : 150px;
-  width: 100% ; 
+  background: #ffefd5;
+  height: 450px;
+  border: 0px solid;
+  width: 620px;
 }
 .setcart {
   box-shadow: 0 2px 10px -2px rgba(0,0,0,.15);
@@ -716,19 +720,21 @@ p {
   height: 150px;
 }
 .order-summary {
+  margin: 0px auto;
   background: #f7f7f7;
-  position:absolute;
+  
   width: 800px;
-  margin-top: 250px;
-  margin-left: 100px;
   border: 0px solid;
+  height:450px;
 }
 .dotted-list { 
-  margin: 0px auto;
+  padding-top: 20px;
+  text-align: left;
   border: 0px solid ;
   border-color:blue;
   height: 400px;
   width: 500px;
+  margin-left: 20px;
   }
 .dotted-list dt:after {
     content: "..................................................................................................................................................................................................................";
@@ -759,10 +765,11 @@ p {
   letter-spacing: 3px;
 }
 .thankyouimg {
-  height:600px;
-  position:absolute;
-  margin-top: 350px;
-  margin-left:800px;
+
+  margin: 0px auto;
+  margin-top: 30px;
+  border:0px solid;
+  
 }
 .heading {
   font-weight: 300;
@@ -778,5 +785,108 @@ p {
   font-size: 18px;
   padding: 10px 50px;
   width: 340px;
+  letter-spacing: 2px;
+  margin-top: 100px;
+}
+.thankyouproductimage {
+  width:250px;
+  border:0px solid;
+  height: 400px;
+}
+
+.thankyoupage {
+  text-align:center;
+  background: white;
+  height: 800px;
+  border: 0px solid;
+}
+.lineitemname {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.totall {
+  font-size: 20px
+}
+.thankyouwords {
+   font-size: 30px;
+   font-weight:200;
+   letter-spacing:2px; 
+}
+#orderreview {
+  box-shadow: rgba(0,0,0,.2) 0 2px 5px 0;
+  color: #555;
+  background: #ffefd5;
+  font-size: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align:center;
+  margin: 0px auto;
+  width: 100%;
+  border:0px solid;
+  font-weight: 400;
+  letter-spacing: 2px;
+  
+}
+#orrderdetail {
+  padding-left:5px;
+  font-size: 50px;
+  color: #555;
+  margin-top: 10px;
+  border: 0px solid;
+}
+.paymentdetail {
+  background-color: #f7f7f7;
+  margin: 0px auto;
+  width:1200px;
+  border: 0px solid;
+  border-color: blue;
+  height: 1000px;
+}
+
+
+.paymenttdetail {
+  padding-left:5px;
+  color: #555;
+  font-size: 50px;
+}
+.shippingdetails {
+  padding-left:5px;
+  color: #555;
+  font-size: 50px;
+  
+}
+.paymentbutton {
+  text-align:center;
+  width : 100%;
+  height: 100px;
+  background: #ffefd5;
+  border: 0px solid;
+}
+.btn.btn-paymentbutton {
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 4px;
+  padding: 10px 50px;
+  width: 340px;
+  letter-spacing: 2px; 
+}
+
+.paymenttdetail p {
+  font-size:20px;
+  font-weight:300;
+  letter-spacing: 2px;
+}
+
+#educate {
+  padding-top:8px;
+  margin: 0px auto;
+  width: 600px;
+  color: red;
+  font-size:20px;
+  font-weight: 300;
   letter-spacing: 2px;
 }

@@ -15,7 +15,7 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   config.action_mailer.asset_host = "http://localhost:3000"
   config.action_mailer.smtp_settings = config_for(:email).symbolize_keys 
@@ -43,5 +43,5 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
 end

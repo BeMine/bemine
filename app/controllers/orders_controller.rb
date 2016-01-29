@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.build_from_cart(current_cart, current_user)
 
-    if @order.save
+    if @order.save!
       session[:cart_id] = nil
 
       # TODO: Move to service object
@@ -81,7 +81,7 @@ class OrdersController < ApplicationController
     # TODO: Move if/else render login in view into view object
 
     # TODO: Move mailing action to sidekiq
-    UserMailer.notify_match_success(@order.fulfiller_id, @product, @order).deliver_later!
+    UserMailer.notify_match_success(@order.fulfiller_id, @product, @order).deliver_now!
   end
 
   private

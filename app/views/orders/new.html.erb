@@ -1,7 +1,8 @@
 <div class="paymentconfirm">
   <div class="paymentdetail">
-    <h1>Review Order</h1>
-    <h3>Order Detail</h3>
+    <div id = "orderreview">Review Order</div>
+    <div id = "educate">親愛的使用者您好，在商品媒合成功之前本公司不會收取您任何費用，麻煩請確認送貨地址及付款資訊無誤，我們將在24小時內以Email方式通知您媒合結果!!</div>
+    <div id = "orrderdetail">Order Detail</div>
     <table class="table" id="paymentdetails">
       <thead>
         <tr>
@@ -20,10 +21,10 @@
         </tr>
       </tbody>
     </table>
-    <h3>Payment Detail</h3>
+    <div class = "paymenttdetail">Payment Detail</div>
     <p><%= image_tag @payment_method.image_url %> •••• •••• •••• <%= @payment_method.last_4 %></p>
     <%= link_to 'Change payment', show_payment_cart_path(@cart), data: { no_turbolink: true } %>
-    <h3>Shipping Detail</h3>
+    <div class = "shippingdetails">Shipping Detail</div>
     <p><%= @order.name %></p>
     <p>
       <%= @order.shipping_address.postcode %>
@@ -34,7 +35,7 @@
     <p><%= ISO3166::Country.find_country_by_alpha2(@order.shipping_address.country).name %></p>
     <%= link_to 'Change address', show_address_cart_path(@cart) %>
     <%= simple_form_for @order do |f| %>
-      <%= f.button :submit, '下單', class: 'btn btn-primary' %>
+      <div class = "paymentbutton"><%= f.button :submit, '下單', class: 'btn btn-paymentbutton' %></div>
     <% end %>
   </div>
 </div>

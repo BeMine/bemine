@@ -1,14 +1,16 @@
-<div class = "thankyoupage">
-  <div class = "thankyouaftermatch">
-    <h5>Thank you for your order</h5>
-    <h5> hi xx 您好  謝謝您使用xx商品的媒合服務,我們將在24小時內Email通知您媒合結果,在此期間我們不會收取您任何費用,請放心</h5>
+<div class = "thankyoupage row">
+  <div class = "thankyouimg"><%=image_tag("thankyou.png")%></div>
+  <div class = "thankyouaftermatch col-xs-4">
+    <h5 class = "thankyouwords"> 親愛的 <%= @order.name %> 您好，謝謝您使用 <%= @order.line_item.product.name %> 商品的媒合服務,我們將在24小時內Email通知您媒合結果，在此期間我們不會收取您任何費用，請您放心</h5>
     <div class = "continuebutton">
-      <%= link_to 'Continue shopping', root_path, :class => "btn btn-continuebutton" %>
-    </div>
+      <%= link_to 'Continue shopping', root_path, :class => "btn btn-continuebutton" %></div>
   </div>
-  <div class = "order-summary row">
+  <div class = "order-summary row col-xs-5">
     <h5 class = "heading">Order Summary</h5>
-    <div class = "dotted-list small-12 columns">
+    <div class = "thankyouproductimage col-md-4 col-sm-4">
+     <div class ="box col2 thankyouimage"><%= image_tag(@order.line_item.product.picture.url) %></div><div class ="lineitemname"><%= @order.line_item.product.name %></div>    
+    </div>
+     <div class = "dotted-list small-12 columns col-md-6 col-sm-6 ">
       <dl>
         <dt>
           <span>Subtotal:<pseudo:after></pseudo:after></span>
@@ -24,18 +26,17 @@
         <dd>FREE</dd>
       </dl>
       <dl>
-        <dt>
-          <span>Total:<pseudo:after></pseudo:after></span>
-          <pseudo:after></pseudo:after>
+        <dt class = "totall">
+          <span "totall">Total:</span>   
         </dt>
-        <dd><%= number_to_currency(@order.amount, precision: 0) %></dd>
+        <dd class = "totall"><%= number_to_currency(@order.amount, precision: 0) %></dd>
       </dl>
       <dl>
         <dt>
           <span>Name:<pseudo:after></pseudo:after></span>
           <pseudo:after></pseudo:after>
         </dt>
-        <dd><%= @order.name%></dd>
+        <dd><%= @order.name %></dd>
       </dl>
       <dl>
         <dt>
@@ -52,5 +53,8 @@
     </div>
   </div>
 </div>
-<div class = "thankyouimg"><%=image_tag("thankyou.png")%></div>
-<%= image_tag(@order.line_item.product.picture.url) %>
+
+
+
+
+

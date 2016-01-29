@@ -13,7 +13,7 @@ class UserMailer < ApplicationMailer
     @user = user
     @token = token
 
-    mail(to: order.user.email, subject: 'New Order Request')
+    mail(to: @user.email, subject: 'New Order Request')
   end
 
   def notify_match_success(user, product, order)
