@@ -5,7 +5,7 @@
     <div class ="buyerdetails col-xs-6">
       <h5>新媒合訂單</h5>
       <%= simple_form_for @cart, url: update_address_cart_path(@cart), method: :post do |f| %>
-        <%= f.input :name %>
+        <%= f.input :name, label: '收件者姓名', required: true %>
         <%= f.simple_fields_for :shipping_address do |a| %>
           <%= a.input :address1, label: '地址' %>
           <%= a.input :address2, label: '地址（第二行）', required: false %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160125082002) do
+ActiveRecord::Schema.define(version: 20160129024104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,14 +52,6 @@ ActiveRecord::Schema.define(version: 20160125082002) do
     t.datetime "picture_updated_at"
   end
 
-  create_table "details", force: :cascade do |t|
-    t.string   "content"
-    t.integer  "quantity"
-    t.string   "size"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "fulfill_requests", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "order_id"
@@ -69,7 +61,7 @@ ActiveRecord::Schema.define(version: 20160125082002) do
   end
 
   add_index "fulfill_requests", ["order_id"], name: "index_fulfill_requests_on_order_id", using: :btree
-  add_index "fulfill_requests", ["token"], name: "index_fulfill_requests_on_token", using: :btree
+  add_index "fulfill_requests", ["token"], name: "index_fulfill_requests_on_token", unique: true, using: :btree
   add_index "fulfill_requests", ["user_id"], name: "index_fulfill_requests_on_user_id", using: :btree
 
   create_table "line_items", force: :cascade do |t|
@@ -80,6 +72,10 @@ ActiveRecord::Schema.define(version: 20160125082002) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id", using: :btree
+  add_index "line_items", ["order_id"], name: "index_line_items_on_order_id", using: :btree
+  add_index "line_items", ["product_id"], name: "index_line_items_on_product_id", using: :btree
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
@@ -133,6 +129,7 @@ ActiveRecord::Schema.define(version: 20160125082002) do
     t.string   "fb_token"
     t.string   "name"
     t.string   "payment_info"
+    t.string   "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

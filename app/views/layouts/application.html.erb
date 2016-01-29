@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bemine</title>
+    <title>BeMine - 海外代購媒合</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= yield :stylesheet %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="header">
-      <div class="logo-place">
-        <div class = "deistrict row">
-          <div class="firstcontainer col-xs-6 ">
-            <p><%=link_to image_tag("logo33.png"), root_path%></p>
-          </div>
-          <div class = "qqq col-xs-6">
-            <% if current_user %>
-              <%= current_user.name %>
-              <%= link_to('登出', destroy_user_session_path, :method => :delete, :class => "btn btn-signout") %>
-              <%= link_to('修改密碼', edit_registration_path(:user), :class => "btn btn-change") %>
-              <%= link_to('訂單', orders_path, :class => "btn btn-change") %>
-            <% else %>
-              <%= link_to('Sign Up', new_registration_path(:user), :class => "btn btn-signup") %>
-              <%= link_to('登入', new_session_path(:user), :class => "btn btn-signin") %>
-              <%= link_to "Facebook 登入", user_omniauth_authorize_path(:facebook), :class => "btn btn-signin" %>
-            <% end %>
-          </div>
-        </div>
+    <div class="header clearfix">
+      <div class="logo">
+        <p><%=link_to image_tag("logo.png"), root_path %></p>
       </div>
-      <div class="layoutcate">
-        <div class = "deistrict row">
-          <div class="cate">
-            <ul class = "secondbar">
-              <li>MEN</li>
-              <li>WOMEN</li>
-              <li>KIDS</li>
-              <li>CONTACT</li>
-            </ul>
-          </div>
-        </div>
+      <div class="menu">
+        <ul>
+          <% if current_user %>
+            <li><%= link_to('登出', destroy_user_session_path, :method => :delete, :class => "btn btn-menu") %></li>
+            <!--   <li><%= link_to('修改密碼', edit_registration_path(:user), :class => "btn btn-menu") %></li> -->
+            <li><%= link_to('訂單', orders_path, :class => "btn btn-menu") %></li>
+          <% else %>
+            <li><%= link_to('註冊', new_registration_path(:user), :class => "btn btn-signup") %></li>
+            <li><%= link_to('登入', new_session_path(:user), :class => "btn btn-menu") %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
     <%= yield %>
   </body>
+  <div class="footer">
+    <p class="text-center">© BeMine</p>
+  </div>
 </html>

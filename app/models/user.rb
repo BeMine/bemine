@@ -5,11 +5,24 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, :omniauth_providers => [:facebook]
 
+  validates_presence_of :name, :email
+
+  # TODO: Add validation of role
+
   has_one :address, as: :addressable
   has_many :orders
   has_many :fulfill_requests
 
   store :payment_info, accessors: [:bt_customer_id]
+
+  def self.notify_fulfiller!(order)
+    self.find_each do |user|
+      if user != order.user
+        fulfill_request = user.fulfill_requests.create!(user: user, order: order)
+        UserMailer.notify_match(user, order, fulfill_request).deliver_later!
+      end
+    end
+  end
 
   def display_name
     name || email
@@ -29,6 +42,7 @@ class User < ActiveRecord::Base
     if existing_user
       existing_user.fb_uid = auth.uid
       existing_user.fb_token = auth.credentials.token
+      existing_user.name = auth.info.name
       existing_user.save!
       return existing_user
     end
@@ -38,8 +52,13 @@ class User < ActiveRecord::Base
     user.fb_uid = auth.uid
     user.fb_token = auth.credentials.token
     user.email = auth.info.email
+    user.name = auth.info.name
     user.password = Devise.friendly_token[0, 20]
     user.save!
     return user
+  end
+
+  def admin?
+    role == 'admin'
   end
 end
