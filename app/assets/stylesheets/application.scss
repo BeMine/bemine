@@ -178,6 +178,11 @@ li {
   font-weight: 300;
 }
 
+.text-large {
+  font-size: 2em;
+  font-weight: 300;
+}
+
 .loginsection {
   border: 2px solid;
 }
@@ -823,4 +828,15 @@ section#contact {
 
 .table-header {
   min-width: 100px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  .text-jumbo {
+    font-size: 2em;
+    font-weight: 300;
+  }
+  .text-large {
+    font-size: 1em;
+    font-weight: 300;
+  }
 }
