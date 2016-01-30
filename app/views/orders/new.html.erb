@@ -1,41 +1,38 @@
-<div class="paymentconfirm">
-  <div class="paymentdetail">
-    <div id = "orderreview">Review Order</div>
-    <div id = "educate">親愛的使用者您好，在商品媒合成功之前本公司不會收取您任何費用，麻煩請確認送貨地址及付款資訊無誤，我們將在24小時內以Email方式通知您媒合結果!!</div>
-    <div id = "orrderdetail">Order Detail</div>
-    <table class="table" id="paymentdetails">
-      <thead>
-        <tr>
-          <td>Product</td>
-          <td>Quantity</td>
-          <td>Total</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class ="box col2"><%= image_tag(@order.line_item.product.picture.url) %><%= @order.line_item.product.name %></div>
-          </td>
-          <td><%= @order.line_item.quantity %></td>
-          <td><%= number_to_currency(@order.amount, precision: 0) %></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class = "paymenttdetail">Payment Detail</div>
-    <p><%= image_tag @payment_method.image_url %> •••• •••• •••• <%= @payment_method.last_4 %></p>
-    <%= link_to 'Change payment', show_payment_cart_path(@cart), data: { no_turbolink: true } %>
-    <div class = "shippingdetails">Shipping Detail</div>
-    <p><%= @order.name %></p>
-    <p>
-      <%= @order.shipping_address.postcode %>
-      <%= @order.shipping_address.region %>
-      <%= @order.shipping_address.locality %>
-      <%= @order.shipping_address.address1 %>
-    </p>
-    <p><%= ISO3166::Country.find_country_by_alpha2(@order.shipping_address.country).name %></p>
-    <%= link_to 'Change address', show_address_cart_path(@cart) %>
-    <%= simple_form_for @order do |f| %>
-      <div class = "paymentbutton"><%= f.button :submit, '下單', class: 'btn btn-paymentbutton' %></div>
-    <% end %>
+<div class="container">
+  <div class="page-header text-center">
+    <h1>訂單確認</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2><%= @order.line_item.product.name %></h2>
+      <%= image_tag @order.line_item.product.picture.url, class: 'center-block product-image' %>
+    </div>
+    <div class="col-md-6">
+      <div class="col-xs-12">
+        <h2 class="side-section">產品</h2>
+        <p>數量 <%= @order.line_item.quantity %></p>
+        <p>總價 <%= number_to_currency(@order.amount, precision: 0) %></p>
+      </div>
+      <div class="col-xs-12">
+        <h2 class="side-section">付款</h2>
+        <p><%= image_tag @payment_method.image_url %> •••• •••• •••• <%= @payment_method.last_4 %></p>
+        <%= link_to '變更', show_payment_cart_path(@cart), data: { no_turbolink: true } %>
+      </div>
+      <div class="col-xs-12">
+        <h2 class="side-section">收件資訊</h2>
+        <p><%= @order.name %></p>
+        <p>
+          <%= @order.shipping_address.postcode %>
+          <%= @order.shipping_address.region %>
+          <%= @order.shipping_address.locality %>
+          <%= @order.shipping_address.address1 %>
+        </p>
+        <p><%= ISO3166::Country.find_country_by_alpha2(@order.shipping_address.country).name %></p>
+        <%= link_to '變更', show_address_cart_path(@cart) %>
+      </div>
+      <%= simple_form_for @order do |f| %>
+        <div class=""><%= f.button :submit, '下單', class: 'btn btn-default btn-lg btn-bemine center-block' %></div>
+      <% end %>
+    </div>
   </div>
 </div>

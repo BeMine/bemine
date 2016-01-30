@@ -1,52 +1,44 @@
-<div class = "thankyoupage row">
-  <div class = "thankyouimg"><%=image_tag("thankyou.png")%></div>
-  <div class = "thankyouaftermatch col-xs-4">
-    <h5 class = "thankyouwords"> 親愛的 <%= @order.name %> 您好，謝謝您使用 <%= @order.line_item.product.name %> 商品的媒合服務,我們將在24小時內Email通知您媒合結果，在此期間我們不會收取您任何費用，請您放心</h5>
-    <div class = "continuebutton">
-      <%= link_to 'Continue shopping', root_path, :class => "btn btn-continuebutton" %></div>
-  </div>
-  <div class = "order-summary row col-xs-5">
-    <h5 class = "heading">Order Summary</h5>
-    <div class = "thankyouproductimage col-md-4 col-sm-4">
-      <div class ="box col2 thankyouimage"><%= image_tag(@order.line_item.product.picture.url) %></div>
-      <div class ="lineitemname"><%= @order.line_item.product.name %></div>
+<div class="container">
+  <div class="row">
+    <div class="page-header text-center">
+      <h2>訂單內容</h2>
     </div>
-    <div class = "dotted-list small-12 columns col-md-6 col-sm-6 ">
-      <dl>
-        <dt>
-          <span>Subtotal:</span>
-        </dt>
-        <dd><%= number_to_currency(@order.amount, precision: 0) %></dd>
-      </dl>
-      <dl>
-        <dt>
-          <span>Shipping:</span>
-        </dt>
-        <dd>FREE</dd>
-      </dl>
-      <dl>
-        <dt>
-          <span>Total:</span>
-        </dt>
-        <dd class = "totall"><%= number_to_currency(@order.amount, precision: 0) %></dd>
-      </dl>
-      <dl>
-        <dt>
-          <span>Name:</span>
-        </dt>
-        <dd><%= @order.name %></dd>
-      </dl>
-      <dl>
-        <dt>
-          <span>Diliver Address:</span>
-        </dt>
-        <dd>
-          <%= @order.shipping_address.postcode %>
-          <%= @order.shipping_address.region %>
-          <%= @order.shipping_address.locality %>
-          <%= @order.shipping_address.address1 %>
-        </dd>
-      </dl>
+    <div class="col-md-6">
+      <table class="table">
+        <tr>
+          <th class="table-header">產品</th>
+          <td>
+            <%= image_tag @order.line_item.product.picture.url, class: 'product-image-small' %>
+            <p><%= @order.line_item.product.name %></p>
+          </td>
+        </tr>
+        <tr>
+          <th class="table-header">小計</th>
+          <td><%= number_to_currency(@order.amount, precision: 0) %></td>
+        </tr>
+        <tr>
+          <th class="table-header">運費</th>
+          <td class="table-header">免費</td>
+        </tr>
+        <tr>
+          <th class="table-header">總價</th>
+          <td><%= number_to_currency(@order.amount, precision: 0) %></td>
+        </tr>
+        <tr>
+          <th class="table-header">寄件地址</th>
+          <td>
+            <%= @order.shipping_address.postcode %>
+            <%= @order.shipping_address.region %>
+            <%= @order.shipping_address.locality %>
+            <%= @order.shipping_address.address1 %>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <%= image_tag "thankyou.png", class: 'center-block padding' %>
+      <p class="padding">親愛的 <%= @order.name %> 您好，謝謝您使用 <%= @order.line_item.product.name %> 商品的媒合服務,我們將在24小時內Email通知您媒合結果，在此期間我們不會收取您任何費用，請您放心。</p>
+      <%= link_to '繼續 Shopping', root_path, :class => "btn btn-default btn-lg btn-continue-shopping center-block padding" %>
     </div>
   </div>
 </div>

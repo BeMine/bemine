@@ -470,13 +470,13 @@ section#contact {
   height: 24px;
 }
 
-#paymentdetails {
-  margin: 0xp solid;
+.box-shadow {
+  // margin: 0xp solid;
   box-shadow: rgba(0, 0, 0, .2) 0 2px 5px 0;
-  width: 100%;
-  border: 0px solid;
-  margin-top: 0px;
-  background: white;
+  // width: 100%;
+  // border: 0px solid;
+  // margin-top: 0px;
+  // background: white;
 }
 
 .thankyouaftermatch {
@@ -609,16 +609,10 @@ section#contact {
   text-align: center;
 }
 
-.btn.btn-continuebutton {
+.btn-continue-shopping {
   color: white;
   background-color: #67c39f;
   border-color: #67c39f;
-  border-radius: 4px;
-  font-size: 18px;
-  padding: 10px 50px;
-  width: 340px;
-  letter-spacing: 2px;
-  margin-top: 100px;
 }
 
 .thankyouproductimage {
@@ -802,6 +796,10 @@ section#contact {
   width: 100%;
 }
 
+.product-image-small {
+  width: 50%;
+}
+
 .carousel-inner img {
   width: 100%
 }
@@ -812,4 +810,17 @@ section#contact {
 
 #user-name {
   color: white;
+}
+
+.side-section {
+  border-bottom: 1px solid #eee;
+  padding: 0px 0px 15px 0px;
+}
+
+.padding {
+  padding: 20px 0px;
+}
+
+.table-header {
+  min-width: 100px;
 }
