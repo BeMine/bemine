@@ -6,6 +6,40 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# Users
+
+puts 'Seeding users'
+
+password = 'password'
+
+users = [
+  { email: 'admin@email.com', name: 'Admin', password: password, role: 'admin' },
+  { email: 'alphabt@gmail.com', name: 'Brian', password: password },
+  { email: 'briantai@outlook.com', name: 'Brian (Outlook)', password: password },
+  { email: 'iczman04@yahoo.com', name: 'Brian (Yahoo)', password: password },
+  { email: 'zowie7912@gmail.com', name: 'Stanley', password: password },
+]
+
+users.each do |user|
+  u = User.create!(
+    email: user[:email],
+    name: user[:name],
+    password: user[:password],
+    role: user[:role]
+  )
+  u.create_address(
+    address1: '南京東路二段97號',
+    locality: '中山區',
+    region: '台北市',
+    postcode: '104',
+    country: 'TW'
+  )
+end
+
+# Categories
+
+puts 'Seeding categories'
+
 categories = [
   { :name => '鞋包配件',    :picture => File.new("#{Rails.root}/app/assets/images/categories/accessories.png") },
   { :name => '品牌服飾',    :picture => File.new("#{Rails.root}/app/assets/images/categories/clothings.png") },

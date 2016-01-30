@@ -16,8 +16,9 @@ namespace :dev do
 
     user = User.create!(
       email: 'user@email.com',
-      name: 'Test User', password:
-      password, role: 'admin'
+      name: 'Test User',
+      password: password,
+      role: 'admin'
     )
     user.create_address(
       address1: '南京東路二段97號',
@@ -42,7 +43,6 @@ namespace :dev do
         country: 'TW'
       )
       users << user
-
     end
 
     puts 'Generating products...'
@@ -69,8 +69,6 @@ namespace :dev do
   task clean: :environment do
     puts 'Cleaning the db...'
 
-    User.delete_all
-    Address.delete_all
     Product.delete_all
     Cart.delete_all
     Order.delete_all
