@@ -15,8 +15,8 @@ password = 'password'
 users = [
   { email: 'admin@email.com', name: 'Admin', password: password, role: 'admin' },
   { email: 'alphabt@gmail.com', name: 'Brian', password: password },
-  { email: 'briantai@outlook.com', name: 'Brian (Outlook)', password: password },
-  { email: 'iczman04@yahoo.com', name: 'Brian (Yahoo)', password: password },
+  # { email: 'briantai@outlook.com', name: 'Brian (Outlook)', password: password },
+  # { email: 'iczman04@yahoo.com', name: 'Brian (Yahoo)', password: password },
   { email: 'zowie7912@hotmail.com', name: 'Stanley', password: password },
 ]
 
