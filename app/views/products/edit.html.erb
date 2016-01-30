@@ -20,6 +20,9 @@
     <%= f.text_field :matcharea%>
   </div>
   <div class="form-group">
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+  <div class="form-group">
     <%= f.submit "送出", :class => "btn btn-warning" %>
   </div>
 <% end %>
