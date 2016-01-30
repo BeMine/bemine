@@ -48,42 +48,43 @@
     </div>
   </div>
 </div>
-<div id="categories" class="home-section">
-  <div id="masonry-container" class="transitions-enabled infinite-scroll centered clearfix">
-    <% @categories.each do |category|%>
-      <figure class="box col4">
-        <%= link_to image_tag(category.picture.url, class: 'darken'), category %>
+<!-- Categories -->
+<div id="categories" class="home-section row">
+  <% @categories.each do |category|%>
+    <div class="col-sm-6 col-lg-4 category">
+      <figure>
+        <%= link_to image_tag(category.picture.url, class: 'darken center-block'), category %>
         <figcaption class="text-overlay text-shadown"><%= category.name %></figcaption>
       </figure>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
+<!-- Core Values -->
 <div class="home-section row">
-  <div class="col-md-4 text-center core-service">
+  <div class="col-sm-6 col-lg-4 text-center core-service">
     <%= fa_icon 'spinner 4x' %>
     <h2>自動代購媒合</h2>
     <p>找到自己喜歡的商品，線上立即自動幫您配對代購者，保證24小時內通知媒合結果，輕鬆完成交易。</p>
   </div>
-  <div class="col-md-4 text-center core-service">
+  <div class="col-sm-6 col-lg-4 text-center core-service">
     <%= fa_icon 'eye 4x' %>
     <h3>商品經手把關</h3>
     <p>所有商品都由經過認證的代購者買回，經BeMine嚴格的商品檢查後，才將最好的商品送到您手中。如仍遇瑕疵或仿造品，BeMine則全權負起退換貨之責任。</p>
   </div>
-  <div class="col-md-4 text-center core-service">
+  <div class="col-sm-6 col-lg-4 text-center core-service">
     <%= fa_icon 'times 4x' %>
     <h3>一律免運費</h3>
     <p>我們堅持您看到的價格就是最後的實際價格，不再收取任何額外費用</p>
   </div>
-  <div class="clearfix"></div>
-  <div class="col-md-4 text-center core-service">
+  <div class="col-sm-6 col-lg-4 text-center core-service">
     <%= fa_icon 'clock-o 4x' %>
     <h3>24小時回覆結果</h3>
   </div>
-  <div class="col-md-4 text-center core-service">
+  <div class="col-sm-6 col-lg-4 text-center core-service">
     <%= fa_icon 'truck 4x' %>
     <h3>負責物流服務</h3>
   </div>
-  <div class="col-md-4 text-center core-service">
+  <div class="col-sm-6 col-lg-4 text-center core-service">
     <%= fa_icon 'quote-right 4x' %>
     <h3>專人客服</h3>
   </div>

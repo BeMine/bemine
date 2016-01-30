@@ -396,6 +396,7 @@ section#contact {
 
 .core-service {
   padding: 30px 50px;
+  height: 250px;
 }
 
 #purchasesection {
@@ -770,8 +771,10 @@ section#contact {
   font-size: 4em;
   position: absolute;
   top: 50%;
+  left: 50%;
   width: 100%;
   text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 .text-shadow {
@@ -792,6 +795,14 @@ section#contact {
   padding: 25px;
 }
 
-.product_image {
+.product-image {
   width: 100%;
+}
+
+.carousel-inner img {
+  width: 100%
+}
+
+.category {
+  padding: 30px 0px;
 }
