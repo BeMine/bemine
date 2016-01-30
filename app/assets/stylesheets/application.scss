@@ -739,7 +739,10 @@ section#contact {
 }
 
 .btn-bemine,
-.btn-bemine:hover {
+.btn-bemine:active,
+.btn-bemine:focus,
+.btn-bemine:hover,
+.btn-bemine:visited {
   border-color: #fec503;
   background-color: #fec503;
   min-width: 200px;
@@ -805,4 +808,8 @@ section#contact {
 
 .category {
   padding: 30px 0px;
+}
+
+#user-name {
+  color: white;
 }

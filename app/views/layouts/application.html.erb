@@ -15,6 +15,7 @@
       <div class="menu">
         <ul>
           <% if current_user %>
+            <li id="user-name"><%= current_user.name %></li>
             <li><%= link_to('登出', destroy_user_session_path, :method => :delete, :class => "btn btn-menu") %></li>
             <!--   <li><%= link_to('修改密碼', edit_registration_path(:user), :class => "btn btn-menu") %></li> -->
             <li><%= link_to('訂單', orders_path, :class => "btn btn-menu") %></li>
@@ -26,8 +27,8 @@
       </div>
     </div>
     <%= yield %>
+    <div class="footer">
+      <p class="text-center">© BeMine</p>
+    </div>
   </body>
-  <div class="footer">
-    <p class="text-center">© BeMine</p>
-  </div>
 </html>
