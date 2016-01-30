@@ -17,7 +17,7 @@ users = [
   { email: 'alphabt@gmail.com', name: 'Brian', password: password },
   { email: 'briantai@outlook.com', name: 'Brian (Outlook)', password: password },
   { email: 'iczman04@yahoo.com', name: 'Brian (Yahoo)', password: password },
-  { email: 'zowie7912@gmail.com', name: 'Stanley', password: password },
+  { email: 'zowie7912@hotmail.com', name: 'Stanley', password: password },
 ]
 
 users.each do |user|
