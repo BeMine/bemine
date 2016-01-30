@@ -14,9 +14,9 @@
 <%= javascript_include_tag 'https://js.braintreegateway.com/v2/braintree.js' %>
 <script>
   braintree.setup("<%= @bt_client_token %>", "dropin", {
-                container: "payment-form",
-                onReady: function () {
-                  $('#show_payment :submit').prop('disabled', false);
-                }
-              });
+    container: "payment-form",
+    onReady: function () {
+      $('#show_payment :submit').prop('disabled', false);
+    }
+  });
 </script>
