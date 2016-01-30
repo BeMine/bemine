@@ -15,7 +15,7 @@
           </tr>
           <tr>
             <th>單價</th>
-            <td><%= number_to_currency(@order.line_item.product.price * 0.28, precision: 0) %></td>
+            <td><%= number_to_currency(@order.line_item.product.price, precision: 0) %></td>
           </tr>
           <tr>
             <th>數量</th>
@@ -23,7 +23,7 @@
           </tr>
           <tr>
             <th>BeMine 將支付您</th>
-            <td><%= number_to_currency(@order.line_item.product.price * 0.28, precision: 0) %></td>
+            <td><%= number_to_currency(@order.line_item.product.price * @order.line_item.quantity, precision: 0) %></td>
           </tr>
         </table>
         <p>請將於5天內把產品寄至 BeMine 收購中心</p>
