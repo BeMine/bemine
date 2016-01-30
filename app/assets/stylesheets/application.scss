@@ -81,11 +81,6 @@ li {
   margin-bottom: 0px;
 }
 
-.category img {
-  display: block;
-  margin: 0 auto;
-}
-
 .log {
   float: right;
 }
@@ -400,8 +395,8 @@ section#contact {
 }
 
 .core-service {
-  padding: 30px 50px;
-  height: 250px;
+  padding: 50px;
+  min-height: 300px;
 }
 
 #purchasesection {
@@ -751,10 +746,6 @@ section#contact {
   border-bottom: 1px solid #eee;
 }
 
-.container {
-  margin-bottom: 100px;
-}
-
 .footer {
   padding: 75px 0;
   color: lightgray;
@@ -770,7 +761,7 @@ section#contact {
 
 .text-overlay {
   color: white;
-  font-size: 4em;
+  font-size: 3em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -783,8 +774,8 @@ section#contact {
   text-shadow: 0px 0px 20px black;
 }
 
-.home-section {
-  padding: 75px 0px;
+.section {
+  padding: 50px 0px;
 }
 
 .vcenter {
@@ -810,7 +801,7 @@ section#contact {
 }
 
 .category {
-  padding: 30px 0px;
+  padding: 20px 0px;
 }
 
 #user-name {
@@ -830,13 +821,37 @@ section#contact {
   min-width: 100px;
 }
 
-@media screen and (min-width: 0px) and (max-width: 750px) {
+.category-image {
+  width: 400px;
+}
+
+.container-fluid {
+  margin: 50px 0px;
+}
+
+@media screen and (max-device-width: 750px) {
   .text-jumbo {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 300;
   }
   .text-large {
-    font-size: 1em;
+    font-size: 2em;
     font-weight: 300;
+  }
+  .category-image {
+    width: 100%;
+  }
+  .text-overlay {
+    color: white;
+    font-size: 6em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  .category {
+    padding: 0px;
   }
 }

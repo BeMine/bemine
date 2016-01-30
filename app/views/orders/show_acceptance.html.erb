@@ -1,13 +1,9 @@
-<div class="container-fluid">
-  <div class="row">
-    <% if @order.accepted? %>
-      <% if @order.fulfiller == @fulfill_request.user %>
-        <%= render 'accepted' %>
-      <% else %>
-        <%= render 'rejected' %>
-      <% end %>
-    <% else %>
-      <%= render 'acceptance' %>
-    <% end %>
-  </div>
-</div>
+<% if @order.accepted? %>
+  <% if @order.fulfiller == @fulfill_request.user %>
+    <%= render 'accepted' %>
+  <% else %>
+    <%= render 'rejected' %>
+  <% end %>
+<% else %>
+  <%= render 'acceptance' %>
+<% end %>

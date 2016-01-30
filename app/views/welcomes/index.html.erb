@@ -1,8 +1,8 @@
 <% content_for :stylesheet do %>
   <%= stylesheet_link_tag controller_name, media: 'all', 'data-turbolinks-track' => true %>
 <% end %>
-<div class="hero">
-  <div class="hero-background">
+<div id="hero">
+  <div id="hero-background">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -49,48 +49,56 @@
   </div>
 </div>
 <!-- Categories -->
-<div id="categories" class="home-section row">
-  <% @categories.each do |category|%>
-    <div class="col-sm-6 col-lg-4 category">
-      <figure>
-        <%= link_to category do %>
-          <%= image_tag(category.picture.url, class: 'darken center-block') %>
-          <figcaption class="text-overlay text-shadown"><%= category.name %></figcaption>
-        <% end %>
-      </figure>
+<div id="categories" class="section">
+  <div class="container-fluid">
+    <div class="row">
+      <% @categories.each do |category|%>
+        <div class="col-md-6 col-lg-4 category">
+          <figure>
+            <%= link_to category do %>
+              <%= image_tag(category.picture.url, class: 'darken center-block category-image') %>
+              <figcaption class="text-overlay text-shadow"><%= category.name %></figcaption>
+            <% end %>
+          </figure>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
 <!-- Core Values -->
-<div class="home-section row">
-  <div class="col-sm-6 col-lg-4 text-center core-service">
-    <%= fa_icon 'spinner 4x' %>
-    <h2>自動代購媒合</h2>
-    <p>找到自己喜歡的商品，線上立即自動幫您配對代購者，保證24小時內通知媒合結果，輕鬆完成交易。</p>
-  </div>
-  <div class="col-sm-6 col-lg-4 text-center core-service">
-    <%= fa_icon 'eye 4x' %>
-    <h3>商品經手把關</h3>
-    <p>所有商品都由經過認證的代購者買回，經BeMine嚴格的商品檢查後，才將最好的商品送到您手中。如仍遇瑕疵或仿造品，BeMine則全權負起退換貨之責任。</p>
-  </div>
-  <div class="col-sm-6 col-lg-4 text-center core-service">
-    <%= fa_icon 'times 4x' %>
-    <h3>一律免運費</h3>
-    <p>我們堅持您看到的價格就是最後的實際價格，不再收取任何額外費用</p>
-  </div>
-  <div class="col-sm-6 col-lg-4 text-center core-service">
-    <%= fa_icon 'clock-o 4x' %>
-    <h3>24小時回覆結果</h3>
-    <p>我們將在一天以內告知媒合結果，讓您有效率地瞭解購物狀況及代購成果</p>
-  </div>
-  <div class="col-sm-6 col-lg-4 text-center core-service">
-    <%= fa_icon 'truck 4x' %>
-    <h3>負責物流服務</h3>
-    <p>賣方只需把代購商品寄回本公司，其餘物流方式由我方負責</p>
-  </div>
-  <div class="col-sm-6 col-lg-4 text-center core-service">
-    <%= fa_icon 'quote-right 4x' %>
-    <h3>專人客服</h3>
-    <p>專屬客服常駐，解決買賣雙方即時問題，提供更明確的代購流程資訊</p>
+<div class="section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-lg-4 text-center core-service">
+        <%= fa_icon 'spinner 4x' %>
+        <h2>自動代購媒合</h2>
+        <h4>找到自己喜歡的商品，線上立即自動幫您配對代購者，保證24小時內通知媒合結果，輕鬆完成交易。</h4>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center core-service">
+        <%= fa_icon 'eye 4x' %>
+        <h3>商品經手把關</h3>
+        <h4>所有商品都由經過認證的代購者買回，經BeMine嚴格的商品檢查後，才將最好的商品送到您手中。如仍遇瑕疵或仿造品，BeMine則全權負起退換貨之責任。</h4>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center core-service">
+        <%= fa_icon 'times 4x' %>
+        <h3>一律免運費</h3>
+        <h4>我們堅持您看到的價格就是最後的實際價格，不再收取任何額外費用</h4>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center core-service">
+        <%= fa_icon 'clock-o 4x' %>
+        <h3>24小時回覆結果</h3>
+        <h4>我們將在一天以內告知媒合結果，讓您有效率地瞭解購物狀況及代購成果</h4>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center core-service">
+        <%= fa_icon 'truck 4x' %>
+        <h3>負責物流服務</h3>
+        <h4>賣方只需把代購商品寄回本公司，其餘物流方式由我方負責</h4>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center core-service">
+        <%= fa_icon 'quote-right 4x' %>
+        <h3>專人客服</h3>
+        <h4>專屬客服常駐，解決買賣雙方即時問題，提供更明確的代購流程資訊</h4>
+      </div>
+    </div>
   </div>
 </div>

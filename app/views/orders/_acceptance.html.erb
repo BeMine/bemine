@@ -1,32 +1,34 @@
-<div class="container">
+<div class="container section">
   <div class="page-header text-center">
     <h1>代購請求</h1>
   </div>
-  <div class="col-md-6">
-    <%= image_tag @order.line_item.product.picture.url, class: 'center-block product-image' %>
-  </div>
-  <div class="col-md-6">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <table class="table acceptance">
-          <tr>
-            <th>產品名稱</th>
-            <td><%= @order.line_item.product.name %></td>
-          </tr>
-          <tr>
-            <th>單價</th>
-            <td><%= number_to_currency(@order.line_item.product.price, precision: 0) %></td>
-          </tr>
-          <tr>
-            <th>數量</th>
-            <td><%= @order.line_item.quantity %></td>
-          </tr>
-          <tr>
-            <th>BeMine 將支付您</th>
-            <td><%= number_to_currency(@order.line_item.product.price * @order.line_item.quantity, precision: 0) %></td>
-          </tr>
-        </table>
-        <%= link_to "接受代購", update_acceptance_order_path(@order, fulfill_request_id: @fulfill_request.id), class: 'btn btn-default btn-lg btn-bemine center-block', method: :post %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= image_tag @order.line_item.product.picture.url, class: 'center-block product-image' %>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <table class="table acceptance">
+            <tr>
+              <th>產品名稱</th>
+              <td><%= @order.line_item.product.name %></td>
+            </tr>
+            <tr>
+              <th>單價</th>
+              <td><%= number_to_currency(@order.line_item.product.price, precision: 0) %></td>
+            </tr>
+            <tr>
+              <th>數量</th>
+              <td><%= @order.line_item.quantity %></td>
+            </tr>
+            <tr>
+              <th>BeMine 將支付您</th>
+              <td><%= number_to_currency(@order.line_item.product.price * @order.line_item.quantity, precision: 0) %></td>
+            </tr>
+          </table>
+          <%= link_to "接受代購", update_acceptance_order_path(@order, fulfill_request_id: @fulfill_request.id), class: 'btn btn-default btn-lg btn-bemine center-block', method: :post %>
+        </div>
       </div>
     </div>
   </div>
