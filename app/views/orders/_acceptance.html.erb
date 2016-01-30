@@ -15,7 +15,7 @@
           </tr>
           <tr>
             <th>單價</th>
-            <td><%= number_to_currency(@order.line_item.product.price * 0.28, precision: 0) %></td>
+            <td><%= number_to_currency(@order.line_item.product.price, precision: 0) %></td>
           </tr>
           <tr>
             <th>數量</th>
@@ -23,7 +23,7 @@
           </tr>
           <tr>
             <th>BeMine 將支付您</th>
-            <td><%= number_to_currency(@order.line_item.product.price * 0.28, precision: 0) %></td>
+            <td><%= number_to_currency(@order.line_item.product.price * @order.line_item.quantity, precision: 0) %></td>
           </tr>
         </table>
         <%= link_to "接受代購", update_acceptance_order_path(@order, fulfill_request_id: @fulfill_request.id), class: 'btn btn-default btn-lg btn-bemine center-block', method: :post %>
