@@ -53,8 +53,10 @@
   <% @categories.each do |category|%>
     <div class="col-sm-6 col-lg-4 category">
       <figure>
-        <%= link_to image_tag(category.picture.url, class: 'darken center-block'), category %>
-        <figcaption class="text-overlay text-shadown"><%= category.name %></figcaption>
+        <%= link_to category do %>
+          <%= image_tag(category.picture.url, class: 'darken center-block') %>
+          <figcaption class="text-overlay text-shadown"><%= category.name %></figcaption>
+        <% end %>
       </figure>
     </div>
   <% end %>
