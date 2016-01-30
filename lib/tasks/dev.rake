@@ -3,7 +3,60 @@ namespace :dev do
     Rake::Task['dev:nuke_images'].invoke
     Rake::Task['db:migrate:reset'].invoke
     Rake::Task['db:seed'].invoke
-    Rake::Task['dev:fake'].invoke
+  end
+
+  task demo: :environment do
+    Rake::Task['dev:clean'].invoke
+
+    puts 'Generating products...'
+
+    products = [
+      {
+        name: 'iRobot Roomba 吸塵器',
+        picture: File.new("#{Rails.root}/app/assets/images/products/iRobot_Roomba.jpg"),
+        price: '8000',
+        location: '韓國',
+        category_id: 3
+      },
+      {
+        name: 'Dyson DC37 吸塵器',
+        picture: File.new("#{Rails.root}/app/assets/images/products/Dyson_DC37.jpg"),
+        price: '25000',
+        location: '日本',
+        category_id: 3
+      },
+      {
+        name: 'Makita DCL180Z 吸塵器',
+        picture: File.new("#{Rails.root}/app/assets/images/products/Makita_DCL180Z.jpg"),
+        price: '14000',
+        location: '新加坡',
+        category_id: 3
+      },
+      {
+        name: 'Breeze Cyclonic 吸塵器',
+        picture: File.new("#{Rails.root}/app/assets/images/products/Breeze_Cyclonic.jpg"),
+        price: '15000',
+        location: '美國',
+        category_id: 3
+      },
+      {
+        name: 'Dyson HP01 電風扇',
+        picture: File.new("#{Rails.root}/app/assets/images/products/Dyson_HP01.jpg"),
+        price: '10000',
+        location: '日本',
+        category_id: 3
+      },
+    ]
+
+    products.each do |product|
+      Product.create!(
+        name: product[:name],
+        picture: product[:picture],
+        price: product[:price],
+        location: product[:location],
+        category_id: product[:category_id]
+      )
+    end
   end
 
   task fake: :environment do
